@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動報名 · 基隆海洋獅子會 Keelung Ocean Lions Club</title>
+<meta name="description" content="基隆海洋獅子會年度活動報名 — 例會、淨灘、義賣園遊會、年度公益晚會等公益服務活動。">
+<link rel="canonical" href="https://keelung-ocean-lions.netlify.app/register.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="基隆海洋獅子會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="活動報名 · 基隆海洋獅子會 Keelung Ocean Lions Club">
+<meta property="og:description" content="基隆海洋獅子會年度活動報名 — 例會、淨灘、義賣園遊會、年度公益晚會等公益服務活動。">
+<meta property="og:url" content="https://keelung-ocean-lions.netlify.app/register.html">
+<meta property="og:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="活動報名 · 基隆海洋獅子會 Keelung Ocean Lions Club">
+<meta name="twitter:description" content="基隆海洋獅子會年度活動報名 — 例會、淨灘、義賣園遊會、年度公益晚會等公益服務活動。">
+<meta name="twitter:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.event-row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: var(--s-5);
+  padding: var(--s-5) 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.event-row:hover .event-title { color: var(--lion-gold); }
+.event-date {
+  font-family: var(--font-en);
+  text-align: center;
+}
+.event-date__day {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--sea-ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.event-date__mo {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--lion-gold);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.event-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sea-ink);
+  margin-bottom: 4px;
+  transition: color .2s;
+}
+.event-meta { font-size: 13px; color: var(--ink-500); display: flex; gap: 16px; flex-wrap: wrap; }
+.event-meta span { display: inline-flex; align-items: center; gap: 4px; }
+@media (max-width: 640px) {
+  .event-row { grid-template-columns: 80px 1fr; }
+  .event-row > .btn { grid-column: 1 / -1; justify-self: start; }
+  .event-date__day { font-size: 28px; }
+}
+</style>
+</head>
+<body data-page="register">
+
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>EVENTS</span></div>
+    <span class="eyebrow on-dark">活動報名 · UPCOMING</span>
+    <h1>近期活動</h1>
+    <p class="lede">本會例會、公益服務、年度大會與會員聯誼活動皆在此公告。歡迎獅友與社會大眾踴躍報名參加。</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container" style="max-width: 920px;">
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">14</div><span class="event-date__mo">JUN</span></div>
+      <div>
+        <div class="event-title">年度大會範本 · Annual General Meeting</div>
+        <div class="event-meta"><span>📍 地點以會所公告為準</span><span>🕒 時間以會所公告為準</span><span>👥 限會員及眷屬</span></div>
+      </div>
+      <a href="agm.html" class="btn btn--outline-ocean">大會專頁 →</a>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">28</div><span class="event-date__mo">JUN</span></div>
+      <div>
+        <div class="event-title">夏日淨灘 — 福隆守護行動</div>
+        <div class="event-meta"><span>📍 福隆海水浴場</span><span>🕒 08:00 — 12:00</span><span>👥 開放公眾 / 名額 80</span></div>
+      </div>
+      <button class="btn btn--gold" onclick="openSignup('夏日淨灘')">線上報名 →</button>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">12</div><span class="event-date__mo">JUL</span></div>
+      <div>
+        <div class="event-title">7 月例會 · 主題：青年領袖論壇</div>
+        <div class="event-meta"><span>📍 海洋會館 · 5F 會議廳</span><span>🕒 19:00 — 21:30</span><span>👥 會員 + 眷屬</span></div>
+      </div>
+      <button class="btn btn--outline-ocean" onclick="openSignup('7 月例會')">出席登記</button>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">23</div><span class="event-date__mo">AUG</span></div>
+      <div>
+        <div class="event-title">原鄉學童文具捐贈 · 花蓮卓溪</div>
+        <div class="event-meta"><span>📍 花蓮 · 卓溪國小</span><span>🕒 全天活動</span><span>👥 會員志工</span></div>
+      </div>
+      <button class="btn btn--outline-ocean" onclick="openSignup('原鄉學童文具捐贈')">志工報名</button>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">19</div><span class="event-date__mo">OCT</span></div>
+      <div>
+        <div class="event-title">年度公益晚會 · 浪潮三十二週年</div>
+        <div class="event-meta"><span>📍 君悅酒店 · 凱悅廳</span><span>🕒 18:30 入場</span><span>👥 開放購票</span></div>
+      </div>
+      <button class="btn btn--gold" onclick="openSignup('公益晚會')">索票 →</button>
+    </div>
+
+    <div class="event-row">
+      <div class="event-date"><div class="event-date__day">07</div><span class="event-date__mo">DEC</span></div>
+      <div>
+        <div class="event-title">獨老送暖 · 歲末關懷年菜計畫</div>
+        <div class="event-meta"><span>📍 全臺六縣市同步</span><span>🕒 全日</span><span>👥 會員志工 + 公開募集</span></div>
+      </div>
+      <button class="btn btn--outline-ocean" onclick="openSignup('歲末關懷')">志工報名</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Signup modal -->
+<div id="signupModal" class="lb-overlay" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+  <div class="lb-overlay__inner" style="max-width: 560px; background: white; padding: var(--s-7); color: var(--ink-900);">
+    <button class="lb-overlay__close" onclick="closeSignup()" aria-label="關閉">×</button>
+    <span class="eyebrow">活動報名</span>
+    <h2 id="signupTitle" style="margin-top: var(--s-2);">活動</h2>
+    <form onsubmit="event.preventDefault(); closeSignup(); alert('報名已送出！本會將於 1–2 日內透過 Email 寄出確認信。');" style="margin-top: var(--s-5);">
+      <div class="field"><label>姓名</label><input type="text" required></div>
+      <div class="field"><label>Email</label><input type="email" required></div>
+      <div class="field"><label>聯絡電話</label><input type="tel" required></div>
+      <div class="field"><label>同行人數</label><input type="number" min="1" max="10" value="1"></div>
+      <div class="field"><label>備註 (飲食 / 接送)</label><textarea></textarea></div>
+      <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">送出報名 →</button>
+    </form>
+  </div>
+</div>
+
+<section class="section section--sand">
+  <div class="container text-center" style="max-width: 720px;">
+    <span class="eyebrow">月度例會</span>
+    <h2>例會日程</h2>
+    <p class="section-title__sub">本會固定於每月第二個週四晚間舉行例會，地點海洋會館 5F。會員與訪賓請於前一週完成出席登記。</p>
+    <a href="contact.html" class="btn btn--outline-ocean mt-5">向秘書處詢問 →</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/chrome.js"></script>
+<script>
+function openSignup(title){
+  document.getElementById('signupTitle').textContent = title;
+  document.getElementById('signupModal').classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+function closeSignup(){
+  document.getElementById('signupModal').classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+document.getElementById('signupModal').addEventListener('click', e => {
+  if (e.target.id === 'signupModal') closeSignup();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSignup(); });
+</script>
+</body>
+</html>

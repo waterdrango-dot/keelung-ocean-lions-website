@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影音紀錄 · 基隆海洋獅子會</title>
+<meta name="description" content="基隆海洋獅子會影音紀錄 — 活動影片、媒體報導與公益宣傳影音資料。">
+<link rel="canonical" href="https://keelung-ocean-lions.netlify.app/media.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="基隆海洋獅子會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="影音紀錄 · 基隆海洋獅子會">
+<meta property="og:description" content="基隆海洋獅子會影音紀錄 — 活動影片、媒體報導與公益宣傳影音資料。">
+<meta property="og:url" content="https://keelung-ocean-lions.netlify.app/media.html">
+<meta property="og:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="影音紀錄 · 基隆海洋獅子會">
+<meta name="twitter:description" content="基隆海洋獅子會影音紀錄 — 活動影片、媒體報導與公益宣傳影音資料。">
+<meta name="twitter:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .featured {
+    background: var(--sea-ink);
+    padding: var(--s-7) 0;
+  }
+  .featured__player {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #0B5394 0%, #073763 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+  }
+  .featured__player::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at center, rgba(212,160,21,0.2), transparent 60%),
+      repeating-linear-gradient(0deg, transparent 0 38px, rgba(255,248,225,0.04) 38px 39px);
+  }
+  .featured__player::after {
+    content: "基隆海洋獅子會 · 第 34 屆自強活動精彩回顧";
+    position: absolute; bottom: 24px; left: 28px;
+    color: rgba(255,255,255,0.55); font-size: 12px; letter-spacing: 0.2em;
+    font-family: var(--font-en); text-transform: uppercase;
+  }
+  .play-btn {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 96px; height: 96px;
+    background: var(--lion-gold);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    transition: all .3s var(--ease);
+    box-shadow: 0 12px 40px rgba(180,95,6,0.5);
+  }
+  .featured__player:hover .play-btn {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--lion-gold-2);
+  }
+  .play-btn::before {
+    content: ""; width: 0; height: 0;
+    border-left: 22px solid white; border-top: 14px solid transparent; border-bottom: 14px solid transparent;
+    margin-left: 6px;
+  }
+  .featured__caption {
+    color: white; margin-top: var(--s-5);
+  }
+  .featured__caption h3 { color: white; }
+  .featured__caption .meta {
+    font-family: var(--font-en); font-size: 13px; color: var(--lion-gold-soft);
+    letter-spacing: 0.16em; margin-bottom: var(--s-3);
+  }
+
+  .vid-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-5); }
+  @media(max-width:880px){ .vid-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:560px){ .vid-grid { grid-template-columns: 1fr; } }
+
+  .vid-card { cursor: pointer; }
+  .vid-card__thumb {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #0B5394, #073763);
+    position: relative; overflow: hidden; border-radius: 4px;
+    transition: transform .3s var(--ease);
+  }
+  .vid-card:hover .vid-card__thumb { transform: translateY(-4px); }
+  .vid-card__thumb::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 60% 40%, rgba(212,160,21,0.18), transparent 60%);
+  }
+  .vid-card__play {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    transition: all .25s var(--ease);
+  }
+  .vid-card:hover .vid-card__play {
+    background: var(--lion-gold);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  .vid-card__play::before {
+    content: ""; width: 0; height: 0;
+    border-left: 14px solid var(--sea-ink);
+    border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+    margin-left: 4px;
+    transition: border-color .25s;
+  }
+  .vid-card:hover .vid-card__play::before { border-left-color: white; }
+  .vid-card__dur {
+    position: absolute; bottom: 10px; right: 10px;
+    background: rgba(0,0,0,0.7); color: white;
+    padding: 3px 8px; font-family: var(--font-en);
+    font-size: 12px; letter-spacing: 0.1em;
+    border-radius: 2px;
+  }
+  .vid-card__cat {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--lion-gold);
+    color: white; padding: 3px 10px;
+    font-family: var(--font-en);
+    font-size: 11px; letter-spacing: 0.16em; font-weight: 700;
+  }
+  .vid-card__body { padding-top: var(--s-3); }
+  .vid-card__title {
+    font-size: 16px; font-weight: 600; color: var(--sea-ink); line-height: 1.5; margin-bottom: 6px;
+  }
+  .vid-card__meta {
+    font-family: var(--font-en); font-size: 12px; color: var(--ink-500); letter-spacing: 0.1em;
+  }
+
+  /* Press list */
+  .press-list { display: grid; gap: var(--s-3); margin-top: var(--s-6); }
+  .press-row {
+    display: grid; grid-template-columns: 110px 1fr 140px auto;
+    gap: var(--s-5); align-items: center;
+    padding: var(--s-4) var(--s-5);
+    background: white; border: 1px solid var(--line);
+    transition: all .25s var(--ease);
+  }
+  @media(max-width:760px){ .press-row { grid-template-columns: 1fr; gap: 8px; } }
+  .press-row:hover {
+    border-color: var(--lion-gold);
+    transform: translateX(4px);
+    box-shadow: 0 12px 24px -16px rgba(11,83,148,0.3);
+  }
+  .press-date {
+    font-family: var(--font-en); font-size: 13px; color: var(--lion-gold);
+    letter-spacing: 0.1em; font-weight: 600;
+  }
+  .press-title { font-size: 16px; color: var(--sea-ink); font-weight: 600; }
+  .press-source { font-size: 13px; color: var(--ink-500); font-family: var(--font-en); letter-spacing: 0.1em; }
+  .press-arrow { color: var(--ocean-deep); transition: transform .25s; }
+  .press-row:hover .press-arrow { transform: translateX(4px); color: var(--lion-gold); }
+</style>
+</head>
+<body data-page="media">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>MEDIA</span></div>
+    <span class="eyebrow on-dark">影音紀錄 · MEDIA</span>
+    <h1>每一段影像，都是一道留下來的浪</h1>
+    <p class="lede">三十五年來，我們以鏡頭記錄基隆海洋獅子會的每一場聚會、每一次公益、每一個感動瞬間。</p>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <div class="eyebrow on-dark" style="margin-bottom: var(--s-4);">本月精選 · FEATURED</div>
+    <div class="featured__player">
+      <div class="play-btn"></div>
+    </div>
+    <div class="featured__caption">
+      <div class="meta">2025 · 07 · 10 · 第 35 屆會長就職</div>
+      <h3>第 35 屆會長 張眾佳 就職典禮</h3>
+      <p class="lede" style="color: rgba(255,255,255,0.75);">本屆會長張眾佳（佳平結構技師事務所執業技師）於民國 114 年 7 月 10 日就職，秉持本會「服務先於己」之精神持續推展會務，並啟動第 36 屆姊妹會推薦巡訪。<br><span style="font-size: 13px; color: rgba(255,255,255,0.55);">影片整理中 · 如有就職典禮影片請聯繫會所</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title" style="text-align:left; margin-bottom: var(--s-6);">
+      <span class="eyebrow">影片合輯 · ALL VIDEOS</span>
+      <h2 style="margin-bottom: 8px;">完整影像紀錄</h2>
+    </div>
+
+    <div class="empty-state" style="padding: var(--s-8) var(--s-6); text-align:center; background: var(--paper-warm); border: 1px dashed var(--ink-200); border-radius: var(--r-3);">
+      <div style="width: 64px; height: 64px; margin: 0 auto var(--s-4); border-radius: 50%; background: var(--lion-gold-soft); display:flex; align-items:center; justify-content:center;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--lion-gold)" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      </div>
+      <h3 style="margin: 0 0 var(--s-2); color: var(--sea-ink);">歡迎獅友共建影音檔案</h3>
+      <p style="max-width: 520px; margin: 0 auto; color: var(--ink-500); line-height: 1.7;">
+        本會 35 年來累積之就職典禮、會員大會、姊妹會交流、社會服務影像分散於歷屆獅友手中。<br>
+        若您保有相關影音資料，誠摯邀請與會所聯繫，共同建立本會完整影音典藏。
+      </p>
+      <a href="contact.html" class="btn btn--ghost" style="margin-top: var(--s-5);">聯絡會所提供素材 →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-title" style="text-align:left;">
+      <span class="eyebrow">媒體報導 · PRESS COVERAGE</span>
+      <h2 style="margin-bottom: 8px;">媒體看基隆海洋獅子會</h2>
+    </div>
+
+    <div class="press-list">
+      <div class="press-row" style="grid-template-columns: 1fr; padding: var(--s-6); text-align:center; background: var(--paper-warm); border: 1px dashed var(--ink-200); cursor: default;">
+        <div>
+          <h4 style="margin: 0 0 var(--s-2); color: var(--sea-ink); font-size: 18px;">歡迎提供媒體報導</h4>
+          <p style="margin: 0; color: var(--ink-500); font-size: 14px; line-height: 1.7;">本會歷年累積豐富之社會服務與會務活動，相關媒體報導正在彙整。<br>如有報導連結或剪報資料，歡迎與會所聯繫，共同累積歷史紀錄。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

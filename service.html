@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公益服務 · 基隆海洋獅子會</title>
+<meta name="description" content="基隆海洋獅子會公益實踐 — 弱勢關懷、獎助學金、淨灘與海洋保育、社區服務等年度公益項目紀實。">
+<link rel="canonical" href="https://keelung-ocean-lions.netlify.app/service.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="基隆海洋獅子會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="公益服務 · 基隆海洋獅子會">
+<meta property="og:description" content="基隆海洋獅子會公益實踐 — 弱勢關懷、獎助學金、淨灘與海洋保育、社區服務等年度公益項目紀實。">
+<meta property="og:url" content="https://keelung-ocean-lions.netlify.app/service.html">
+<meta property="og:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="公益服務 · 基隆海洋獅子會">
+<meta name="twitter:description" content="基隆海洋獅子會公益實踐 — 弱勢關懷、獎助學金、淨灘與海洋保育、社區服務等年度公益項目紀實。">
+<meta name="twitter:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  body { background:#fbf7f0; }
+
+  /* Hero */
+  .svc-hero {
+    background: linear-gradient(180deg, #08355e 0%, #0b5394 100%);
+    color:#fff; padding: 120px 32px 80px; text-align:center; position:relative; overflow:hidden;
+  }
+  .svc-hero::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(212,175,55,.15), transparent 50%),
+      radial-gradient(circle at 80% 100%, rgba(255,255,255,.05), transparent 60%);
+  }
+  .svc-hero__inner { position:relative; max-width: 900px; margin: 0 auto; }
+  .svc-hero__kicker { font-family: var(--font-en); font-size: 13px; letter-spacing: .42em; color:#d4af37; font-weight:600; margin-bottom: 24px; }
+  .svc-hero h1 { font-family: var(--font-serif); font-size: clamp(48px, 6vw, 72px); font-weight:900; margin: 0 0 24px; letter-spacing: .04em; line-height: 1.1; }
+  .svc-hero p { font-size: 17px; line-height: 2; color: rgba(255,255,255,.85); max-width: 680px; margin: 0 auto; }
+
+  /* Creed band */
+  .creed { background:#fff; padding: 100px 32px; border-bottom: 1px solid #e8d9b8; }
+  .creed__inner { max-width: 1100px; margin: 0 auto; }
+  .creed__head { text-align:center; margin-bottom: 64px; }
+  .creed__kicker { font-family: var(--font-en); font-size: 12px; letter-spacing: .42em; color: #9b7d2e; font-weight:600; margin-bottom: 16px; }
+  .creed__title { font-family: var(--font-serif); font-size: 44px; font-weight:900; color:#0b3a66; margin:0; letter-spacing: .04em; }
+  .creed__sub { color:#7a6a4a; margin-top:12px; font-size: 14px; letter-spacing: .16em; }
+
+  .creed__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  @media(max-width:980px){ .creed__grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:560px){ .creed__grid { grid-template-columns: 1fr; } }
+
+  .c-card {
+    border: 1px solid #e8d9b8; padding: 32px 24px;
+    background: linear-gradient(180deg, #fff 0%, #fbf7f0 100%);
+    position: relative; transition: all .3s ease;
+  }
+  .c-card:hover { border-color:#d4af37; transform: translateY(-3px); box-shadow: 0 16px 32px -16px rgba(8,53,94,.2); }
+  .c-card__num {
+    font-family: var(--font-serif); font-size: 56px; font-weight:900;
+    color: #d4af37; line-height:1; opacity:.6; margin-bottom: 16px;
+  }
+  .c-card__t {
+    font-family: var(--font-serif); font-size: 18px; font-weight:700; color:#0b3a66; margin-bottom: 8px; letter-spacing: .04em;
+  }
+  .c-card__d {
+    font-size: 13px; color:#5a6a7e; line-height: 1.7;
+  }
+
+  /* Pillars - editorial */
+  .pillars { padding: 100px 32px; max-width: 1200px; margin: 0 auto; }
+  .pillars__head { text-align:center; margin-bottom: 80px; }
+  .pillars__kicker { font-family: var(--font-en); font-size:12px; letter-spacing: .42em; color:#9b7d2e; font-weight:600; margin-bottom: 16px; }
+  .pillars__title { font-family: var(--font-serif); font-size: 48px; font-weight:900; color:#0b3a66; margin:0 0 12px; letter-spacing:.04em; }
+  .pillars__quote {
+    font-family: var(--font-serif); font-size: 17px; color:#5a6a7e; max-width: 640px; margin: 16px auto 0;
+    line-height: 1.9; font-style: italic;
+  }
+  .pillars__rule { width: 48px; height: 3px; background: #d4af37; margin: 32px auto; }
+
+  .pillar {
+    display: grid; grid-template-columns: 200px 1fr; gap: 56px;
+    padding: 48px 0; border-bottom: 1px solid #e8d9b8; align-items: start;
+  }
+  .pillar:last-child { border-bottom: none; }
+  @media(max-width:760px){ .pillar { grid-template-columns: 1fr; gap: 24px; } }
+
+  .pillar__lead {
+    font-family: var(--font-en); font-size: 13px; letter-spacing: .42em; color: #d4af37; font-weight:700;
+    text-align: right; padding-top: 8px; line-height: 1.6;
+  }
+  @media(max-width:760px){ .pillar__lead { text-align: left; } }
+  .pillar__lead-num {
+    display: block; font-family: var(--font-serif); font-size: 64px; color: #0b3a66; font-weight:900;
+    line-height: 1; margin-bottom: 8px; letter-spacing: 0;
+  }
+
+  .pillar__t {
+    font-family: var(--font-serif); font-size: 32px; font-weight:900; color:#0b3a66;
+    margin: 0 0 16px; letter-spacing: .04em;
+  }
+  .pillar__zh-en { font-family: var(--font-en); font-size: 12px; letter-spacing: .3em; color:#9b7d2e; font-weight:600; margin-bottom: 12px; text-transform: uppercase; }
+  .pillar__d {
+    font-size: 16px; line-height: 2; color:#3a4a5e;
+  }
+  .pillar__d strong { color: #0b3a66; font-weight: 700; }
+
+  /* Sister & sponsored clubs */
+  .clubs {
+    background: linear-gradient(180deg, #08355e 0%, #0b3a66 100%);
+    color:#fff; padding: 100px 32px;
+  }
+  .clubs__inner { max-width: 1100px; margin: 0 auto; }
+  .clubs__head { text-align:center; margin-bottom: 64px; }
+  .clubs__kicker { font-family: var(--font-en); font-size:12px; letter-spacing: .42em; color:#d4af37; font-weight:600; margin-bottom: 16px; }
+  .clubs__title { font-family: var(--font-serif); font-size: 44px; font-weight:900; margin:0; letter-spacing: .04em; }
+  .clubs__sub { color: rgba(255,255,255,.6); margin-top:12px; font-size: 14px; letter-spacing: .16em; }
+
+  .clubs__grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+  }
+  @media(max-width:880px){ .clubs__grid { grid-template-columns: 1fr; } }
+
+  .club-card {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(212,175,55,.25);
+    padding: 32px 28px; border-radius: 4px; position: relative;
+    transition: all .3s ease;
+  }
+  .club-card:hover { background: rgba(255,255,255,.08); border-color: #d4af37; transform: translateY(-3px); }
+  .club-card__type {
+    font-family: var(--font-en); font-size: 11px; letter-spacing: .32em; color:#d4af37; font-weight:700;
+    margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(212,175,55,.25);
+  }
+  .club-card__name {
+    font-family: var(--font-serif); font-size: 26px; font-weight:700; color:#fff; margin-bottom: 4px; letter-spacing: .04em;
+  }
+  .club-card__name-en {
+    font-family: var(--font-en); font-size: 12px; color: rgba(255,255,255,.55); letter-spacing: .14em; margin-bottom: 20px;
+  }
+  .club-card__row {
+    display: flex; justify-content: space-between; padding: 8px 0;
+    font-size: 13.5px; color: rgba(255,255,255,.85);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  .club-card__row span:first-child { color: rgba(255,255,255,.55); letter-spacing: .12em; font-size: 12px; }
+
+  /* Stats */
+  .stats { padding: 80px 32px; background:#fff; }
+  .stats__inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .stats__kicker { font-family: var(--font-en); font-size: 12px; letter-spacing: .42em; color:#9b7d2e; font-weight:600; margin-bottom: 16px; }
+  .stats__title { font-family: var(--font-serif); font-size: 36px; font-weight:900; color:#0b3a66; margin:0 0 48px; letter-spacing:.04em; }
+  .stats__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  }
+  @media(max-width:880px){ .stats__grid { grid-template-columns: repeat(2,1fr); gap: 24px; } }
+  .stat {
+    border-top: 3px solid #d4af37; padding-top: 24px;
+    text-align: left;
+  }
+  .stat__num {
+    font-family: var(--font-serif); font-size: 56px; font-weight:900; color:#0b3a66; line-height: 1; letter-spacing: .02em;
+  }
+  .stat__num small { font-size: 18px; color: #9b7d2e; margin-left: 6px; font-weight: 600; }
+  .stat__lbl { font-size: 14px; color: #5a6a7e; margin-top: 12px; line-height: 1.6; }
+
+  /* Note */
+  .note {
+    max-width: 800px; margin: 0 auto; padding: 32px;
+    background: #fbf7f0; border-left: 3px solid #d4af37;
+    color:#5a6a7e; font-size: 13px; line-height: 1.8; text-align: left;
+    margin-top: 48px;
+  }
+  .note strong { color: #0b3a66; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a href="index.html" class="site-nav__brand">
+      <span class="site-nav__brand-zh">基隆海洋獅子會</span>
+      <span class="site-nav__brand-en">KEELUNG OCEAN LIONS CLUB</span>
+    </a>
+    <div class="site-nav__links">
+      <a href="index.html">首頁</a>
+      <a href="about.html">認識本會</a>
+      <a href="history.html">會史紀要</a>
+      <a href="presidents.html">歷屆會長</a>
+      <a href="service.html" class="active">公益服務</a>
+      <a href="gallery.html">活動花絮</a>
+      <a href="contact.html">聯絡我們</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="svc-hero">
+  <div class="svc-hero__inner">
+    <div class="svc-hero__kicker">PUBLIC SERVICE · 公益服務</div>
+    <h1>回饋　犧牲　奉獻</h1>
+    <p>「回饋、犧牲、奉獻」之無私心懷，與「積極、熱誠、負責」之大我胸襟，正如同海洋般之浩瀚、遼闊、深遠 — 這就是海洋獅子會的服務初心。</p>
+  </div>
+</header>
+
+<!-- 八大信條 -->
+<section class="creed">
+  <div class="creed__inner">
+    <div class="creed__head">
+      <div class="creed__kicker">CODE OF ETHICS · 獅子會八大信條</div>
+      <h2 class="creed__title">服務之道 · 信條為本</h2>
+      <div class="creed__sub">獅友共同奉行之國際獅子會精神準則</div>
+    </div>
+
+    <div class="creed__grid">
+      <div class="c-card">
+        <div class="c-card__num">壹</div>
+        <div class="c-card__t">敬業樂群</div>
+        <div class="c-card__d">對自己的事業，要努力以赴，俾使能享受功成名就之樂。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">貳</div>
+        <div class="c-card__t">公平合理</div>
+        <div class="c-card__d">追求成功，獲取一切應得之報酬，但決不為自身利益而犧牲他人之自尊與權利。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">參</div>
+        <div class="c-card__t">誠信經營</div>
+        <div class="c-card__d">事業之經營以不損害他人為原則，對顧客之服務，務求盡善盡美。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">肆</div>
+        <div class="c-card__t">遇事三思</div>
+        <div class="c-card__d">遇有疑難時，不可採用不當之手段，應以光明磊落之態度，謀求解決之道。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">伍</div>
+        <div class="c-card__t">友善互助</div>
+        <div class="c-card__d">友誼為目的，不為手段；真實之友誼，非為利益而存在，乃為服務而結合。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">陸</div>
+        <div class="c-card__t">克盡職責</div>
+        <div class="c-card__d">克盡公民之天職，對國家、社會、地方應有忠誠擁護之熱忱，貢獻時間與精神，以促進公共之福祉。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">柒</div>
+        <div class="c-card__t">扶弱濟困</div>
+        <div class="c-card__d">應同情不幸之人，撫慰失意之人，扶助貧弱之人。</div>
+      </div>
+      <div class="c-card">
+        <div class="c-card__num">捌</div>
+        <div class="c-card__t">嚴於律己</div>
+        <div class="c-card__d">批評時宜謹慎，讚美時宜慷慨；待人接物本以建設、不以破壞為原則。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 六大服務主軸 -->
+<section class="pillars">
+  <div class="pillars__head">
+    <div class="pillars__kicker">SIX PILLARS · 六大服務主軸</div>
+    <h2 class="pillars__title">我們深耕的方向</h2>
+    <div class="pillars__rule"></div>
+    <p class="pillars__quote">「八大信條篤行不移；國際姊妹會之締盟、獎助學金之頒發、反毒害宣導、幼兒教育之啟蒙、視力第一國際基金之捐獻、認養社區再造，皆顯示卓越成效。」</p>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">01</span>
+      INTERNATIONAL<br>FRIENDSHIP
+    </div>
+    <div>
+      <div class="pillar__zh-en">SISTER CLUB · 國際姊妹會締盟</div>
+      <h3 class="pillar__t">國際獅誼 · 跨海情同</h3>
+      <p class="pillar__d">本會於 <strong>民國 82 年 6 月 27 日</strong>與韓國<strong>釜山新羅獅子會</strong>（Pusan Silla Lions Club）正式締結國際姊妹會，三十餘年來持續進行雙向獅誼交流、文化互訪與聯合公益行動，為基隆獅界開啟跨國服務之先河。</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">02</span>
+      EDUCATION<br>SCHOLARSHIP
+    </div>
+    <div>
+      <div class="pillar__zh-en">SCHOLARSHIPS · 獎助學金頒發</div>
+      <h3 class="pillar__t">勵學助才 · 培育棟樑</h3>
+      <p class="pillar__d">每屆持續編列預算辦理獎助學金頒發，照顧基隆地區清寒優秀學子。三十餘載累積照亮無數家庭，亦響應國際獅子會「Empowering Service」之教育服務軸線。</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">03</span>
+      ANTI-DRUG<br>CAMPAIGN
+    </div>
+    <div>
+      <div class="pillar__zh-en">DRUG-FREE · 反毒害宣導</div>
+      <h3 class="pillar__t">守護青年 · 拒毒於外</h3>
+      <p class="pillar__d">配合國際獅子會「Lions Quest」生命教育與反毒害宣導計畫，於基隆轄區校園、社區舉辦講座與宣導活動，協助青少年遠離毒品危害，建立健全人格。</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">04</span>
+      EARLY<br>EDUCATION
+    </div>
+    <div>
+      <div class="pillar__zh-en">EARLY CHILDHOOD · 幼兒教育啟蒙</div>
+      <h3 class="pillar__t">向下扎根 · 啟蒙未來</h3>
+      <p class="pillar__d">關懷學齡前兒童身心發展與閱讀習慣養成。捐贈幼兒讀物、舉辦親子教育活動，並協助偏遠地區幼兒教育資源，落實「教育從根開始」之服務精神。</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">05</span>
+      SIGHTFIRST<br>LCIF
+    </div>
+    <div>
+      <div class="pillar__zh-en">SIGHTFIRST · 視力第一國際基金</div>
+      <h3 class="pillar__t">點亮明眸 · 視界共享</h3>
+      <p class="pillar__d">響應國際獅子會基金會（LCIF）<strong>SightFirst 視力第一</strong>全球倡議，多年捐獻支持白內障手術、糖尿病視網膜病變防治及視障輔具計畫，與全球獅友共同對抗可預防之失明。</p>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <div class="pillar__lead">
+      <span class="pillar__lead-num">06</span>
+      COMMUNITY<br>RENEWAL
+    </div>
+    <div>
+      <div class="pillar__zh-en">COMMUNITY · 認養社區再造</div>
+      <h3 class="pillar__t">立足基隆 · 共榮港都</h3>
+      <p class="pillar__d">「立足基隆、放眼國際」為本會服務地理座標。多年來認養社區公共空間、推動環境美化與社區營造，落實「服務從家門開始」之獅子精神，回饋這片孕育我們的港都土地。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Service Highlights (照片資料：30 週年慶 P49 社會服務) -->
+<section style="background:linear-gradient(180deg,#fbf7f0 0%, #fff 100%); padding:96px 32px; border-top:1px solid #e8d9b8; border-bottom:1px solid #e8d9b8;">
+  <div style="max-width:1280px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:64px;">
+      <div style="font-family:var(--font-en); font-size:12px; letter-spacing:.42em; color:#9b7d2e; font-weight:600; margin-bottom:16px;">RECENT GIVING · 近期公益實踐</div>
+      <h2 style="font-family:var(--font-serif); font-size:44px; font-weight:900; color:#0b3a66; margin:0 0 12px; letter-spacing:.04em;">三十週年慶會典禮捐獻紀實</h2>
+      <div style="width:48px; height:3px; background:#d4af37; margin:24px auto;"></div>
+      <p style="font-family:var(--font-serif); font-size:16px; color:#5a6a7e; max-width:680px; margin:0 auto; line-height:1.9; font-style:italic;">於授證 30 週年慶典之際，由會長代表本會及獅兄獅嫂，向地方公益團體與弱勢族群進行專案捐獻。</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+      <article style="background:#fff; border:1px solid #e8d9b8; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="aspect-ratio:4/3; background:#08355e; overflow:hidden;">
+          <img src="assets/photos/service-4.jpg" alt="贊助基隆生命線協會社會服務基金" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+        <div style="padding:28px 24px; flex:1; display:flex; flex-direction:column;">
+          <div style="font-family:var(--font-en); font-size:11px; letter-spacing:.32em; color:#9b7d2e; font-weight:600; margin-bottom:8px;">CASE 01 · LIFE-LINE FUND</div>
+          <h3 style="font-family:var(--font-serif); font-size:20px; font-weight:700; color:#0b3a66; margin:0 0 12px; letter-spacing:.04em;">贊助基隆生命線協會</h3>
+          <p style="font-size:14px; color:#5a6a7e; line-height:1.8; margin:0 0 16px; flex:1;">支持自殺防治與心理諮詢服務，為港都民眾守護生命熱線。</p>
+          <div style="border-top:1px solid #e8d9b8; padding-top:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+              <span style="font-size:12px; color:#7a6a4a; letter-spacing:.16em;">捐獻金額</span>
+              <span style="font-family:var(--font-serif); font-size:22px; font-weight:900; color:#d4af37;">11<small style="font-size:13px; font-weight:600; margin-left:2px;">萬元</small></span>
+            </div>
+            <div style="font-size:11px; color:#7a6a4a; line-height:1.7;">海洋會 2 萬 · 詹炳燦 3 萬 · 周瑞慶 3 萬 · 邱瑞義 3 萬</div>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:#fff; border:1px solid #e8d9b8; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="aspect-ratio:4/3; background:#08355e; overflow:hidden;">
+          <img src="assets/photos/service-5.jpg" alt="贊助雙溪區上林社區關懷老人基金" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+        <div style="padding:28px 24px; flex:1; display:flex; flex-direction:column;">
+          <div style="font-family:var(--font-en); font-size:11px; letter-spacing:.32em; color:#9b7d2e; font-weight:600; margin-bottom:8px;">CASE 02 · ELDER CARE</div>
+          <h3 style="font-family:var(--font-serif); font-size:20px; font-weight:700; color:#0b3a66; margin:0 0 12px; letter-spacing:.04em;">關懷雙溪上林社區老人</h3>
+          <p style="font-size:14px; color:#5a6a7e; line-height:1.8; margin:0 0 16px; flex:1;">深入偏鄉社區，挹注關懷老人基金，落實「敬老尊賢」之獅子精神。</p>
+          <div style="border-top:1px solid #e8d9b8; padding-top:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+              <span style="font-size:12px; color:#7a6a4a; letter-spacing:.16em;">捐獻金額</span>
+              <span style="font-family:var(--font-serif); font-size:22px; font-weight:900; color:#d4af37;">12<small style="font-size:13px; font-weight:600; margin-left:2px;">萬元</small></span>
+            </div>
+            <div style="font-size:11px; color:#7a6a4a; line-height:1.7;">海洋會 2 萬 · 陳建宏 2 萬 · 李鴻欽 2 萬 · 劉慶璋 2 萬 · 陳坤田 2 萬 · 簡枝文 1 萬 · 賴聰福 1 萬</div>
+          </div>
+        </div>
+      </article>
+
+      <article style="background:#fff; border:1px solid #e8d9b8; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="aspect-ratio:4/3; background:#08355e; overflow:hidden;">
+          <img src="assets/photos/service-6.jpg" alt="月眉國小獎勵金" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+        <div style="padding:28px 24px; flex:1; display:flex; flex-direction:column;">
+          <div style="font-family:var(--font-en); font-size:11px; letter-spacing:.32em; color:#9b7d2e; font-weight:600; margin-bottom:8px;">CASE 03 · STUDENT AID</div>
+          <h3 style="font-family:var(--font-serif); font-size:20px; font-weight:700; color:#0b3a66; margin:0 0 12px; letter-spacing:.04em;">月眉國小獎勵金</h3>
+          <p style="font-size:14px; color:#5a6a7e; line-height:1.8; margin:0 0 16px; flex:1;">由李鴻欽主席代表贊助月眉國小品學兼優學生獎勵金，鼓勵學子精進向上。</p>
+          <div style="border-top:1px solid #e8d9b8; padding-top:14px;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+              <span style="font-size:12px; color:#7a6a4a; letter-spacing:.16em;">獎勵金額</span>
+              <span style="font-family:var(--font-serif); font-size:22px; font-weight:900; color:#d4af37;">2<small style="font-size:13px; font-weight:600; margin-left:2px;">萬元</small></span>
+            </div>
+            <div style="font-size:11px; color:#7a6a4a; line-height:1.7;">李鴻欽主席　贊助　月眉國小 洪立杰同學</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="margin-top:32px; padding:20px 24px; background:rgba(212,175,55,.08); border-left:3px solid #d4af37; font-size:13px; color:#5a6a7e; line-height:1.8;">
+      <strong style="color:#0b3a66;">資料來源</strong>　以上三項捐獻為授證 30 週年慶會典禮上實際進行之公益專案，所有捐獻金額與獅友芳名均依現場儀式公告紀錄。完整捐獻明細請參閱本會 30 週年紀念特刊 P49〈社會服務〉專章。
+    </div>
+  </div>
+</section>
+
+<style>
+  @media(max-width:980px){
+    section[style*="RECENT GIVING"] > div > div:nth-child(2) { grid-template-columns: 1fr 1fr !important; }
+  }
+  @media(max-width:680px){
+    section[style*="RECENT GIVING"] > div > div:nth-child(2) { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<!-- Sister & Sponsored Clubs -->
+<section class="clubs">
+  <div class="clubs__inner">
+    <div class="clubs__head">
+      <div class="clubs__kicker">PARTNER CLUBS · 友會網絡</div>
+      <h2 class="clubs__title">我們的獅誼脈絡</h2>
+      <div class="clubs__sub">輔導會 · 國際姊妹會 · 輔導推薦成立之會</div>
+    </div>
+
+    <div class="clubs__grid">
+      <div class="club-card">
+        <div class="club-card__type">SPONSORED BY · 輔導會</div>
+        <div class="club-card__name">中央獅子會</div>
+        <div class="club-card__name-en">CHUNG-YANG LIONS CLUB</div>
+        <div class="club-card__row"><span>授證日期</span><span>1991.07.14</span></div>
+        <div class="club-card__row"><span>關係</span><span>本會輔導會</span></div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-card__type">SISTER CLUB · 國際姊妹會</div>
+        <div class="club-card__name">釜山新羅獅子會</div>
+        <div class="club-card__name-en">PUSAN SILLA LIONS CLUB · KOREA</div>
+        <div class="club-card__row"><span>結盟日期</span><span>1993.06.27</span></div>
+        <div class="club-card__row"><span>所在</span><span>大韓民國 釜山</span></div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-card__type">SPONSORED · 輔導推薦</div>
+        <div class="club-card__name">忠孝獅子會</div>
+        <div class="club-card__name-en">CHUNG-HSIAO LIONS CLUB</div>
+        <div class="club-card__row"><span>成立日期</span><span>1994.03.16</span></div>
+        <div class="club-card__row"><span>導獅</span><span>李元吉前總監</span></div>
+      </div>
+
+      <div class="club-card">
+        <div class="club-card__type">SPONSORED · 輔導推薦</div>
+        <div class="club-card__name">港都獅子會</div>
+        <div class="club-card__name-en">HARBOR-CITY LIONS CLUB</div>
+        <div class="club-card__row"><span>成立日期</span><span>1994.04.08</span></div>
+        <div class="club-card__row"><span>導獅</span><span>陳建宏前總監</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Verifiable stats -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stats__kicker">SINCE 1991 · 三十五年來</div>
+    <h2 class="stats__title">海洋獅子會的服務軌跡</h2>
+
+    <div class="stats__grid">
+      <div class="stat">
+        <div class="stat__num">35<small>年</small></div>
+        <div class="stat__lbl">自 1991 年授證以來<br>持續服務基隆社區</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">35<small>屆</small></div>
+        <div class="stat__lbl">現任理事長張眾佳<br>2025–2026 為現任屆別</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">2<small>會</small></div>
+        <div class="stat__lbl">輔導推薦成立<br>忠孝獅子會、港都獅子會</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">1<small>姊</small></div>
+        <div class="stat__lbl">國際姊妹會締盟<br>韓國釜山新羅獅子會</div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>關於詳細數據</strong>　本會每屆由理監事會審議年度公益捐獻、活動場次、獎助學金及 LCIF 基金捐獻明細。完整年度成果報告由秘書處彙整，敬請洽會務聯絡人索取最新版本。
+    </div>
+  </div>
+</section>
+
+<footer style="background:#08355e; color:rgba(255,255,255,.7); padding: 40px 32px; text-align:center; font-size:13px; letter-spacing: .12em;">
+  © 國際獅子會 300A5 區　基隆海洋獅子會　Keelung Ocean Lions Club
+  <div style="margin-top:8px; font-size:11px; color:rgba(255,255,255,.4);">資料來源：30 週年紀念特刊《海洋獅子會簡介》《輔導推薦》《海洋榮耀》</div>
+</footer>
+
+</body>
+</html>
