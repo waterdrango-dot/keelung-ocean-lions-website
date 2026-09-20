@@ -56,14 +56,19 @@ python3 -m http.server 8000
 
 ## 更換正式網域
 
-SEO 標記中的網址目前設為 `https://keelung-ocean-lions.netlify.app`。
-若日後改用自訂網域，執行以下指令一次換掉全站：
+正式網址為 `https://keelung-ocean-lions.netlify.app`，
+同時寫在各頁 SEO 標記、`robots.txt`、`sitemap.xml` 與 `admin/config.yml`
+（CMS 的 `site_url` / `display_url`）。
+
+若日後改用自訂網域，執行以下指令一次換掉全部：
 
 ```bash
 OLD="https://keelung-ocean-lions.netlify.app"
 NEW="https://你的新網域"
-sed -i "s|$OLD|$NEW|g" *.html robots.txt sitemap.xml
+sed -i "s|$OLD|$NEW|g" *.html robots.txt sitemap.xml admin/config.yml
 ```
+
+漏掉 `admin/config.yml` 會讓後台的「檢視網站」連結指向舊網址。
 
 ## 維護注意事項
 
