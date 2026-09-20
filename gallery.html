@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活動花絮 · 基隆海洋獅子會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  body { background:#fbf7f0; }
+
+  /* Hero */
+  .g-hero {
+    background: linear-gradient(180deg, #08355e 0%, #0b5394 100%);
+    color:#fff; padding: 110px 32px 70px; text-align:center;
+    position: relative; overflow:hidden;
+  }
+  .g-hero::before {
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 25% 20%, rgba(212,175,55,.18), transparent 50%),
+      radial-gradient(circle at 75% 80%, rgba(255,255,255,.06), transparent 60%);
+  }
+  .g-hero__inner { position:relative; max-width: 900px; margin: 0 auto; }
+  .g-hero__kicker { font-family: var(--font-en); font-size:13px; letter-spacing:.42em; color:#d4af37; font-weight:600; margin-bottom: 24px; }
+  .g-hero h1 { font-family: var(--font-serif); font-size: clamp(44px, 5.5vw, 64px); font-weight:900; margin: 0 0 20px; letter-spacing:.04em; line-height: 1.1; }
+  .g-hero p { font-size: 16px; line-height: 2; color: rgba(255,255,255,.85); max-width: 640px; margin: 0 auto; }
+
+  /* Tabs */
+  .g-tabs-wrap {
+    background: #fff; border-bottom: 1px solid #e8d9b8; position: sticky; top: 0; z-index: 10;
+    box-shadow: 0 4px 12px -8px rgba(8,53,94,.15);
+  }
+  .g-tabs {
+    max-width: 1280px; margin: 0 auto; padding: 0 32px;
+    display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+  }
+  .g-tabs::-webkit-scrollbar { display: none; }
+  .g-tab {
+    padding: 18px 20px; flex-shrink: 0;
+    background: none; border: none;
+    font-family: var(--font-zh); font-size: 14px; color: #5a6a7e; font-weight: 500;
+    cursor: pointer; transition: all .25s ease;
+    border-bottom: 2px solid transparent;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .g-tab:hover { color: #0b3a66; }
+  .g-tab.is-active { color: #0b3a66; border-bottom-color: #d4af37; font-weight: 700; }
+  .g-tab__cnt {
+    display: inline-block; margin-left: 6px;
+    font-family: var(--font-en); font-size: 11px; color: #b8941f;
+    background: #fbf7f0; padding: 2px 7px; border-radius: 10px;
+    letter-spacing: .08em;
+  }
+  .g-tab.is-active .g-tab__cnt { background: #d4af37; color: #fff; }
+
+  /* Section header */
+  .g-section { padding: 64px 32px; max-width: 1280px; margin: 0 auto; }
+  .g-shead { margin-bottom: 40px; display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .g-shead__l h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 900; color:#0b3a66; margin: 0 0 8px; letter-spacing: .04em; }
+  .g-shead__l .sub { font-family: var(--font-en); font-size: 12px; letter-spacing:.32em; color:#9b7d2e; font-weight:600; }
+  .g-shead__r { font-size: 13px; color: #7a6a4a; }
+
+  /* Photo grid */
+  .g-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  }
+  @media(max-width:1080px){ .g-grid { grid-template-columns: repeat(3,1fr); } }
+  @media(max-width:760px){ .g-grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:480px){ .g-grid { grid-template-columns: 1fr; } }
+
+  .g-card {
+    aspect-ratio: 4/3;
+    background: linear-gradient(180deg, #fff 0%, #fbf7f0 100%);
+    border: 1px dashed #d9c8a3;
+    display: grid; place-items: center;
+    text-align: center;
+    position: relative;
+    transition: all .3s ease;
+    cursor: default;
+    overflow: hidden;
+  }
+  .g-card:hover {
+    border-color: #d4af37; border-style: solid;
+    box-shadow: 0 16px 32px -16px rgba(8,53,94,.2);
+    transform: translateY(-3px);
+  }
+  .g-card__pattern {
+    position: absolute; inset: 0; opacity: .12;
+    background-image:
+      linear-gradient(45deg, #0b5394 25%, transparent 25%),
+      linear-gradient(-45deg, #0b5394 25%, transparent 25%);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px;
+    pointer-events: none;
+  }
+  .g-card__inner {
+    position: relative; padding: 20px;
+  }
+  .g-card__icon {
+    width: 36px; height: 36px; margin: 0 auto 12px;
+    color: #d4af37; opacity: .8;
+  }
+  .g-card__t {
+    font-family: var(--font-serif); font-size: 16px; font-weight: 700; color: #0b3a66;
+    margin-bottom: 4px; letter-spacing: .04em;
+  }
+  /* Real photo card */
+  .g-photo {
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d9c8a3;
+    background:#08355e;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  .g-photo:hover {
+    border-color:#d4af37;
+    box-shadow: 0 16px 32px -16px rgba(8,53,94,.4);
+    transform: translateY(-3px);
+  }
+  .g-photo img {
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition: transform .6s ease;
+  }
+  .g-photo:hover img { transform: scale(1.05); }
+  .g-photo__cap {
+    position:absolute; left:0; right:0; bottom:0;
+    padding: 24px 16px 12px;
+    background: linear-gradient(0deg, rgba(8,53,94,.92) 0%, rgba(8,53,94,.4) 70%, transparent 100%);
+    color:#fff;
+    font-family: var(--font-serif);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing:.04em;
+    line-height:1.5;
+  }
+  .g-photo__src {
+    font-family: var(--font-en);
+    font-size:10px;
+    letter-spacing:.24em;
+    color:#d4af37;
+    font-weight:600;
+    margin-top:4px;
+    display:block;
+  }
+  .g-card__d {
+    font-size: 11px; color: #9b7d2e; letter-spacing: .2em; font-family: var(--font-en); font-weight: 600;
+  }
+  .g-card__pending {
+    position: absolute; top: 8px; right: 8px;
+    background: #fbf7f0; color: #9b7d2e;
+    font-size: 10px; letter-spacing: .12em; padding: 3px 8px;
+    border: 1px solid #d9c8a3; font-weight: 600;
+    border-radius: 2px;
+  }
+
+  /* Source pages reference */
+  .g-card__src {
+    font-family: var(--font-en); font-size: 10px; color: #b8941f;
+    letter-spacing: .14em; margin-top: 8px; opacity: .9;
+  }
+
+  /* Empty state for sections without items */
+  .g-empty {
+    grid-column: 1 / -1;
+    padding: 60px 32px;
+    background: #fff;
+    border: 1px dashed #d9c8a3;
+    text-align: center;
+    color: #7a6a4a;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Upload notice */
+  .upload-notice {
+    max-width: 1080px; margin: 24px auto 0; padding: 28px 32px;
+    background: linear-gradient(135deg, #fff 0%, #fbf7f0 100%);
+    border-left: 4px solid #d4af37;
+    display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  }
+  @media(max-width:680px){ .upload-notice { grid-template-columns: 1fr; text-align: center; } }
+  .un-icon {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: #d4af37; color:#fff; display: grid; place-items: center;
+    font-size: 22px; font-weight: 700;
+  }
+  .un-text strong { display: block; color:#0b3a66; font-size: 16px; margin-bottom: 4px; font-weight: 700; }
+  .un-text span { font-size: 13.5px; color: #5a6a7e; line-height: 1.7; }
+  .un-cta {
+    background: #0b5394; color: #fff; text-decoration: none;
+    padding: 12px 24px; font-size: 13px; letter-spacing: .12em; font-weight: 600;
+    transition: background .25s ease;
+    border-radius: 2px; white-space: nowrap;
+  }
+  .un-cta:hover { background: #0b3a66; }
+
+  /* Page sections separator */
+  .g-divider { height: 1px; background: #e8d9b8; max-width: 1280px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a href="index.html" class="site-nav__brand">
+      <span class="site-nav__brand-zh">基隆海洋獅子會</span>
+      <span class="site-nav__brand-en">KEELUNG OCEAN LIONS CLUB</span>
+    </a>
+    <div class="site-nav__links">
+      <a href="index.html">首頁</a>
+      <a href="about.html">認識本會</a>
+      <a href="history.html">會史紀要</a>
+      <a href="presidents.html">歷屆會長</a>
+      <a href="service.html">公益服務</a>
+      <a href="gallery.html" class="active">活動花絮</a>
+      <a href="contact.html">聯絡我們</a>
+    </div>
+  </div>
+</nav>
+
+<header class="g-hero">
+  <div class="g-hero__inner">
+    <div class="g-hero__kicker">PHOTO ARCHIVE · 活動花絮</div>
+    <h1>三十五年　鏡頭裡的海洋</h1>
+    <p>從授證大典到例會剪影、從淨灘行動到獅情獅誼，每一張影像皆為基隆海洋獅子會服務軌跡之見證。本影像檔案參照 30 週年紀念特刊體例分類整理。</p>
+  </div>
+</header>
+
+<!-- Notice -->
+<div style="background:#fff;">
+  <div class="upload-notice">
+    <div class="un-icon">!</div>
+    <div class="un-text">
+      <strong>歡迎獅友共建影像檔案</strong>
+      <span>本頁分章節展示 30 週年紀念特刊體例之歷年影像。若您手中保有早期授證、例會、姊妹會交流之相片或數位檔案，誠摯邀請與秘書處聯繫，共同完整本會歷史。</span>
+    </div>
+    <a class="un-cta" href="contact.html">聯絡秘書處 →</a>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="g-tabs-wrap">
+  <div class="g-tabs" id="tabs">
+    <button class="g-tab is-active" data-cat="all">全部分類</button>
+    <button class="g-tab" data-cat="01">全體合影</button>
+    <button class="g-tab" data-cat="02">進場合照</button>
+    <button class="g-tab" data-cat="11">授證紀念</button>
+    <button class="g-tab" data-cat="13">社會服務</button>
+    <button class="g-tab" data-cat="14">動態例會</button>
+    <button class="g-tab" data-cat="15">獅情獅誼</button>
+    <button class="g-tab" data-cat="17">締盟留影</button>
+    <button class="g-tab" data-cat="18">輔導推薦</button>
+  </div>
+</div>
+
+<div id="content"></div>
+
+<footer style="background:#08355e; color:rgba(255,255,255,.7); padding: 40px 32px; text-align:center; font-size:13px; letter-spacing: .12em; margin-top: 40px;">
+  © 國際獅子會 300A5 區　基隆海洋獅子會　Keelung Ocean Lions Club
+  <div style="margin-top:8px; font-size:11px; color:rgba(255,255,255,.4);">分類體例參照《30 週年紀念特刊》目錄章節</div>
+</footer>
+
+<script>
+// 影像章節結構 — 來自 30 週年紀念特刊目錄
+const SECTIONS = [
+  { id:"01", title:"全體合影",    en:"GROUP PORTRAITS",      page:"P02", desc:"全體獅友與夫人合影、屆別合影",
+    photos:[
+      {src:"assets/photos/group-1.jpg", cap:"授證 30 週年全體合影"},
+      {src:"assets/photos/group-2.jpg", cap:"理監事會 · 獅嫂團隊合照"},
+      {src:"assets/photos/group-3.jpg", cap:"獅兄理監事 · 全體合影"},
+      {src:"assets/photos/group-4.jpg", cap:"30 週年慶 · 大會合影"}
+    ] },
+  { id:"02", title:"進場合照",    en:"PROCESSION",           page:"P05", desc:"年會進場、會長交接進場剪影",
+    photos:[
+      {src:"assets/photos/president-entry-1.jpg", cap:"歷屆會長 · 年會進場"},
+      {src:"assets/photos/president-entry-2.jpg", cap:"獅兄獅嫂 · 進場儀式"},
+      {src:"assets/photos/president-entry-3.jpg", cap:"第 21 屆 陳坤田會長伉儷"},
+      {src:"assets/photos/president-entry-4.jpg", cap:"獅兄獅嫂 · 攜手進場"},
+      {src:"assets/photos/president-entry-5.jpg", cap:"第 30 屆 陳紹群會長伉儷 · 2020-2021"},
+      {src:"assets/photos/president-entry-6.jpg", cap:"年會進場 · 獅嫂代表"},
+      {src:"assets/photos/angel-1.jpg", cap:"親善天使 · 引導服務"},
+      {src:"assets/photos/angel-2.jpg", cap:"親善天使 · 典禮接待"}
+    ] },
+  { id:"04", title:"內閣組織",    en:"CABINET",              page:"P14", desc:"歷屆內閣組織架構",                    items:[] },
+  { id:"05", title:"會史沿革",    en:"CLUB HISTORY",         page:"P15", desc:"創會至今之大事紀錄影像",              items:[] },
+  { id:"06", title:"歷屆會長",    en:"PAST PRESIDENTS",      page:"P16", desc:"歷屆會長個人肖像（請見會長頁）",      items:[], link:"presidents.html" },
+  { id:"07", title:"獅嫂服飾",    en:"LIONESS DRESS",        page:"P21", desc:"歷年獅嫂典禮服飾留影",                items:[] },
+  { id:"08", title:"海洋榮耀",    en:"HALL OF HONOR",        page:"P24", desc:"獅兄歷任區職務紀念（請見會史頁）",    items:[], link:"history.html" },
+  { id:"09", title:"卓越傳承",    en:"EXCELLENCE",           page:"P28", desc:"卓越會員、卓越會長表揚紀錄",          items:[] },
+  { id:"10", title:"新獅永續",    en:"NEW MEMBERS",          page:"P33", desc:"新進獅友入會儀式",                    items:[] },
+  { id:"11", title:"授證紀念",    en:"CHARTER",              page:"P34", desc:"歷屆授證大典與週年慶典",              items:["1991.07.14 授證大典", "20 周年慶 (2011)", "25 周年慶 (2016)", "30 周年慶 (2021)"] },
+  { id:"13", title:"社會服務",    en:"PUBLIC SERVICE",       page:"P49", desc:"獎助學金、反毒、視力第一、社區再造",
+    photos:[
+      {src:"assets/photos/service-1.jpg", cap:"獎助學金頒發儀式"},
+      {src:"assets/photos/service-2.jpg", cap:"公益捐贈 · 弱勢關懷"},
+      {src:"assets/photos/service-3.jpg", cap:"社區公益服務"},
+      {src:"assets/photos/service-4.jpg", cap:"贊助基隆生命線協會 11 萬元"},
+      {src:"assets/photos/service-5.jpg", cap:"關懷雙溪上林老人 12 萬元"},
+      {src:"assets/photos/service-6.jpg", cap:"月眉國小 洪立杰同學獎勵金"}
+    ] },
+  { id:"14", title:"動態例會",    en:"REGULAR MEETINGS",     page:"P58", desc:"歷屆每月例會、聯合例會留影",
+    photos:[
+      {src:"assets/photos/agm-1.jpg", cap:"30 週年年會 · 典禮現場"},
+      {src:"assets/photos/agm-2.jpg", cap:"30 週年年會 · 致詞致謝"},
+      {src:"assets/photos/agm-3.jpg", cap:"30 週年年會 · 會務報告"}
+    ] },
+  { id:"15", title:"獅情獅誼",    en:"FELLOWSHIP",           page:"P64", desc:"獅友間情誼活動、聯誼餐會",            items:[] },
+  { id:"16", title:"海洋特色",    en:"OCEAN SPIRIT",         page:"P66", desc:"本會獨有特色活動",                    items:[] },
+  { id:"17", title:"締盟留影",    en:"SISTER CLUB",          page:"P68", desc:"與韓國釜山新羅獅子會締盟交流",         items:["1993.06.27 韓國釜山新羅締盟", "歷年姊妹會互訪"] },
+  { id:"18", title:"輔導推薦",    en:"SPONSORED CLUBS",      page:"P70", desc:"忠孝獅子會、港都獅子會成立",          items:["1994.03.16 忠孝獅子會成立", "1994.04.08 港都獅子會成立"] },
+  { id:"19", title:"會員名錄",    en:"MEMBER ROSTER",        page:"P72", desc:"歷屆會員大頭照與名錄",                items:[] },
+  { id:"20", title:"緬懷追思",    en:"IN MEMORIAM",          page:"P74", desc:"已故獅友追思紀念",                    items:[] },
+  { id:"21", title:"編輯委員",    en:"EDITORS",              page:"P75", desc:"30 周年紀念特刊編輯委員會合影",       items:[] }
+];
+
+const ICON = '<svg class="g-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-7 7"/></svg>';
+
+function renderSection(sec) {
+  let items;
+  if (sec.photos && sec.photos.length) {
+    items = sec.photos.map(p => `
+      <div class="g-photo">
+        <img src="${p.src}" alt="${p.cap}" loading="lazy">
+        <div class="g-photo__cap">${p.cap}<span class="g-photo__src">SOURCE · ${sec.page}</span></div>
+      </div>`).join("");
+  } else if (sec.items && sec.items.length) {
+    items = sec.items.map(it => `
+      <div class="g-card">
+        <div class="g-card__pattern"></div>
+        <div class="g-card__pending">紙本待掃描</div>
+        <div class="g-card__inner">
+          ${ICON}
+          <div class="g-card__t">${it}</div>
+          <div class="g-card__src">${sec.page}</div>
+        </div>
+      </div>`).join("");
+  } else {
+    items = `<div class="g-empty">本章節影像陸續上架中，歡迎獅友與會友提供珍貴歷史影像，共同充實本會檔案。</div>`;
+  }
+
+  const linkBtn = sec.link
+    ? `<a href="${sec.link}" style="font-size:13px;color:#0b5394;text-decoration:none;font-weight:600;letter-spacing:.08em;">前往專頁 →</a>`
+    : `<span>特刊頁碼 · ${sec.page}</span>`;
+
+  return `
+    <section class="g-section" data-cat="${sec.id}">
+      <div class="g-shead">
+        <div class="g-shead__l">
+          <div class="sub">CHAPTER ${sec.id} · ${sec.en}</div>
+          <h2>${sec.title}</h2>
+          <div style="font-size:14px;color:#5a6a7e;margin-top:6px;">${sec.desc}</div>
+        </div>
+        <div class="g-shead__r">${linkBtn}</div>
+      </div>
+      <div class="g-grid">${items}</div>
+    </section>
+    <div class="g-divider"></div>
+  `;
+}
+
+function render(cat) {
+  const list = cat === "all" ? SECTIONS : SECTIONS.filter(s => s.id === cat);
+  document.getElementById("content").innerHTML = list.map(renderSection).join("");
+}
+
+document.querySelectorAll(".g-tab").forEach(t => {
+  t.addEventListener("click", () => {
+    document.querySelectorAll(".g-tab").forEach(x => x.classList.remove("is-active"));
+    t.classList.add("is-active");
+    render(t.dataset.cat);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+render("all");
+</script>
+</body>
+</html>

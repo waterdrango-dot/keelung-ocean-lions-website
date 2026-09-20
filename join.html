@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加入我們 · 基隆海洋獅子會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .why-grid { display:grid; grid-template-columns: repeat(4,1fr); gap: var(--s-5); }
+  @media(max-width:880px){ .why-grid { grid-template-columns: 1fr 1fr; } }
+  @media(max-width:560px){ .why-grid { grid-template-columns: 1fr; } }
+  .why-card {
+    background: white; border: 1px solid var(--line); padding: var(--s-6) var(--s-5);
+    transition: all .35s var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .why-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--lion-gold);
+    box-shadow: 0 20px 40px -20px rgba(11,83,148,0.3);
+  }
+  .why-card__num {
+    font-family: var(--font-en); font-size: 12px;
+    color: var(--lion-gold); letter-spacing: 0.24em; font-weight: 700;
+    margin-bottom: var(--s-4);
+  }
+  .why-card__icon { width: 48px; height: 48px; color: var(--ocean-deep); margin-bottom: var(--s-4); }
+  .why-card h3 { font-size: 18px; color: var(--sea-ink); }
+  .why-card p { font-size: 14px; color: var(--ink-700); line-height: 1.7; }
+
+  /* Journey */
+  .journey {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    position: relative;
+  }
+  @media(max-width:880px){ .journey { grid-template-columns: 1fr; gap: var(--s-5); } }
+  .journey-step {
+    text-align: center; padding: var(--s-5) var(--s-4);
+    position: relative;
+  }
+  .journey-step:not(:last-child)::after {
+    content: ""; position: absolute;
+    top: 60px; right: -2px; width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--ocean-deep), rgba(11,83,148,0.2));
+    z-index: 0;
+  }
+  @media(max-width:880px){ .journey-step::after { display: none; } }
+  .journey-step__num {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: white; border: 2px solid var(--ocean-deep);
+    color: var(--ocean-deep);
+    font-family: var(--font-en); font-size: 28px; font-weight: 700;
+    display: grid; place-items: center;
+    margin: 0 auto var(--s-4);
+    position: relative; z-index: 1;
+    transition: all .3s var(--ease);
+  }
+  .journey-step:hover .journey-step__num {
+    background: var(--lion-gold);
+    border-color: var(--lion-gold);
+    color: white;
+    transform: scale(1.05);
+  }
+  .journey-step h4 { font-size: 18px; color: var(--sea-ink); margin-bottom: 6px; }
+  .journey-step p { font-size: 13px; color: var(--ink-500); line-height: 1.6; }
+
+  /* FAQ */
+  .faq { max-width: 820px; margin: 0 auto; }
+  .faq-item {
+    border: 1px solid var(--line); background: white;
+    margin-bottom: var(--s-3);
+    transition: border-color .25s;
+  }
+  .faq-item.is-open { border-color: var(--lion-gold); }
+  .faq-q {
+    width: 100%; text-align: left; padding: var(--s-4) var(--s-5);
+    font-size: 16px; font-weight: 600; color: var(--sea-ink);
+    cursor: pointer; background: none; border: none;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-zh);
+  }
+  .faq-toggle {
+    width: 28px; height: 28px;
+    border: 1px solid var(--line); border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--ocean-deep);
+    transition: transform .3s var(--ease);
+    flex-shrink: 0;
+  }
+  .faq-item.is-open .faq-toggle { transform: rotate(45deg); border-color: var(--lion-gold); color: var(--lion-gold); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .4s var(--ease);
+  }
+  .faq-item.is-open .faq-a { max-height: 400px; }
+  .faq-a-inner {
+    padding: 0 var(--s-5) var(--s-5);
+    font-size: 15px; color: var(--ink-700); line-height: 1.85;
+    border-top: 1px solid var(--line);
+    padding-top: var(--s-4);
+  }
+
+  /* Form */
+  .form-section {
+    display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7);
+  }
+  @media(max-width:880px){ .form-section { grid-template-columns: 1fr; } }
+  .form-card {
+    background: white; padding: var(--s-7);
+    border: 1px solid var(--line); border-radius: 4px;
+  }
+  .form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4);
+  }
+  @media(max-width:560px){ .form-row { grid-template-columns: 1fr; } }
+
+  .trust {
+    display:grid; gap: var(--s-5);
+  }
+  .testimonial {
+    background: var(--sand-gold); border-left: 3px solid var(--lion-gold);
+    padding: var(--s-5);
+    font-style: italic;
+    color: var(--ink-700);
+    line-height: 1.85;
+  }
+  .testimonial cite {
+    display: block; margin-top: var(--s-3);
+    font-style: normal;
+    font-weight: 600; color: var(--sea-ink);
+    font-size: 14px;
+  }
+  .testimonial cite small { display:block; color: var(--ink-500); font-weight: 400; margin-top: 2px; }
+
+  .lcia-badge {
+    display:flex; gap: var(--s-4); align-items:center;
+    padding: var(--s-5); border: 1px solid var(--line);
+    background: white;
+  }
+  .lcia-badge__mark {
+    width: 64px; height: 64px;
+    background: var(--ocean-deep);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: white; font-family: var(--font-serif); font-size: 28px; font-weight: 700;
+    border: 2px solid var(--lion-gold);
+    flex-shrink: 0;
+  }
+  .lcia-badge__text {
+    font-size: 13px; color: var(--ink-700); line-height: 1.6;
+  }
+  .lcia-badge__text strong { display: block; color: var(--sea-ink); font-size: 14px; }
+</style>
+</head>
+<body data-page="join">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>JOIN US</span></div>
+    <span class="eyebrow on-dark">加入我們 · JOIN US</span>
+    <h1>成為這片海洋裡的<br>下一道浪花</h1>
+    <p class="lede">基隆海洋獅子會誠摯邀請認同「服務先於己」之企業領袖共同投身公益。<br>三十年來，我們等待著每一位願意為社會奉獻的您。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">加入理由 · WHY JOIN</span>
+      <h2>為什麼選擇基隆海洋獅子會</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card__num">01</div>
+        <svg class="why-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="18" r="6"/><path d="M12 38 Q12 26 24 26 Q36 26 36 38"/></svg>
+        <h3>影響力的延伸</h3>
+        <p>透過國際獅子會 300A5 區與全球 140 萬獅友連結，您的善意能跨越國境，產生真正的影響力。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">02</div>
+        <svg class="why-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="18"/><path d="M16 24 L22 30 L34 18"/></svg>
+        <h3>透明問責的信任</h3>
+        <p>96.4% 資金直達受助者的承諾，讓您每一筆捐獻都看得見、信得過。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">03</div>
+        <svg class="why-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 36 L8 18 L24 8 L40 18 L40 36 Z"/><path d="M18 36 L18 26 L30 26 L30 36"/></svg>
+        <h3>志同道合的人脈</h3>
+        <p>與企業領袖、專業人士、各界菁英共聚一堂，建立深厚而值得信賴的長期友誼。</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">04</div>
+        <svg class="why-card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="24,6 30,18 42,18 32,28 36,42 24,34 12,42 16,28 6,18 18,18"/></svg>
+        <h3>仁千棒榮譽機會</h3>
+        <p>達成 LCIF 仁千棒大使資格，於我們的「公益大使榮譽牆」上留下您的名字與故事。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">會員旅程 · YOUR JOURNEY</span>
+      <h2>四個步驟 · 加入基隆海洋獅子會</h2>
+    </div>
+    <div class="journey">
+      <div class="journey-step">
+        <div class="journey-step__num">01</div>
+        <h4>初步詢問</h4>
+        <p>填寫線上諮詢表單，或透過 LINE OA 聯絡會務秘書，了解基隆海洋獅子會。</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step__num">02</div>
+        <h4>會員推薦</h4>
+        <p>由現任會員推薦並陪同參與兩次例會，與會員們深入交流。</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step__num">03</div>
+        <h4>入會儀式</h4>
+        <p>經理事會審議通過後，於下次月例會舉行正式入會儀式，配戴會員徽章。</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-step__num">04</div>
+        <h4>公益大使</h4>
+        <p>定期參與公益活動，逐步累積服務時數與捐獻，邁向 LCIF 仁千棒之路。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">常見問題 · FAQ</span>
+      <h2>關於入會 · 您可能想了解</h2>
+    </div>
+    <div class="faq" id="faq">
+      <div class="faq-item">
+        <button class="faq-q">入會是否有資格條件？<span class="faq-toggle">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">我們歡迎認同「服務先於己」精神之企業領袖、專業人士及各界菁英。理事會將綜合評估申請人之公益熱忱、服務承諾及人格特質。我們相信，公益不分職業——只要您願意為社會付出，基隆海洋獅子會即是您的家。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">會費及捐獻金額如何？<span class="faq-toggle">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">年度會費為新臺幣 36,000 元，其中包含 LCIF 國際基金、區會行政、會所維運及月例會餐費。公益捐獻則為自由心意，不設下限。會員若達到 USD $1,000 個人捐獻，將獲頒「仁千棒勳章」，登錄於本會公益大使榮譽牆。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">每月需投入多少時間？<span class="faq-toggle">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">月例會每月一次，每次約 2 小時。年度公益服務活動建議參與至少 6 場次。其他自願性活動如自強旅行、慈善晚宴、淨灘行動等，皆視個人時間彈性安排。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">沒有人推薦也可以申請嗎？<span class="faq-toggle">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">可以。請先填寫本頁諮詢表單，會務秘書將安排您與我們的會員聯絡委員會主席進行初次諮詢，並安排您參與兩次例會。經評估後，將指派合適之現任會員擔任您的推薦人。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">獅嫂是否需要正式入會？<span class="faq-toggle">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">獅嫂為基隆海洋獅子會之重要夥伴。雖非正式會員，但我們鼓勵獅嫂積極參與年度活動，並設有「獅嫂聯誼會」定期舉辦藝文、慈善活動。基隆海洋獅子會自始即是「家庭式」獅子會，邀請獅嫂共同投入是我們的重要文化。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="form-section">
+      <div>
+        <span class="eyebrow">入會諮詢 · INQUIRY</span>
+        <h2>填寫表單 · 我們將於 3 日內回覆</h2>
+        <p class="lede" style="margin-top: var(--s-4);">所有資料僅供本會內部聯繫使用，絕不外洩。會務秘書將安排專人聯繫您。</p>
+
+        <div class="trust mt-7">
+          <div class="lcia-badge">
+            <div class="lcia-badge__mark">L</div>
+            <div class="lcia-badge__text">
+              <strong>Lions Clubs International · 300A5</strong>
+              基隆海洋獅子會為國際獅子會 300A5 區之正式登錄分會
+            </div>
+          </div>
+          <blockquote class="testimonial">
+            「我們這個會就是一群志同道合的朋友，因為國際獅子會的精神結合，三十多年來持續為基隆地方做服務。每一位會員所給予的，將會超越自己付出的。」
+            <cite>— 摘自本會公開出版資料<small>呈現本會成立宗旨與服務精神</small></cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            本會創會 35 年，廣納各業先進與夥伴。歡迎不分性別、職業、年資的朋友一同投入：「服務先於己」是我們長年共持的信念。
+            <cite>— 基隆海洋獅子會<small>更多會員親身分享請洽會所</small></cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <form class="form-card" onsubmit="event.preventDefault(); alert('感謝您的諮詢！會務秘書將於 3 日內聯繫您。');">
+        <h3 style="margin-bottom: var(--s-5);">線上諮詢表</h3>
+
+        <div class="form-row">
+          <div class="field">
+            <label>姓名 <span style="color: var(--lion-gold);">*</span></label>
+            <input type="text" required placeholder="王小明">
+          </div>
+          <div class="field">
+            <label>聯絡電話 <span style="color: var(--lion-gold);">*</span></label>
+            <input type="tel" required placeholder="0912-345-678">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Email <span style="color: var(--lion-gold);">*</span></label>
+          <input type="email" required placeholder="your@email.com">
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>企業 / 職稱</label>
+            <input type="text" placeholder="OO 公司 / 執行長">
+          </div>
+          <div class="field">
+            <label>推薦人 (若有)</label>
+            <input type="text" placeholder="推薦人姓名">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>留言 / 您想了解的事項</label>
+          <textarea placeholder="您可以告訴我們：您為何想加入基隆海洋獅子會？您最關心的公益議題？..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">送出諮詢 · 開啟海洋之旅 →</button>
+        <p style="font-size: 12px; color: var(--ink-500); margin-top: var(--s-3); text-align:center;">送出後，會務秘書將於 3 個工作日內透過 Email 或電話與您聯繫。</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/chrome.js"></script>
+<script>
+document.querySelectorAll(".faq-q").forEach(q => {
+  q.addEventListener("click", () => {
+    q.parentElement.classList.toggle("is-open");
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基隆海洋獅子會 Keelung Ocean Lions Club · 三十年公益未曾退潮</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    min-height: 86vh;
+    color: white;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+  }
+  .hero__bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(5,42,79,0.78) 0%, rgba(11,83,148,0.65) 50%, rgba(10,74,133,0.85) 100%),
+      url("assets/photos/keelung-ocean.jpg") center 40% / cover no-repeat;
+    z-index: -2;
+  }
+  .hero__bg::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 50% at 70% 30%, rgba(180,95,6,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .hero__photo-strip {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 32vh; max-height: 280px;
+    z-index: -1;
+    opacity: 0.32;
+    mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 50%, black 80%, transparent 100%);
+    overflow: hidden;
+  }
+  .hero__photo-strip img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center 35%;
+    filter: grayscale(0.2) contrast(1.05) brightness(0.9);
+  }
+  .hero__waves {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
+  .hero__waves svg { width: 100%; height: 100%; display: block; }
+
+  .hero__sun {
+    position: absolute;
+    top: 18%;
+    right: 12%;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,160,21,0.35) 0%, rgba(212,160,21,0.08) 50%, transparent 70%);
+    filter: blur(20px);
+    z-index: -1;
+  }
+
+  .hero__inner {
+    position: relative;
+    text-align: center;
+    padding: var(--s-9) var(--s-5);
+    max-width: 1100px;
+  }
+
+  .hero__eyebrow {
+    font-family: var(--font-en);
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: var(--lion-gold-soft);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: var(--s-5);
+  }
+
+  .hero__eyebrow::before, .hero__eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 32px; height: 1px;
+    background: var(--lion-gold-soft);
+    vertical-align: middle;
+    margin: 0 14px;
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 5.5vw, 64px);
+    color: white;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-family: var(--font-serif);
+    margin-bottom: var(--s-6);
+  }
+
+  .hero h1 .accent {
+    color: var(--lion-gold-soft);
+    font-weight: 700;
+  }
+
+  .hero__sub {
+    font-size: clamp(17px, 1.6vw, 22px);
+    color: rgba(255,255,255,0.86);
+    margin-bottom: var(--s-8);
+    letter-spacing: 0.16em;
+    font-weight: 300;
+  }
+
+  .hero__sub strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  .hero__ctas {
+    display: flex;
+    gap: var(--s-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero__scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.55);
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .hero__scroll svg { display: block; margin: 8px auto 0; animation: bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 0%,100% {transform: translateY(0);} 50% {transform: translateY(6px);} }
+
+  /* Floating gold chip on hero */
+  .hero__chip {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212,160,21,0.45);
+    color: var(--lion-gold-soft);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-family: var(--font-en);
+    white-space: nowrap;
+  }
+  @media (max-width: 1024px) {
+    .hero__chip { display: none; }
+  }
+
+  /* ===== Stats strip ===== */
+  .stats-strip {
+    background: var(--sea-ink);
+    color: white;
+  }
+
+  /* ===== About preview ===== */
+  .about-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-9);
+    align-items: center;
+  }
+  .about-preview__img {
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #0B5394 0%, #073763 100%);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-preview__img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(7,55,99,0.55) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .about-preview__caption {
+    position: absolute;
+    bottom: 16px; left: 20px;
+    color: rgba(255,255,255,0.92);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+  .about-preview__img svg { width: 100%; height: 100%; opacity: 0.4; }
+
+  .about-preview__text h2 {
+    color: var(--sea-ink);
+  }
+  .about-preview__text .lede { margin-bottom: var(--s-5); }
+  .about-preview__pillars {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--s-4);
+    margin: var(--s-5) 0 var(--s-6);
+  }
+  .pillar {
+    text-align: center;
+    padding: var(--s-4) var(--s-3);
+    border-top: 1px solid var(--line);
+  }
+  .pillar__zh {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ocean-deep);
+    letter-spacing: 0.1em;
+  }
+  .pillar__en {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--lion-gold);
+    margin-top: 4px;
+  }
+
+  @media (max-width: 880px) {
+    .about-preview { grid-template-columns: 1fr; gap: var(--s-6); }
+  }
+
+  /* ===== Lions Mottoes (orange banners from PPT template) ===== */
+  .mottoes {
+    background: linear-gradient(180deg, #fbf6ec 0%, #f6efdf 100%);
+    border-top: 1px solid rgba(11,83,148,0.08);
+    border-bottom: 1px solid rgba(11,83,148,0.08);
+  }
+  .mottoes__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-5);
+    align-items: end;
+    margin-top: var(--s-7);
+  }
+  @media (max-width: 800px) {
+    .mottoes__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .motto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-3);
+  }
+  .motto img {
+    width: auto;
+    max-width: 100%;
+    height: 280px;
+    display: block;
+    filter: drop-shadow(0 12px 24px rgba(7,55,99,0.18));
+    transition: transform 0.4s ease;
+  }
+  .motto:hover img { transform: translateY(-6px); }
+  .motto__caption {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--sea-ink);
+    opacity: 0.65;
+  }
+
+  /* ===== Ambassador wall preview ===== */
+  .amb-wall {
+    background: var(--sand-gold);
+    position: relative;
+    overflow: hidden;
+  }
+  .amb-wall::before {
+    content: "DISTRICT GOVERNOR · REGION CHAIRPERSON · ZONE CHAIRPERSON · CONVENTION CHAIR · ";
+    position: absolute;
+    top: 16px; left: 0; right: 0;
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: rgba(180,95,6,0.18);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .amb-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-4);
+    margin-top: var(--s-7);
+  }
+  .amb-card {
+    background: linear-gradient(180deg, #fff9e8 0%, #f5e6b0 100%);
+    border: 1px solid #d4a015;
+    padding: var(--s-5);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .amb-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -16px rgba(180,95,6,0.4);
+  }
+  .amb-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.6) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform .8s ease;
+  }
+  .amb-card:hover::before { transform: translateX(100%); }
+
+  .amb-card__star {
+    position: absolute;
+    top: 14px; right: 14px;
+    color: #B45F06;
+  }
+  .amb-card__photo {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #073763, #0B5394);
+    display: grid; place-items: center;
+    color: var(--lion-gold-soft);
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: var(--s-3);
+    border: 2px solid #d4a015;
+  }
+  .amb-card__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--sea-ink);
+    margin-bottom: 4px;
+  }
+  .amb-card__meta {
+    font-size: 12px;
+    color: var(--ink-500);
+    font-family: var(--font-en);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--s-3);
+  }
+  .amb-card__quote {
+    font-size: 13px;
+    color: var(--ink-700);
+    line-height: 1.7;
+    border-top: 1px solid rgba(180,95,6,0.25);
+    padding-top: var(--s-3);
+    font-style: italic;
+  }
+
+  @media (max-width: 880px) {
+    .amb-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== Activities grid ===== */
+  .acts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--s-5);
+  }
+  .act-card__img {
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #0B5394, #073763);
+    position: relative;
+    overflow: hidden;
+  }
+  .act-card__img svg { position: absolute; inset: 0; opacity: 0.35; }
+  .act-card__img--photo img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .act-card__img--photo::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: var(--tint, linear-gradient(135deg, rgba(11,83,148,0.5), rgba(7,55,99,0.6)));
+    pointer-events: none;
+  }
+  .act-card__img--photo .act-card__date { z-index: 2; }
+  .act-card__date {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--lion-gold);
+    color: white;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-family: var(--font-en);
+    letter-spacing: 0.16em;
+  }
+  .act-card__body { padding: var(--s-5); }
+  .act-card__cat {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    color: var(--lion-gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .act-card__title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--sea-ink);
+    line-height: 1.4;
+    margin-bottom: var(--s-3);
+  }
+  .act-card__excerpt {
+    font-size: 14px;
+    color: var(--ink-500);
+    line-height: 1.7;
+  }
+  @media (max-width: 880px) {
+    .acts-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== Presidents carousel (timeline) ===== */
+  .pres-timeline {
+    background: linear-gradient(180deg, #073763 0%, #052a4f 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .pres-timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212,160,21,0.4) 20%, rgba(212,160,21,0.4) 80%, transparent);
+  }
+  .pres-rail {
+    display: flex;
+    gap: var(--s-5);
+    overflow-x: auto;
+    padding: var(--s-7) var(--s-5) var(--s-5);
+    scroll-snap-type: x mandatory;
+  }
+  .pres-rail::-webkit-scrollbar { height: 4px; }
+  .pres-rail::-webkit-scrollbar-thumb { background: var(--lion-gold); }
+  .pres-rail::-webkit-scrollbar-track { background: rgba(255,255,255,0.08); }
+
+  .pres-card {
+    flex-shrink: 0;
+    width: 220px;
+    scroll-snap-align: start;
+    text-align: center;
+    cursor: pointer;
+  }
+  .pres-card__yr {
+    font-family: var(--font-en);
+    font-size: 13px;
+    color: var(--lion-gold-soft);
+    letter-spacing: 0.16em;
+    margin-bottom: var(--s-3);
+  }
+  .pres-card__node {
+    width: 18px; height: 18px;
+    border: 2px solid var(--lion-gold);
+    border-radius: 50%;
+    background: var(--sea-ink);
+    margin: 0 auto var(--s-3);
+    transition: all .25s var(--ease);
+  }
+  .pres-card:hover .pres-card__node {
+    background: var(--lion-gold);
+    transform: scale(1.3);
+  }
+  .pres-card__photo {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    margin: 0 auto var(--s-3);
+    background: linear-gradient(135deg, #0B5394, #073763);
+    display: grid; place-items: center;
+    color: var(--lion-gold-soft);
+    font-family: var(--font-serif);
+    font-size: 38px;
+    font-weight: 700;
+    border: 2px solid rgba(212,160,21,0.4);
+    transition: border-color .3s var(--ease);
+  }
+  .pres-card:hover .pres-card__photo { border-color: var(--lion-gold); }
+  .pres-card__term {
+    font-family: var(--font-en);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 4px;
+  }
+  .pres-card__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2px;
+  }
+  .pres-card__title {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ===== Section ornament: ring ===== */
+  .ring-orn {
+    width: 120px; height: 120px;
+    margin: 0 auto var(--s-5);
+    position: relative;
+  }
+</style>
+</head>
+<body data-page="home">
+
+<div id="site-nav"></div>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__sun"></div>
+  <div class="hero__waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 800" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="waveLine1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#d4a015" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="waveLine2" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#fff" stop-opacity="0.4"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,500 Q360,440 720,500 T1440,500" fill="none" stroke="url(#waveLine1)" stroke-width="1.5"/>
+      <path d="M0,540 Q360,490 720,540 T1440,540" fill="none" stroke="url(#waveLine2)" stroke-width="1"/>
+      <path d="M0,580 Q360,540 720,580 T1440,580" fill="none" stroke="url(#waveLine2)" stroke-width="1" opacity="0.7"/>
+      <path d="M0,620 Q360,590 720,620 T1440,620" fill="none" stroke="url(#waveLine2)" stroke-width="1" opacity="0.5"/>
+      <path d="M0,660 Q360,640 720,660 T1440,660" fill="none" stroke="url(#waveLine2)" stroke-width="1" opacity="0.3"/>
+      <!-- distant horizon -->
+      <line x1="0" y1="380" x2="1440" y2="380" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="hero__chip">CELEBRATING 36 YEARS · 1991 — 2027</div>
+
+  <!-- hero supporting photo strip -->
+  <div class="hero__photo-strip" aria-hidden="true">
+    <img src="assets/photos/group-2.jpg" alt="" />
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__eyebrow">基隆海洋獅子會 · OCEAN LIONS CLUB</div>
+    <h1>
+      在這片海洋裡，<br>
+      <span class="accent">每一聲獅吼</span>都成為他人的浪花
+    </h1>
+    <div class="hero__sub">
+      基隆海洋獅子會 — <strong>三十六年公益未曾退潮</strong>
+    </div>
+    <div class="hero__ctas">
+      <a href="join.html" class="btn btn--gold">加入我們 <span class="arrow">→</span></a>
+      <a href="service.html" class="btn btn--outline-white">了解公益足跡</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    SCROLL
+    <svg width="14" height="20" viewBox="0 0 14 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2 V18 M2 13 L7 18 L12 13"/></svg>
+  </div>
+</section>
+
+<!-- ============== 36TH TERM THEME ============== -->
+<section class="section" style="background:linear-gradient(180deg, #062542 0%, #08355e 100%); padding: 64px 0;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items:center; max-width:1100px; margin:0 auto;">
+      <div>
+        <div style="font-family:var(--font-en); font-size:11px; letter-spacing:0.28em; font-weight:700; color:var(--lion-gold-soft); margin-bottom:14px;">第 36 屆 · 36TH TERM · 2026 — 2027</div>
+        <div style="font-family:var(--font-serif); font-size:48px; font-weight:700; color:#fff; line-height:1.1; letter-spacing:0.04em;">江志偉<br><span style="font-size:14px; font-weight:400; color:var(--lion-gold-soft); letter-spacing:0.18em; font-family:var(--font-en);">PRESIDENT · CHIANG CHIH-WEI</span></div>
+        <div style="margin-top:18px; font-size:13px; color:rgba(255,255,255,0.6); letter-spacing:0.04em;">就任：中華民國 115 年 7 月 10 日</div>
+      </div>
+      <div style="border-left: 1px solid rgba(241,196,15,0.32); padding-left: 48px;">
+        <div style="font-family:var(--font-en); font-size:11px; letter-spacing:0.28em; font-weight:700; color:var(--lion-gold-soft); margin-bottom:14px;">本屆主軸 · ANNUAL THEME</div>
+        <h2 style="color:#fff; font-size:42px; line-height:1.25; margin:0 0 22px; letter-spacing:0.04em;">「為海洋盡力，<span style="color:var(--lion-gold);">服務無界限</span>」</h2>
+        <p style="color:rgba(255,255,255,0.82); font-size:16px; line-height:1.85; max-width:580px; margin:0 0 28px;">秉承國際獅子會「We Serve」之精神，以海洋之寬廣包容為心，深根基隆、服務社區。本屆全年共 26 次例會（隔週三晚間），推動<b style="color:#fff; font-weight:600;">中秋送愛 50 戶、冬令物資 30 戶、海岸淨灘、青銀共融</b>四大方向。</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px 12px;">
+          <span style="font-family:var(--font-en); font-size:11px; letter-spacing:0.18em; color:var(--lion-gold-soft); border:1px solid rgba(241,196,15,0.4); padding:6px 12px; font-weight:600;">26 例會 / 年</span>
+          <span style="font-family:var(--font-en); font-size:11px; letter-spacing:0.18em; color:var(--lion-gold-soft); border:1px solid rgba(241,196,15,0.4); padding:6px 12px; font-weight:600;">深化服務</span>
+          <span style="font-family:var(--font-en); font-size:11px; letter-spacing:0.18em; color:var(--lion-gold-soft); border:1px solid rgba(241,196,15,0.4); padding:6px 12px; font-weight:600;">強化會務</span>
+          <span style="font-family:var(--font-en); font-size:11px; letter-spacing:0.18em; color:var(--lion-gold-soft); border:1px solid rgba(241,196,15,0.4); padding:6px 12px; font-weight:600;">擴大連結</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STATS ============== -->
+<section class="stats-strip">
+  <div class="stats">
+    <div class="stats__item">
+      <span class="stats__num">35</span>
+      <span class="stats__label">YEARS OF SERVICE</span>
+      <span class="stats__zh">年公益未曾退潮</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num">36</span>
+      <span class="stats__label">PRESIDENTS</span>
+      <span class="stats__zh">屆會長一脈相承</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num">34<span style="font-size: 0.5em; vertical-align: super;">萬</span></span>
+      <span class="stats__label">30TH ANNIV. DONATIONS</span>
+      <span class="stats__zh">30 週年三項公益總額</span>
+    </div>
+    <div class="stats__item">
+      <span class="stats__num">300A5</span>
+      <span class="stats__label">DISTRICT</span>
+      <span class="stats__zh">國際獅子會分區</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT PREVIEW ============== -->
+<section class="section">
+  <div class="container">
+    <div class="about-preview">
+      <div class="about-preview__img">
+        <img src="assets/photos/group-1.jpg" alt="基隆海洋獅子會授證 30 週年合影 · 第 30-31 屆會長交接" style="width:100%; height:100%; object-fit:cover; object-position: center 40%; display:block;">
+        <div class="about-preview__caption">授證 30 週年合影 · 2021 年第 30-31 屆會長交接</div>
+      </div>
+      <div class="about-preview__text">
+        <span class="eyebrow">關於基隆海洋獅子會 · ABOUT US</span>
+        <h2>三十五年來，<br>我們以海洋為名，以服務為志</h2>
+        <p class="lede">
+          基隆海洋獅子會成立於 1991 年，由一群心繫公益的企業領袖共同創立，隸屬國際獅子會 300A5 區。三十餘年來，我們秉持「服務先於己 (We Serve)」之精神，深耕弱勢扶助、教育獎助、災難救助、健康促進等公益領域。
+        </p>
+        <p class="lede" style="font-size:16px;">
+          海洋之名，象徵著我們的視野——寬廣、深邃、流動不息。每一位會員都是這片海洋裡的浪花，匯聚成推動社會前行的力量。
+        </p>
+        <div class="about-preview__pillars">
+          <div class="pillar">
+            <div class="pillar__zh">寬廣</div>
+            <div class="pillar__en">Vastness</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__zh">深邃</div>
+            <div class="pillar__en">Depth</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__zh">流動</div>
+            <div class="pillar__en">Flow</div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn--outline-ocean">深入了解我們 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== LIONS FOUR MOTTOES ============== -->
+<section class="section mottoes">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">獅子會四大格言 · FOUR MOTTOES</span>
+      <h2>自由 · 智慧 · 我們的國家安全</h2>
+      <p class="section-title__sub">國際獅子會四大精神，鐫刻於每一面會旗、每一場例會。</p>
+    </div>
+    <div class="mottoes__grid">
+      <div class="motto">
+        <img src="assets/lions/motto-1-liberty-wisdom.png" alt="自由智慧">
+        <div class="motto__caption">LIBERTY · WISDOM</div>
+      </div>
+      <div class="motto">
+        <img src="assets/lions/motto-2-serve-society.png" alt="服務社會">
+        <div class="motto__caption">SERVE · SOCIETY</div>
+      </div>
+      <div class="motto">
+        <img src="assets/lions/motto-3-benefit-people.png" alt="造福人群">
+        <div class="motto__caption">BENEFIT · PEOPLE</div>
+      </div>
+      <div class="motto">
+        <img src="assets/lions/motto-4-national-security.png" alt="國家安全">
+        <div class="motto__caption">NATIONAL · SECURITY</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AMBASSADOR WALL PREVIEW ============== -->
+<section class="section amb-wall">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">海洋榮耀 · HALL OF HONOR</span>
+      <h2>服務區會 · 為光增輝</h2>
+      <p class="section-title__sub">本會獅兄歷任國際獅子會 300A5 區職務，為基隆獅界之光。</p>
+    </div>
+    <div class="amb-grid">
+      <article class="amb-card">
+        <svg class="amb-card__star" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg>
+        <div class="amb-card__photo">陳</div>
+        <div class="amb-card__name">陳建宏 前總監</div>
+        <div class="amb-card__meta">第 1 屆·創會會長</div>
+        <p class="amb-card__quote">2008–09 民國 97–98 年度國際獅子會 300A5 區總監，為本會最高榮耀。亦曾任第一分區主席、第一專區主席及區秘書長。</p>
+      </article>
+      <article class="amb-card">
+        <svg class="amb-card__star" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg>
+        <div class="amb-card__photo">李</div>
+        <div class="amb-card__name">李鴻欽</div>
+        <div class="amb-card__meta">第 11 屆會長</div>
+        <p class="amb-card__quote">2008–09 F 區事務長、2012–13 第一分區主席、2013–14 第一專區主席、2014–15 300A5 區年會主席。</p>
+      </article>
+      <article class="amb-card">
+        <svg class="amb-card__star" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15,9 22,9 17,14 19,22 12,17 5,22 7,14 2,9 9,9"/></svg>
+        <div class="amb-card__photo">簡</div>
+        <div class="amb-card__name">簡枝文</div>
+        <div class="amb-card__meta">第 31 屆會長</div>
+        <p class="amb-card__quote">2014–15 300A5 區東海岸獅訊總編輯、台灣總會中文版獅子會刊編輯。本會 30 週年紀念特刊總編輯。</p>
+      </article>
+    </div>
+    <div style="text-align:center; margin-top: var(--s-7);">
+      <a href="history.html" class="btn btn--outline-ocean">查看完整海洋榮耀名錄 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ACTIVITIES — 30週年紀實 ============== -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">30 週年紀實 · 30TH ANNIVERSARY</span>
+      <h2>授證 30 週年公益實踐</h2>
+      <p class="section-title__sub">第 30-31 屆會長交接慶典中，獅友合力捐獻完成的三項具名公益。</p>
+    </div>
+    <div class="acts-grid">
+      <article class="card act-card">
+        <div class="act-card__img act-card__img--photo" style="--tint: linear-gradient(135deg, rgba(11,83,148,0.45), rgba(7,55,99,0.55));">
+          <img src="assets/photos/service-1.jpg" alt="基隆海洋獅子會贈與基隆家扶中心 20 萬元社會服務基金" />
+          <div class="act-card__date">2021 . 07</div>
+        </div>
+        <div class="act-card__body">
+          <div class="act-card__cat">FAMILY WELFARE · 弱勢家庭</div>
+          <h3 class="act-card__title">贊助基隆家扶中心社會服務基金 20 萬元</h3>
+          <p class="act-card__excerpt">海洋會 2 萬 · 陳建宏 6 萬 · 李鴻欽 6 萬 · 賴聰福 2 萬 · 陳清源 2 萬 · 趙友欽 2 萬。</p>
+        </div>
+      </article>
+      <article class="card act-card">
+        <div class="act-card__img act-card__img--photo" style="--tint: linear-gradient(135deg, rgba(180,95,6,0.4), rgba(7,55,99,0.55));">
+          <img src="assets/photos/service-2.jpg" alt="基隆海洋獅子會贊助雙溪區上林社區關懷老人基金 12 萬元" />
+          <div class="act-card__date">2021 . 07</div>
+        </div>
+        <div class="act-card__body">
+          <div class="act-card__cat">ELDER CARE · 偏鄉長者</div>
+          <h3 class="act-card__title">贊助雙溪區上林社區關懷老人基金 12 萬元</h3>
+          <p class="act-card__excerpt">海洋會 2 萬 · 陳建宏 2 萬 · 李鴻欽 2 萬 · 劉慶璋 2 萬 · 陳坤田 2 萬 · 簡枝文 1 萬 · 賴聰福 1 萬。</p>
+        </div>
+      </article>
+      <article class="card act-card">
+        <div class="act-card__img act-card__img--photo" style="--tint: linear-gradient(135deg, rgba(11,83,148,0.4), rgba(212,160,21,0.5));">
+          <img src="assets/photos/service-3.jpg" alt="李鴻欽主席贊助月眉國小洪立杰獎勵金 2 萬元" />
+          <div class="act-card__date">2021 . 07</div>
+        </div>
+        <div class="act-card__body">
+          <div class="act-card__cat">EDUCATION · 學童獎助</div>
+          <h3 class="act-card__title">贊助月眉國小洪立杰同學獎勵金 2 萬元</h3>
+          <p class="act-card__excerpt">由本會理監事年會主席李鴻欽前會長親自贊助，授證於 30 週年慶典舞台。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRESIDENTS TIMELINE ============== -->
+<section class="pres-timeline section">
+  <div class="container">
+    <div class="section-title" style="color:white;">
+      <span class="eyebrow on-dark">會長傳承 · LEGACY</span>
+      <h2 style="color:white;">三十五屆會長 · 一脈相承</h2>
+      <p class="section-title__sub" style="color: rgba(255,255,255,0.65);">每一屆會長皆以個人之力推動公益，為下一任奠定深厚之基。</p>
+    </div>
+  </div>
+  <div class="pres-rail">
+    <article class="pres-card">
+      <div class="pres-card__yr">1991 — 1992</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">陳</div>
+      <div class="pres-card__term">第 1 屆 · CHARTER</div>
+      <div class="pres-card__name">陳建宏 創會會長</div>
+      <div class="pres-card__title">後任 300A5 區總監 (2008–09)</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">1995 — 1996</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">劉</div>
+      <div class="pres-card__term">第 5 屆</div>
+      <div class="pres-card__name">劉慶璋</div>
+      <div class="pres-card__title">本會 20 週年年會主席</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2001 — 2002</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">李</div>
+      <div class="pres-card__term">第 11 屆</div>
+      <div class="pres-card__name">李鴻欽</div>
+      <div class="pres-card__title">2014–15 300A5 區年會主席</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2004 — 2005</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">邱</div>
+      <div class="pres-card__term">第 14 屆</div>
+      <div class="pres-card__name">邱瑞義</div>
+      <div class="pres-card__title">本會 25 週年年會主席</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2011 — 2012</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">陳</div>
+      <div class="pres-card__term">第 21 屆</div>
+      <div class="pres-card__name">陳坤田</div>
+      <div class="pres-card__title">2018–19 第一分區主席</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2016 — 2017</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">簡</div>
+      <div class="pres-card__term">第 26 屆</div>
+      <div class="pres-card__name">簡國堂</div>
+      <div class="pres-card__title">2021–22 第一分區主席</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2021 — 2022</div>
+      <div class="pres-card__node"></div>
+      <div class="pres-card__photo">簡</div>
+      <div class="pres-card__term">第 31 屆</div>
+      <div class="pres-card__name">簡枝文</div>
+      <div class="pres-card__title">30 週年紀念特刊總編輯</div>
+    </article>
+    <article class="pres-card">
+      <div class="pres-card__yr">2025 — 2026</div>
+      <div class="pres-card__node" style="background: var(--lion-gold); border-color: var(--lion-gold-soft);"></div>
+      <div class="pres-card__photo" style="border-color: var(--lion-gold);">江</div>
+      <div class="pres-card__term" style="color: var(--lion-gold-soft);">第 36 屆 · 現任</div>
+      <div class="pres-card__name">江志偉</div>
+      <div class="pres-card__title">年度主題：為海洋盡力，服務無界限</div>
+    </article>
+  </div>
+  <div class="container" style="text-align:center; margin-top: var(--s-6);">
+    <a href="presidents.html" class="btn btn--outline-white">查看全部 36 屆會長 <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ============== JOIN CTA ============== -->
+<section class="section section--sand">
+  <div class="container" style="text-align:center;">
+    <span class="eyebrow">加入我們 · JOIN US</span>
+    <h2>成為這片海洋裡的下一道浪花</h2>
+    <p class="lede" style="margin: var(--s-4) auto var(--s-6); text-align:center;">
+      若您認同「服務先於己」之理念，並願與一群志同道合的企業領袖共同投身公益，<br>
+      歡迎您加入基隆海洋獅子會。
+    </p>
+    <div class="flex gap-4" style="justify-content:center; flex-wrap:wrap;">
+      <a href="join.html" class="btn btn--gold">立即諮詢入會 <span class="arrow">→</span></a>
+      <a href="contact.html" class="btn btn--outline-ocean">聯絡我們</a>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="assets/chrome.js"></script>
+</body>
+</html>

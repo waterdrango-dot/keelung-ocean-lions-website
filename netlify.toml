@@ -1,0 +1,19 @@
+# =================================================================
+# Netlify 部署設定 · 基隆海洋獅子會
+# =================================================================
+
+[build]
+  publish = "."
+
+# SPA 風格 fallback（保留現有頁面，不會被改寫）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# 後台不被搜尋引擎收錄
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

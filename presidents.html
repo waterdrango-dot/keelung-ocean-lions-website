@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歷屆會長 · 基隆海洋獅子會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .filter-bar {
+    display: flex; gap: var(--s-3); flex-wrap: wrap;
+    padding: var(--s-5) 0;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: var(--s-7);
+    align-items: center;
+  }
+  .filter-bar__label {
+    font-family: var(--font-en); font-size: 12px; letter-spacing: 0.2em;
+    color: var(--ink-500); text-transform: uppercase; margin-right: var(--s-3);
+  }
+  .filter-chip {
+    padding: 8px 18px; border: 1px solid var(--line); background: white;
+    color: var(--ink-700); font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: all .25s var(--ease); border-radius: 2px;
+    font-family: var(--font-zh);
+  }
+  .filter-chip:hover { border-color: var(--ocean-deep); color: var(--ocean-deep); }
+  .filter-chip.is-active { background: var(--ocean-deep); color: white; border-color: var(--ocean-deep); }
+  .filter-bar__count {
+    margin-left: auto; font-family: var(--font-en); font-size: 13px; color: var(--ink-500); letter-spacing: 0.08em;
+  }
+
+  .pres-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5);
+  }
+  @media(max-width: 1080px){ .pres-grid { grid-template-columns: repeat(3,1fr); } }
+  @media(max-width: 760px){ .pres-grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width: 480px){ .pres-grid { grid-template-columns: 1fr; } }
+
+  .p-card {
+    background: white; border: 1px solid var(--line); position: relative; overflow: hidden;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+    cursor: pointer;
+  }
+  .p-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 56px -28px rgba(7,55,99,0.4);
+    border-color: var(--lion-gold);
+  }
+  .p-card__photo {
+    aspect-ratio: 4/5;
+    background: linear-gradient(160deg, #0B5394 0%, #073763 100%);
+    display: grid; place-items: center;
+    position: relative;
+  }
+  .p-card__photo::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at top, rgba(212,160,21,0.3), transparent 60%);
+  }
+  .p-card__initial {
+    font-family: var(--font-serif); font-size: 100px; color: rgba(255,248,225,0.85);
+    font-weight: 700;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    z-index: 1;
+  }
+  .p-card__charter {
+    position: absolute; top: 12px; right: 12px;
+    background: linear-gradient(135deg, #d4a015, #B45F06);
+    color: white; padding: 4px 10px;
+    font-size: 11px; letter-spacing: 0.08em;
+    font-family: var(--font-zh); font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(180,95,6,0.4);
+  }
+  .p-card__charter::before {
+    content: "★"; margin-right: 4px;
+  }
+  .detail-facts {
+    list-style: none; padding: 0; margin: 0 0 var(--s-5);
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .detail-facts > div {
+    padding: var(--s-3) 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .detail-facts > div:nth-child(odd) { padding-right: var(--s-4); border-right: 1px solid var(--line); }
+  .detail-facts > div:nth-child(even) { padding-left: var(--s-4); }
+  .detail-facts dt {
+    font-family: var(--font-en); font-size: 10px; letter-spacing: 0.2em;
+    color: var(--ink-500); text-transform: uppercase; margin-bottom: 4px;
+  }
+  .detail-facts dd {
+    font-size: 15px; color: var(--sea-ink); font-weight: 500; margin: 0;
+  }
+  .detail-pending {
+    background: var(--sand-gold); border-left: 3px solid var(--lion-gold);
+    padding: var(--s-4); margin-top: var(--s-5);
+  }
+  .detail-pending__label {
+    font-family: var(--font-en); font-size: 11px; letter-spacing: 0.2em;
+    color: var(--lion-gold); text-transform: uppercase; font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .detail-pending p {
+    margin: 0; font-size: 14px; color: var(--ink-700); line-height: 1.7;
+  }
+  .p-card__term-badge {
+    position: absolute; bottom: -1px; left: var(--s-4);
+    background: var(--lion-gold); color: white; padding: 4px 12px;
+    font-family: var(--font-en); font-size: 12px; letter-spacing: 0.16em; font-weight: 700;
+    z-index: 2;
+  }
+  .p-card__body { padding: var(--s-5) var(--s-4) var(--s-4); }
+  .p-card__yr {
+    font-family: var(--font-en); font-size: 12px; letter-spacing: 0.16em;
+    color: var(--ink-500); margin-bottom: 4px;
+  }
+  .p-card__name {
+    font-size: 18px; font-weight: 700; color: var(--sea-ink); margin-bottom: 4px;
+  }
+  .p-card__title {
+    font-size: 13px; color: var(--ink-500); line-height: 1.5;
+  }
+
+  /* Detail modal */
+  .detail-modal {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(7,55,99,0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    place-items: center;
+    padding: var(--s-5);
+    overflow-y: auto;
+  }
+  .detail-modal.is-open { display: grid; }
+  .detail-card {
+    background: white; max-width: 960px; width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  @media(max-width:760px){ .detail-card { grid-template-columns: 1fr; } }
+  .detail-photo {
+    background: linear-gradient(160deg, #0B5394, #073763);
+    display: grid; place-items: center;
+    color: rgba(255,248,225,0.9);
+    font-family: var(--font-serif);
+    font-size: 160px; font-weight: 700;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  .detail-photo::after {
+    content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--lion-gold), var(--lion-gold-soft));
+  }
+  .detail-body { padding: var(--s-7); position: relative; }
+  .detail-close {
+    position: absolute; top: var(--s-4); right: var(--s-4);
+    width: 36px; height: 36px;
+    border: 1px solid var(--line); background: white;
+    cursor: pointer; display: grid; place-items: center;
+    border-radius: 50%; transition: all .2s;
+    color: var(--ink-700);
+    font-size: 20px;
+  }
+  .detail-close:hover { border-color: var(--lion-gold); color: var(--lion-gold); }
+  .detail-term { font-family: var(--font-en); font-size: 13px; letter-spacing: 0.2em; color: var(--lion-gold); font-weight: 600; }
+  .detail-name { font-size: 32px; font-weight: 700; color: var(--sea-ink); margin: 8px 0 4px; }
+  .detail-yrs { font-family: var(--font-en); font-size: 14px; color: var(--ink-500); letter-spacing: 0.1em; margin-bottom: var(--s-4); }
+  .detail-bio { color: var(--ink-700); line-height: 1.85; font-size: 15px; margin-bottom: var(--s-5); }
+  .detail-section-h { font-family: var(--font-en); font-size: 11px; letter-spacing: 0.28em; color: var(--lion-gold); text-transform: uppercase; font-weight: 600; margin-bottom: var(--s-3); border-top: 1px solid var(--line); padding-top: var(--s-4); }
+  .detail-achievements { list-style: none; padding: 0; margin: 0 0 var(--s-5); display: grid; gap: var(--s-3); }
+  .detail-achievements li {
+    padding-left: 28px; position: relative;
+    font-size: 14px; color: var(--ink-700); line-height: 1.7;
+  }
+  .detail-achievements li::before {
+    content: "◆"; position: absolute; left: 0; top: 0;
+    color: var(--lion-gold);
+  }
+  .detail-quote {
+    border-left: 3px solid var(--lion-gold);
+    padding: var(--s-3) var(--s-4);
+    background: var(--sand-gold);
+    font-family: var(--font-serif);
+    font-style: italic; font-size: 17px;
+    color: var(--sea-ink); line-height: 1.7;
+    margin-top: var(--s-4);
+  }
+  .detail-honor {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #d4a015, #B45F06); color: white;
+    padding: 8px 14px; font-size: 12px; letter-spacing: 0.16em;
+    font-family: var(--font-en); font-weight: 700;
+    margin-top: var(--s-3);
+  }
+</style>
+</head>
+<body data-page="presidents">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>PAST PRESIDENTS</span></div>
+    <span class="eyebrow on-dark">歷屆會長 · LEGACY</span>
+    <h1>三十六屆會長 · 一脈相承的浪潮</h1>
+    <p class="lede">自 1991 年創會以來，三十六屆會長傳承不輟，於這片海洋裡留下獨特的浪痕。</p>
+    <p class="lede" style="font-size:14px; opacity:0.85; margin-top:10px; color: var(--lion-gold-soft);">本會為國際獅子會 300A5 區・第一專區 14 個姊妹分會之一</p>
+    <p class="lede" style="font-size:13px; opacity:0.7; margin-top:8px;">資料來源：基隆海洋獅子會歷屆會長名錄 · 民國 110 年 4 月 22 日修訂</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar">
+      <span class="filter-bar__label">FILTER · 屆別</span>
+      <button class="filter-chip is-active" data-decade="all">全部會長</button>
+      <button class="filter-chip" data-decade="1">第 1 - 10 屆</button>
+      <button class="filter-chip" data-decade="2">第 11 - 20 屆</button>
+      <button class="filter-chip" data-decade="3">第 21 - 31 屆</button>
+      <span class="filter-bar__count" id="resultCount">SHOWING 31 OF 31</span>
+    </div>
+
+    <div class="pres-grid" id="presGrid"></div>
+  </div>
+</section>
+
+<!-- Detail modal -->
+<div class="detail-modal" id="detailModal">
+  <div class="detail-card" id="detailCard">
+    <!-- populated by JS -->
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="assets/chrome.js"></script>
+<script>
+// 資料來源：基隆海洋獅子會歷屆會長名錄 (民國 110 年 4 月 22 日修訂)
+// 僅包含已驗證之姓名、任期、交接日、是否為授證會員
+const PRESIDENTS = [
+  { term:1,  name:"陳建宏", surname:"陳", rocYears:"80〜81",   years:"1991-1992", transition:"80.07.14", isCharter:true,  isFounder:true },
+  { term:2,  name:"陳文宗", surname:"陳", rocYears:"81〜82",   years:"1992-1993", transition:"81.07.18", isCharter:true  },
+  { term:3,  name:"陳錫金", surname:"陳", rocYears:"82〜83",   years:"1993-1994", transition:"82.06.27", isCharter:false },
+  { term:4,  name:"楊阿金", surname:"楊", rocYears:"83〜84",   years:"1994-1995", transition:"83.07.17", isCharter:true  },
+  { term:5,  name:"劉慶璋", surname:"劉", rocYears:"84〜85",   years:"1995-1996", transition:"84.07.06", isCharter:true  },
+  { term:6,  name:"沈正夫", surname:"沈", rocYears:"85〜86",   years:"1996-1997", transition:"85.07.14", isCharter:true  },
+  { term:7,  name:"呂伯祈", surname:"呂", rocYears:"86〜87",   years:"1997-1998", transition:"86.07.14", isCharter:true  },
+  { term:8,  name:"陳鈺棋", surname:"陳", rocYears:"87〜88",   years:"1998-1999", transition:"87.07.14", isCharter:false },
+  { term:9,  name:"李逸民", surname:"李", rocYears:"88〜89",   years:"1999-2000", transition:"88.07.14", isCharter:false },
+  { term:10, name:"莊振良", surname:"莊", rocYears:"89〜90",   years:"2000-2001", transition:"89.06.30", isCharter:true  },
+  { term:11, name:"李鴻欽", surname:"李", rocYears:"90〜91",   years:"2001-2002", transition:"90.06.28", isCharter:true  },
+  { term:12, name:"周瑞慶", surname:"周", rocYears:"91〜92",   years:"2002-2003", transition:"91.07.14", isCharter:true  },
+  { term:13, name:"張春傳", surname:"張", rocYears:"92〜93",   years:"2003-2004", transition:"92.07.14", isCharter:false },
+  { term:14, name:"邱瑞義", surname:"邱", rocYears:"93〜94",   years:"2004-2005", transition:"93.07.14", isCharter:true  },
+  { term:15, name:"薛孟欽", surname:"薛", rocYears:"94〜95",   years:"2005-2006", transition:"94.07.09", isCharter:false },
+  { term:16, name:"吳朝樂", surname:"吳", rocYears:"95〜96",   years:"2006-2007", transition:"95.07.08", isCharter:false },
+  { term:17, name:"江振科", surname:"江", rocYears:"96〜97",   years:"2007-2008", transition:"96.07.14", isCharter:true  },
+  { term:18, name:"楊宏基", surname:"楊", rocYears:"97〜98",   years:"2008-2009", transition:"97.07.19", isCharter:false },
+  { term:19, name:"吳進財", surname:"吳", rocYears:"98〜99",   years:"2009-2010", transition:"98.07.31", isCharter:true  },
+  { term:20, name:"魏倫華", surname:"魏", rocYears:"99〜100",  years:"2010-2011", transition:"99.07.02", isCharter:false },
+  { term:21, name:"陳坤田", surname:"陳", rocYears:"100〜101", years:"2011-2012", transition:"100.07.14", isCharter:false },
+  { term:22, name:"劉榮華", surname:"劉", rocYears:"101〜102", years:"2012-2013", transition:"101.07.23", isCharter:true  },
+  { term:23, name:"許勝賢", surname:"許", rocYears:"102〜103", years:"2013-2014", transition:"102.07.20", isCharter:false },
+  { term:24, name:"賴聰福", surname:"賴", rocYears:"103〜104", years:"2014-2015", transition:"103.07.18", isCharter:false },
+  { term:25, name:"詹炳燦", surname:"詹", rocYears:"104〜105", years:"2015-2016", transition:"104.07.20", isCharter:false },
+  { term:26, name:"簡國堂", surname:"簡", rocYears:"105〜106", years:"2016-2017", transition:"105.07.14", isCharter:false },
+  { term:27, name:"江國源", surname:"江", rocYears:"106〜107", years:"2017-2018", transition:"106.07.14", isCharter:false },
+  { term:28, name:"簡宗盛", surname:"簡", rocYears:"107〜108", years:"2018-2019", transition:"107.07.13", isCharter:false },
+  { term:29, name:"劉國煌", surname:"劉", rocYears:"108〜109", years:"2019-2020", transition:"108.07.12", isCharter:false },
+  { term:30, name:"陳紹群", surname:"陳", rocYears:"109〜110", years:"2020-2021", transition:"109.07.10", isCharter:false },
+  { term:31, name:"簡枝文", surname:"簡", rocYears:"110〜111", years:"2021-2022", transition:"110.07.09", isCharter:false },
+  { term:32, name:"陳紹群", surname:"陳", rocYears:"111〜112", years:"2022-2023", transition:"111.07.14", isCharter:false },
+  { term:33, name:"賴冠互", surname:"賴", rocYears:"112〜113", years:"2023-2024", transition:"112.07.14", isCharter:false },
+  { term:34, name:"陳璿至", surname:"陳", rocYears:"113〜114", years:"2024-2025", transition:"113.07.14", isCharter:false },
+  { term:35, name:"張眾佳", surname:"張", rocYears:"114〜115", years:"2025-2026", transition:"114.07.10", isCharter:false, isCurrent:false },
+  { term:36, name:"江志偉", surname:"江", rocYears:"115〜116", years:"2026-2027", transition:"115.07.10", isCharter:false, isCurrent:true, theme:"為海洋盡力，服務無界限" }
+];
+
+const TOTAL = PRESIDENTS.length;
+
+function termDecade(term){
+  if(term <= 10) return 1;
+  if(term <= 20) return 2;
+  return 3;
+}
+
+function renderGrid(filter){
+  const grid = document.getElementById("presGrid");
+  const list = filter === "all" ? PRESIDENTS : PRESIDENTS.filter(p => termDecade(p.term) === parseInt(filter));
+  grid.innerHTML = list.map(p => `
+    <article class="p-card" data-term="${p.term}">
+      <div class="p-card__photo">
+        ${p.isCharter ? '<div class="p-card__charter">授證會員</div>' : ''}
+        <div class="p-card__initial">${p.surname}</div>
+        <div class="p-card__term-badge">第 ${p.term} 屆${p.isFounder ? ' · 創會' : ''}</div>
+      </div>
+      <div class="p-card__body">
+        <div class="p-card__yr">${p.years}</div>
+        <div class="p-card__name">${p.name}</div>
+        <div class="p-card__title">民國 ${p.rocYears} 屆期</div>
+      </div>
+    </article>
+  `).join("");
+  document.getElementById("resultCount").textContent = `SHOWING ${list.length} OF ${TOTAL}`;
+
+  grid.querySelectorAll(".p-card").forEach(el => {
+    el.addEventListener("click", () => openDetail(parseInt(el.dataset.term)));
+  });
+}
+
+function openDetail(term){
+  const p = PRESIDENTS.find(x => x.term === term);
+  if(!p) return;
+  const eraLabel = p.term <= 10 ? 'EARLY ERA · 創會初期'
+                 : p.term <= 20 ? 'GROWTH ERA · 成長期'
+                 : 'MATURE ERA · 成熟期';
+  const card = document.getElementById("detailCard");
+  card.innerHTML = `
+    <div class="detail-photo">${p.surname}</div>
+    <div class="detail-body">
+      <button class="detail-close" id="closeDetail" aria-label="Close">×</button>
+      <div class="detail-term">第 ${p.term} 屆 · ${eraLabel}</div>
+      <h2 class="detail-name">${p.name}</h2>
+      <div class="detail-yrs">${p.years} · 民國 ${p.rocYears} 屆期</div>
+      ${p.isCharter ? '<div class="detail-honor">★ 授證會員 · CHARTER MEMBER</div>' : ''}
+      ${p.isFounder ? '<div class="detail-honor" style="margin-left:8px;">★ 創會會長 · FOUNDING PRESIDENT</div>' : ''}
+
+      <dl class="detail-facts">
+        <div><dt>屆次</dt><dd>第 ${p.term} 屆</dd></div>
+        <div><dt>任期</dt><dd>${p.years} (民國 ${p.rocYears})</dd></div>
+        <div><dt>交接日</dt><dd>民國 ${p.transition}</dd></div>
+        <div><dt>身分</dt><dd>${p.isCharter ? '授證會員' : '一般會員'}${p.isFounder ? ' · 創會會長' : ''}</dd></div>
+      </dl>
+
+      <div class="detail-pending">
+        <div class="detail-pending__label">專訪、專業背景與任內記事</div>
+        <p>本頁僅列出經秘書處驗證之名錄資料。專訪內容、任內公益實踐與委員會職務將由秘書處陸續彙整上線。</p>
+      </div>
+    </div>
+  `;
+  document.getElementById("detailModal").classList.add("is-open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("closeDetail").addEventListener("click", closeDetail);
+}
+
+function closeDetail(){
+  document.getElementById("detailModal").classList.remove("is-open");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("detailModal").addEventListener("click", (e) => {
+  if(e.target.id === "detailModal") closeDetail();
+});
+
+document.querySelectorAll(".filter-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    renderGrid(chip.dataset.decade);
+  });
+});
+
+renderGrid("all");
+</script>
+</body>
+</html>

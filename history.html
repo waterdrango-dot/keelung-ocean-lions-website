@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var j=["https://claude.ai","https://preview.claude.ai"];var x=true;var S=30000;var f=3000;document.addEventListener("DOMContentLoaded",()=>{const H=window.Babel;const G="om-src-id";if(H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[G])){H.registerPlugin(G,({types:Y})=>({visitor:{JSXOpeningElement(U,Q){const J=U.node;if(J.name&&J.name.type==="JSXMemberExpression")return;for(let V=0;V<J.attributes.length;V++){const L=J.attributes[V];if(L.type==="JSXAttribute"&&L.name&&L.name.name==="data-om-id")return}const W=Q.file&&Q.file.opts&&Q.file.opts.filename||"?";const Z=J.loc&&J.loc.start;const z=`jsx:${W}:${J.start??0}:${Z?Z.line:0}:${Z?Z.column+1:0}`;J.attributes.push(Y.jsxAttribute(Y.jsxIdentifier("data-om-id"),Y.stringLiteral(z)))}}}))}const k="om-text-extract";let A=false;if(x&&H&&H.registerPlugin&&!(H.availablePlugins&&H.availablePlugins[k])){const Y=window.React;if(Y&&Y.useSyncExternalStore&&Y.createElement){A=true;const U={};const Q=new Set;let J=0;window.__omTextO=U;window.__omTextSet=(z)=>{for(const V in z){const L=z[V];if(L==null)delete U[V];else U[V]=L}J++;Q.forEach((V)=>V())};const W=(z)=>{Q.add(z);return()=>Q.delete(z)};const Z=()=>J;window.__OmT=function z(V){Y.useSyncExternalStore(W,Z,Z);return Y.createElement("span",{"data-om-text":V.i,className:"__om-t"},V.i in U?U[V.i]:V.children)};H.registerPlugin(k,({types:z})=>{const V={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const L={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const _=($,C)=>z.logicalExpression("??",z.memberExpression(z.logicalExpression("||",z.memberExpression(z.identifier("window"),z.identifier("__omTextO")),z.objectExpression([])),z.stringLiteral($),true),C);const E=($)=>$.file&&$.file.opts&&$.file.opts.filename||"?";const B=($)=>$.file&&$.file.code||"";const b=($,C)=>{const X=(F)=>F&&F.start!=null&&F.end!=null&&(F.type==="StringLiteral"||F.type==="TemplateLiteral"&&F.expressions.length===0)?[F.start,F.end]:null;const N=X(C);if(N)return N;if(C&&C.type==="Identifier"){const F=$.scope.getBinding(C.name);if(F&&F.constant&&F.path.node.type==="VariableDeclarator"){return X(F.path.node.init)}}return null};const M=($,C,X)=>{const N=$.node;let F=false;const w=(K,q)=>{F=true;return z.jsxElement(z.jsxOpeningElement(z.jsxIdentifier("__OmT"),[z.jsxAttribute(z.jsxIdentifier("i"),z.stringLiteral(K))],false),z.jsxClosingElement(z.jsxIdentifier("__OmT")),[q],false)};const D=N.children.map((K)=>{if(K.type==="JSXText"){if(K.start==null||K.end==null)return K;const q=X.slice(K.start,K.end);const R=q.length-q.trimStart().length;const m=q.length-q.trimEnd().length;if(R+m>=q.length)return K;return w(`txt:${C}:${K.start+R}:${K.end-m}`,K)}if(K.type==="JSXExpressionContainer"){const q=b($,K.expression);if(q)return w(`str:${C}:${q[0]}:${q[1]}`,K)}return K});if(F)N.children=D};return{visitor:{JSXOpeningElement($,C){const X=$.node;const N=E(C);const F={};for(let w=0;w<X.attributes.length;w++){const D=X.attributes[w];if(D.type!=="JSXAttribute"||!D.name)continue;const K=D.name.name;if(!L[K])continue;if(!D.value||D.value.type!=="StringLiteral")continue;if(D.value.start==null||D.value.end==null)continue;const q=`txt:${N}:${D.value.start}:${D.value.end}`;F[K]=q;D.value=z.jsxExpressionContainer(_(q,z.stringLiteral(D.value.value)))}if(Object.keys(F).length){X.attributes.push(z.jsxAttribute(z.jsxIdentifier("data-om-text-attrs"),z.stringLiteral(JSON.stringify(F))))}},JSXElement($,C){const X=$.node.openingElement;const N=X&&X.name&&X.name.name;if(N==="__OmT")return;if(typeof N==="string"&&V[N])return;M($,E(C),B(C))},JSXFragment($,C){M($,E(C),B(C))}}}})}}const u=A?["transform-react-jsx-source",G,k]:["transform-react-jsx-source",G];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((Y,U)=>{const Q=Y.getAttribute("data-plugins")||"";const J=u.filter((W)=>Q.indexOf(W)<0);if(J.length){Y.setAttribute("data-plugins",Q?`${Q},${J.join(",")}`:J.join(","))}if(!Y.hasAttribute("data-filename")){Y.setAttribute("data-filename",Y.getAttribute("src")||`inline-${U}`)}})});var y=window.parent;if(y&&y!==window){const H=(Q,J)=>{try{y.postMessage({__omelette_log:true,type:Q,data:J},"*")}catch{}};["log","warn","error"].forEach((Q)=>{const J=console[Q];console[Q]=(...W)=>{const Z=W.map((z)=>{try{return typeof z==="object"?JSON.stringify(z):String(z)}catch{try{return String(z)}catch{return"[unstringifiable]"}}}).join(" ");H(Q,Z);J.apply(console,W)}});window.addEventListener("error",(Q)=>{const J=Q.target;if(J&&J!==window&&J.tagName){const W=J.src||J.href||"";H("resource_error",`${J.tagName} failed to load: ${W}`)}else{H("error",`${Q.message||"Unknown error"} at ${Q.filename||"?"}:${Q.lineno||0}:${Q.colno||0}`)}},true);window.addEventListener("unhandledrejection",(Q)=>{const J=Q.reason;const W=J instanceof Error?`${J.message} ${J.stack}`:String(J);H("error",`Unhandled rejection: ${W}`)});const G=()=>{try{y.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")G();else window.addEventListener("load",G);if(window.ResizeObserver)new ResizeObserver(G).observe(document.documentElement);const k={};let A=0;window.claude={complete(Q){return new Promise((J,W)=>{if(!j.length){W(new Error("claude.complete: no parent origin"));return}const Z=`c${++A}`;const z=()=>setTimeout(()=>{delete k[Z];W(new Error(`claude.complete: no data for ${S/1000}s`))},S);const V=z();k[Z]={resolve:J,reject:W,text:"",t:V,arm:z};try{for(const L of j){y.postMessage({__om_api:true,id:Z,body:Q},L)}}catch(L){clearTimeout(V);delete k[Z];W(L)}})}};const u={};let Y=0;window.omelette={writeFile:(Q,J)=>new Promise((W,Z)=>{if(!j.length){W();return}const z=`f${++Y}`;const V=setTimeout(()=>{delete u[z];W()},f);u[z]={resolve:W,reject:Z,t:V};try{for(const L of j){y.postMessage({__om_file:true,id:z,op:"write",path:Q,content:J},L)}}catch{clearTimeout(V);delete u[z];W()}})};const U=(Q)=>{try{return JSON.stringify(Q)}catch{return JSON.stringify(String(Q))}};window.addEventListener("message",(Q)=>{if(j.indexOf(Q.origin)<0)return;if(Q.source!==y)return;const J=Q.data;if(!J)return;if(J.type==="omelette-preview-refresh"){if(typeof J.token!=="string"||!/^[0-9a-f.-]+$/.test(J.token))return;const z=Math.max(1,Math.floor((J.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+J.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+z;return}if(J.__om_file_r){const z=u[J.id];if(!z)return;clearTimeout(z.t);delete u[J.id];if(J.ok)z.resolve();else z.reject(new Error(J.error||"write failed"));return}if(J.__om_api_r){const z=k[J.id];if(!z)return;if(J.error!=null){clearTimeout(z.t);delete k[J.id];z.reject(new Error(J.error));return}if(J.chunk!=null){clearTimeout(z.t);z.t=z.arm();z.text+=J.chunk;return}if(J.done){clearTimeout(z.t);delete k[J.id];z.resolve(J.text!=null?J.text:z.text);return}return}if(!J.__om_eval)return;const W=J;const Z=(z)=>{Q.source.postMessage({...z,__om_eval_r:1,id:W.id},Q.origin)};try{const z=(0,eval)(W.code);if(z&&typeof z.then==="function"){z.then((V)=>Z({ok:1,v:U(V)}),(V)=>Z({ok:0,e:String(V)}))}else{Z({ok:1,v:U(z)})}}catch(z){Z({ok:0,e:String(z)})}})}})();
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>會史紀要 · 基隆海洋獅子會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  :root { --paper:#fbf7f0; --rule:#d9c8a3; }
+  body { background: var(--paper); }
+
+  .hero-h {
+    position:relative; padding: 120px 0 80px;
+    background: linear-gradient(180deg, #08355e 0%, #0b5394 60%, #0b5394 100%);
+    color:#fff; overflow:hidden;
+  }
+  .hero-h::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(212,175,55,0.18), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(255,255,255,0.06), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-h__inner { position:relative; max-width: 1100px; margin:0 auto; padding: 0 32px; }
+  .hero-h__eyebrow { font-family: var(--font-en); font-size: 13px; letter-spacing: 0.42em; color:#d4af37; text-transform:uppercase; margin-bottom: 24px; font-weight:600; }
+  .hero-h__title { font-family: var(--font-serif); font-size: clamp(48px, 7vw, 92px); font-weight: 900; line-height: 1.05; margin: 0 0 16px; letter-spacing: 0.02em; }
+  .hero-h__title small { display:block; font-size:.42em; font-weight:500; letter-spacing:.18em; color:rgba(255,255,255,.7); margin-top:18px; font-family: var(--font-sans); }
+  .hero-h__seal {
+    position:absolute; right: 32px; top: 50%; transform: translateY(-50%);
+    width: 280px; height: 280px; border-radius:50%;
+    border: 2px solid rgba(212,175,55,.4);
+    display:grid; place-items:center;
+    color:#d4af37;
+  }
+  .hero-h__seal-inner {
+    width: 200px; height: 200px; border-radius:50%; border: 1px solid rgba(212,175,55,.3);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+  }
+  .hero-h__seal-num { font-family: var(--font-serif); font-size: 88px; font-weight:900; line-height:1; }
+  .hero-h__seal-lbl { font-size: 13px; letter-spacing: .3em; margin-top: 10px; }
+  @media(max-width:900px){ .hero-h__seal{ display:none; } }
+
+  /* Editorial article */
+  .art {
+    max-width: 760px; margin: -40px auto 0; padding: 80px 64px;
+    background: #fff;
+    box-shadow: 0 30px 80px -30px rgba(8,53,94,.25);
+    position: relative;
+  }
+  .art::before, .art::after {
+    content: ""; position:absolute; left: 50%; transform: translateX(-50%);
+    width: 64px; height: 1px; background: var(--lion-gold);
+  }
+  .art::before { top: 36px; }
+  .art::after { bottom: 36px; }
+  .art__kicker { font-family: var(--font-en); font-size: 12px; letter-spacing: .42em; color:#9b7d2e; text-transform:uppercase; text-align:center; margin-bottom: 16px; font-weight:600; }
+  .art__h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 900; color: #0b3a66; text-align:center; margin: 0 0 8px; letter-spacing: .04em; }
+  .art__sub { text-align:center; font-size: 14px; color: #7a6a4a; letter-spacing:.16em; margin-bottom: 48px; }
+  .art__lead {
+    font-family: var(--font-serif); font-size: 22px; line-height: 1.9; font-weight:500;
+    color:#1a2a3e; text-align: justify; text-indent: 2em;
+    border-left: 3px solid #d4af37; padding: 4px 0 4px 28px; margin: 0 0 36px; background: #fbf7f0;
+    padding-top: 20px; padding-bottom: 20px; padding-right: 20px;
+  }
+  .art__body p {
+    font-size: 17px; line-height: 2.05; color:#2c3e50;
+    text-align: justify; text-indent: 2em; margin-bottom: 24px;
+  }
+  .art__body p::first-letter { font-weight: 700; color: #0b5394; }
+  .art__pullquote {
+    margin: 48px -32px; padding: 32px;
+    border-top: 2px solid #0b5394; border-bottom: 2px solid #0b5394;
+    text-align: center; font-family: var(--font-serif);
+    font-size: 26px; line-height: 1.7; color: #0b3a66; font-weight: 700;
+    letter-spacing: .08em;
+  }
+  .art__pullquote em { font-style: normal; color: #b8941f; }
+  @media(max-width:760px){
+    .art { padding: 56px 28px; margin: -20px 16px 0; }
+    .art__lead { font-size: 18px; padding-left: 18px; }
+    .art__pullquote { font-size: 20px; margin-left:-12px; margin-right:-12px; }
+  }
+
+  /* Timeline */
+  .tl-sec { padding: 100px 32px; max-width: 1100px; margin: 0 auto; }
+  .tl-head { text-align:center; margin-bottom: 72px; }
+  .tl-head__kicker { font-family: var(--font-en); font-size:12px; letter-spacing:.42em; color:#9b7d2e; text-transform:uppercase; font-weight:600; margin-bottom: 16px; }
+  .tl-head__title { font-family: var(--font-serif); font-size: 48px; font-weight:900; color: #0b3a66; margin: 0; letter-spacing: .04em; }
+  .tl-head__rule { width: 48px; height:3px; background: #d4af37; margin: 24px auto; }
+
+  .tl2 { position: relative; padding: 0 0 0 0; }
+  .tl2::before {
+    content:""; position:absolute; left: 24px; top: 0; bottom:0; width: 2px;
+    background: linear-gradient(180deg, #0b5394 0%, #d4af37 100%);
+  }
+  .tl2-item {
+    position: relative; padding: 0 0 56px 80px; display:flex; gap: 24px; align-items: flex-start;
+  }
+  .tl2-item:last-child { padding-bottom: 0; }
+  .tl2-dot {
+    position: absolute; left: 8px; top: 6px;
+    width: 34px; height: 34px; border-radius:50%; background:#fff;
+    border: 3px solid #d4af37;
+    display:grid; place-items:center;
+    font-family: var(--font-en); font-size: 11px; font-weight:700; color:#0b3a66;
+    box-shadow: 0 0 0 6px rgba(255,255,255,.7), 0 0 0 8px rgba(212,175,55,.2);
+  }
+  .tl2-card {
+    flex: 1; background:#fff; border: 1px solid #e8d9b8; border-radius: 4px;
+    padding: 24px 28px; transition: all .3s ease;
+    box-shadow: 0 4px 16px -8px rgba(8,53,94,.1);
+  }
+  .tl2-card:hover { border-color: #d4af37; transform: translateX(4px); box-shadow: 0 12px 28px -12px rgba(8,53,94,.25); }
+  .tl2-yr { font-family: var(--font-en); font-size: 13px; color:#9b7d2e; letter-spacing:.18em; font-weight:700; margin-bottom: 4px; }
+  .tl2-yr small { color:#7a6a4a; font-weight:500; margin-left: 8px; letter-spacing:.05em; }
+  .tl2-t { font-family: var(--font-serif); font-size: 22px; font-weight:700; color:#0b3a66; margin: 0 0 8px; letter-spacing: .03em; }
+  .tl2-d { font-size: 15px; line-height: 1.85; color: #4a5a6e; }
+  .tl2-tag { display: inline-block; padding: 2px 10px; background: #fff7df; color:#9b7d2e; font-size: 11px; letter-spacing:.16em; border-radius: 2px; margin-left: 10px; font-weight:600; vertical-align: middle; }
+
+  /* Honors band */
+  .honors {
+    background: linear-gradient(180deg, #08355e 0%, #0b3a66 100%);
+    padding: 100px 32px; color: #fff;
+  }
+  .honors__inner { max-width: 1100px; margin: 0 auto; }
+  .honors__head { text-align:center; margin-bottom: 64px; }
+  .honors__kicker { font-family: var(--font-en); font-size:12px; letter-spacing:.42em; color:#d4af37; text-transform:uppercase; font-weight:600; margin-bottom:16px; }
+  .honors__title { font-family: var(--font-serif); font-size: 48px; font-weight:900; margin: 0; letter-spacing:.04em; }
+  .honors__sub { color: rgba(255,255,255,.6); margin-top: 12px; font-size: 14px; letter-spacing: .16em; }
+
+  .honors__grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media(max-width:920px){ .honors__grid { grid-template-columns: repeat(2,1fr); } }
+  @media(max-width:580px){ .honors__grid { grid-template-columns: 1fr; } }
+  .h-card {
+    background: rgba(255,255,255,.04); border: 1px solid rgba(212,175,55,.2);
+    padding: 28px 24px; border-radius: 4px;
+    transition: all .3s ease;
+    position: relative;
+  }
+  .h-card:hover { background: rgba(255,255,255,.07); border-color: #d4af37; transform: translateY(-3px); }
+  .h-card__name { font-family: var(--font-serif); font-size: 26px; font-weight:700; color:#d4af37; margin-bottom: 4px; letter-spacing: .04em; }
+  .h-card__role { font-size: 13px; letter-spacing:.16em; color: rgba(255,255,255,.7); margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(212,175,55,.2); }
+  .h-card__list { list-style: none; padding: 0; margin: 0; }
+  .h-card__list li { font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,.85); padding-left: 14px; position: relative; margin-bottom: 6px; }
+  .h-card__list li::before { content: "◆"; position:absolute; left: 0; color:#d4af37; font-size: 8px; top: 6px; }
+
+  /* Footer nav */
+  .pg-nav { background:#fff; padding: 64px 32px; text-align:center; border-top: 1px solid #e8d9b8; }
+  .pg-nav__title { font-family: var(--font-serif); font-size: 24px; color:#0b3a66; margin-bottom: 24px; }
+  .pg-nav__links { display:flex; gap:16px; justify-content:center; flex-wrap: wrap; }
+  .pg-nav__link {
+    padding: 14px 28px; border: 1.5px solid #0b5394; color:#0b5394;
+    font-size: 14px; letter-spacing: .12em; text-decoration:none; transition: all .25s ease;
+    background: #fff;
+  }
+  .pg-nav__link:hover { background:#0b5394; color:#fff; }
+  .pg-nav__link--gold { border-color:#d4af37; color:#9b7d2e; }
+  .pg-nav__link--gold:hover { background:#d4af37; color:#fff; }
+</style>
+</head>
+<body>
+
+<!-- Site nav (matches existing pages) -->
+<nav class="site-nav">
+  <div class="site-nav__inner">
+    <a href="index.html" class="site-nav__brand">
+      <span class="site-nav__brand-zh">基隆海洋獅子會</span>
+      <span class="site-nav__brand-en">KEELUNG OCEAN LIONS CLUB</span>
+    </a>
+    <div class="site-nav__links">
+      <a href="index.html">首頁</a>
+      <a href="about.html">認識本會</a>
+      <a href="history.html" class="active">會史紀要</a>
+      <a href="presidents.html">歷屆會長</a>
+      <a href="service.html">公益服務</a>
+      <a href="gallery.html">活動花絮</a>
+      <a href="contact.html">聯絡我們</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-h">
+  <div class="hero-h__inner">
+    <div class="hero-h__eyebrow">CLUB HISTORY · EST. 1991</div>
+    <h1 class="hero-h__title">會史紀要<small>SINCE 民國 80 年 7 月 14 日 · 浩瀚遼闊 深遠如海</small></h1>
+  </div>
+  <div class="hero-h__seal" aria-hidden="true">
+    <div class="hero-h__seal-inner">
+      <div class="hero-h__seal-num">35</div>
+      <div class="hero-h__seal-lbl">YEARS</div>
+    </div>
+  </div>
+</header>
+
+<!-- EDITORIAL: 創會精神 -->
+<article class="art">
+  <div class="art__kicker">FOUNDING SPIRIT · 創會精神</div>
+  <h2 class="art__h2">浩瀚如海　深遠似洋</h2>
+  <div class="art__sub">基隆海洋獅子會會史簡介暨會館序誌</div>
+
+  <p class="art__lead">「回饋、犧牲、奉獻」之無私心懷與「積極、熱誠、負責」之大我胸襟，正如同海洋般之浩瀚、遼闊、深遠 — 這就是海洋獅子會創會精神及會名之由來。</p>
+
+  <div class="art__body">
+    <p>海洋獅子會於民國八十年七月十四日授證。成立當初，為匯集獅友向心力及認知，即由導獅及創會委員集資購買會館，首開基隆地區獅子會先例。</p>
+
+    <p>創會惟艱、守成不易、激勵奮發、健全發展，為本會最高方針。在全體獅友之全心投入下，會務運作已由點的出發，線的延伸擴展至全方位面之組合。</p>
+
+    <div class="art__pullquote">「團結、遠見」為其特色<br><em>「肯定、推崇」</em>為其目標</div>
+
+    <p>而會館基金之籌措，更得力於全體獅友踴躍捐款，圓滿達成目標。八大信條篤行不移；國際姊妹會之締盟、獎助學金之頒發、反毒害宣導、幼兒教育之啟蒙、視力第一國際基金之捐獻、認養社區再造，皆顯示卓越成效。</p>
+
+    <p>「成功昇華、發揚光大」則為本會最終目的。謹誌垂念，與全體獅友共勉之。</p>
+  </div>
+</article>
+
+<!-- TIMELINE: 30+ 屆里程碑 -->
+<section class="tl-sec">
+  <div class="tl-head">
+    <div class="tl-head__kicker">MILESTONES · 大事紀</div>
+    <h2 class="tl-head__title">三十五年 · 一脈相承</h2>
+    <div class="tl-head__rule"></div>
+  </div>
+
+  <div class="tl2">
+    <div class="tl2-item">
+      <div class="tl2-dot">'91</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">1991.07.14<small>民國 80 年</small></div>
+        <h3 class="tl2-t">授證創會 <span class="tl2-tag">CHARTER</span></h3>
+        <p class="tl2-d">由中央獅子會輔導成立，為基隆地區首個自購會館之獅子會。創會會長陳建宏與 19 位授證會員集資購置會館，奠定海洋會務根基。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'93</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">1993.06.27<small>民國 82 年</small></div>
+        <h3 class="tl2-t">締結國際姊妹會</h3>
+        <p class="tl2-d">與韓國釜山新羅獅子會（Pusan Silla Lions Club）正式締盟，開啟跨國獅誼交流。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'94</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">1994.03.16 / 04.08<small>民國 83 年</small></div>
+        <h3 class="tl2-t">輔導推薦兩會成立</h3>
+        <p class="tl2-d">輔導推薦「忠孝獅子會」（3/16，導獅李元吉前總監）、「港都獅子會」（4/08，導獅陳建宏前總監）相繼成立，開枝散葉。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'08</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2008–09<small>民國 97–98 年</small></div>
+        <h3 class="tl2-t">陳建宏獅兄榮膺 300A5 區總監</h3>
+        <p class="tl2-d">創會會長陳建宏出任國際獅子會 300A5 區總監，為本會最高榮耀，亦為基隆獅界之光。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'11</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2011<small>民國 100 年</small></div>
+        <h3 class="tl2-t">創會 20 週年慶 <span class="tl2-tag">20TH</span></h3>
+        <p class="tl2-d">由第 5 屆會長劉慶璋擔任 20 周年年會主席，回顧創會二十載，承先啟後。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'16</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2016<small>民國 105 年</small></div>
+        <h3 class="tl2-t">創會 25 週年慶 <span class="tl2-tag">25TH</span></h3>
+        <p class="tl2-d">由第 14 屆會長邱瑞義擔任 25 周年年會主席。同年起多位幹部出任區職務。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'21</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2021<small>民國 110 年</small></div>
+        <h3 class="tl2-t">創會 30 週年紀念特刊 <span class="tl2-tag">30TH</span></h3>
+        <p class="tl2-d">陳建宏前總監擔任 30 周年年會主席，第 31 屆會長簡枝文出任紀念特刊總編輯，匯集 21 章 84 頁完整會史。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'25</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2025<small>民國 114 年</small></div>
+        <h3 class="tl2-t">章程暨會務細則修訂</h3>
+        <p class="tl2-d">2025/04/23 修訂章程；2025/12/24 修訂會務施行細則，與時俱進完善制度。</p>
+      </div>
+    </div>
+
+    <div class="tl2-item">
+      <div class="tl2-dot">'26</div>
+      <div class="tl2-card">
+        <div class="tl2-yr">2025–2026<small>民國 114–115 年</small></div>
+        <h3 class="tl2-t">第 35 屆任期 <span class="tl2-tag">CURRENT</span></h3>
+        <p class="tl2-d">現任理事長張眾佳（佳平結構技師事務所執業技師）、第一副會長兼秘書江志偉。承續「回饋、犧牲、奉獻」初心，於基隆持續耕耘公益服務。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONORS -->
+<section class="honors">
+  <div class="honors__inner">
+    <div class="honors__head">
+      <div class="honors__kicker">HALL OF HONOR · 海洋榮耀</div>
+      <h2 class="honors__title">服務區會 · 為光增輝</h2>
+      <div class="honors__sub">本會獅兄歷任 300A5 區職務名錄</div>
+    </div>
+
+    <div class="honors__grid">
+      <div class="h-card">
+        <div class="h-card__name">陳建宏</div>
+        <div class="h-card__role">第 1 屆會長 · 創會會長</div>
+        <ul class="h-card__list">
+          <li>1995–96 第一分區主席</li>
+          <li>1998–99 第一專區主席</li>
+          <li>1999–2000 300A5 區秘書長</li>
+          <li><strong style="color:#d4af37">2008–09 300A5 總監</strong></li>
+          <li>本會 30 周年年會主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">陳文宗</div>
+        <div class="h-card__role">第 2 屆會長</div>
+        <ul class="h-card__list">
+          <li>1999–2000 第一分區主席</li>
+          <li>2004–05 第一專區主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">楊阿金</div>
+        <div class="h-card__role">第 4 屆會長</div>
+        <ul class="h-card__list">
+          <li>2002–03 第一分區主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">劉慶璋</div>
+        <div class="h-card__role">第 5 屆會長</div>
+        <ul class="h-card__list">
+          <li>2008–09 300A5 區年會主席</li>
+          <li>本會 20 周年年會主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">呂伯祈</div>
+        <div class="h-card__role">第 7 屆會長</div>
+        <ul class="h-card__list">
+          <li>2005–06 第一分區主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">李鴻欽</div>
+        <div class="h-card__role">第 11 屆會長</div>
+        <ul class="h-card__list">
+          <li>2008–09 F 區事務長</li>
+          <li>2012–13 第一分區主席</li>
+          <li>2013–14 第一專區主席</li>
+          <li>2014–15 300A5 區年會主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">邱瑞義</div>
+        <div class="h-card__role">第 14 屆會長</div>
+        <ul class="h-card__list">
+          <li>2015–16 第一分區主席</li>
+          <li>本會 25 周年年會主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">陳坤田</div>
+        <div class="h-card__role">第 21 屆會長</div>
+        <ul class="h-card__list">
+          <li>2018–19 第一分區主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">簡國堂</div>
+        <div class="h-card__role">第 26 屆會長</div>
+        <ul class="h-card__list">
+          <li>2021–22 第一分區主席</li>
+        </ul>
+      </div>
+
+      <div class="h-card">
+        <div class="h-card__name">簡枝文</div>
+        <div class="h-card__role">第 31 屆會長</div>
+        <ul class="h-card__list">
+          <li>2014–15 300A5 區東海岸獅訊總編輯</li>
+          <li>2014–15 台灣總會中文版獅子會刊編輯</li>
+          <li>30 周年紀念特刊總編輯</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer nav -->
+<section class="pg-nav">
+  <div class="pg-nav__title">繼續探索</div>
+  <div class="pg-nav__links">
+    <a class="pg-nav__link" href="presidents.html">歷屆會長名錄</a>
+    <a class="pg-nav__link pg-nav__link--gold" href="service.html">公益服務紀錄</a>
+    <a class="pg-nav__link" href="gallery.html">活動花絮</a>
+    <a class="pg-nav__link" href="about.html">認識本會</a>
+  </div>
+</section>
+
+<footer style="background:#08355e; color:rgba(255,255,255,.7); padding: 40px 32px; text-align:center; font-size:13px; letter-spacing: .12em;">
+  © 國際獅子會 300A5 區　基隆海洋獅子會　Keelung Ocean Lions Club
+  <div style="margin-top:8px; font-size:11px; color:rgba(255,255,255,.4);">資料來源：30 週年紀念特刊《海洋榮耀》《會史簡介》《歷屆會長名錄》</div>
+</footer>
+
+</body>
+</html>
