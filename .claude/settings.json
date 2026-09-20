@@ -6,7 +6,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/session-start.sh\""
+            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/session-start.sh\"",
+            "timeout": 10
           }
         ]
       }
@@ -17,7 +18,19 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/guard-bash.sh\""
+            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/guard-bash.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/skill-router.sh\"",
+            "timeout": 5
           }
         ]
       }

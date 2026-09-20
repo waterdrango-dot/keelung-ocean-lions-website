@@ -5,9 +5,14 @@
 set -u
 ROOT=$(cd "$(dirname "$0")/../.." 2>/dev/null && pwd) || ROOT="."
 REPO=$(basename "$ROOT")
+if [ "$(printf '%s' "${CLAUDE_CODE_REMOTE:-}" | tr '[:upper:]' '[:lower:]')" = "true" ]; then
+  MODE="雲端（碰不到本機 Chrome／桌面 LINE／地端 Codex／NAS）"
+else
+  MODE="本機"
+fi
 
 cat <<EOF
-=== TigerOS v$(cat "$ROOT/tigeros/VERSION" 2>/dev/null || echo "?") 已載入｜repo: $REPO ===
+=== TigerOS v$(cat "$ROOT/tigeros/VERSION" 2>/dev/null || echo "?") 已載入｜repo: $REPO｜執行環境: $MODE ===
 
 【動手前先判級】A 直接做 / B 列計畫等首肯 / C 列≥2方案等明文授權 / D 立即停
 判不出來 → 當成更高一級。

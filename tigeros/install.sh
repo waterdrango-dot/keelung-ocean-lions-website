@@ -83,6 +83,14 @@ else
   exit 1
 fi
 
+ROUTER_PAYLOAD='{"prompt":"幫我做這個月損益"}'
+if printf '%s' "$ROUTER_PAYLOAD" | sh "$TARGET/tigeros/hooks/skill-router.sh" 2>/dev/null | grep -q "chengbao-monthly-pnl"; then
+  echo "  ✓ skill-router.sh 正常路由技能"
+else
+  echo "  ✗ skill-router.sh 沒有路由，請檢查 python3 與 skill-rules.json"
+  exit 1
+fi
+
 echo ""
 echo "完成。下一步："
 echo "  cd $TARGET && git add tigeros .claude CLAUDE.md && git commit -m 'chore(tigeros): 掛載 TigerOS harness'"
