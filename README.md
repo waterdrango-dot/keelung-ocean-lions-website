@@ -1,6 +1,8 @@
 # 基隆海洋獅子會官方網站
 
-> 30 年公益 · 一片海洋
+> 自 1991 年創會 · 國際獅子會 300A5 區 · 為海洋盡力，服務無界限
+
+純靜態網站（無需建置流程），搭配 Decap CMS 後台，部署於 Netlify。
 
 ## 專案結構
 
@@ -10,38 +12,61 @@
 ├── about.html              # 關於我們
 ├── presidents.html         # 歷屆會長
 ├── service.html            # 公益實踐
+├── history.html            # 會史紀要
 ├── media.html              # 影音紀錄
 ├── gallery.html            # 活動相簿
 ├── join.html               # 加入我們
+├── donate.html             # 公益捐款
+├── register.html           # 活動報名
+├── agm.html                # 年度大會
+├── members.html            # 會員專區
 ├── contact.html            # 聯絡我們
-├── deployment-deck.html    # 部署計畫提案 (簡報)
 ├── assets/
 │   ├── styles.css          # 全站樣式
-│   ├── chrome.js           # 共用導覽 + 頁尾
-│   └── uploads/            # CMS 上傳的圖片
+│   ├── chrome.js           # 共用導覽列 + 頁尾 + 行動選單
+│   ├── lions/              # 獅子會識別圖像
+│   └── photos/             # 活動照片
 ├── admin/
 │   ├── index.html          # Decap CMS 入口
 │   └── config.yml          # CMS 欄位設定
-├── _data/
-│   ├── site.yml            # 聯絡資訊
-│   ├── homepage.yml        # 首頁文案
-│   ├── presidents/         # 會長資料 (CMS 自動產生)
-│   ├── ambassadors/        # 大使資料
-│   ├── activities/         # 活動資料
-│   ├── videos/             # 影音資料
-│   └── press/              # 媒體報導
+├── data/
+│   └── home.json           # 首頁文案（CMS 寫入）
+├── robots.txt              # 搜尋引擎索引規則
+├── sitemap.xml             # 網站地圖
 ├── netlify.toml            # Netlify 部署設定
-└── DEPLOY-GUIDE.md         # 部署上線完整指南
+├── DEPLOY-SOP.md           # 三分鐘部署 SOP
+└── ADMIN-USERS-GUIDE.md    # 委員後台使用說明
 ```
-
-## 快速開始
-
-請閱讀 **[DEPLOY-GUIDE.md](./DEPLOY-GUIDE.md)** 進行部署。
 
 ## 本機預覽
 
-直接用瀏覽器開啟 `index.html` 即可。
+直接用瀏覽器開啟 `index.html` 即可，不需要安裝任何東西。
 
-## 後台網址
+若要讓 `admin/` 後台在本機正常運作，需以簡易伺服器啟動：
 
-部署完成後：`https://[your-site].netlify.app/admin/`
+```bash
+python3 -m http.server 8000
+# 瀏覽器開 http://localhost:8000
+```
+
+## 部署
+
+請參考 **[DEPLOY-SOP.md](./DEPLOY-SOP.md)**。後台網址為 `https://[站名].netlify.app/admin/`，
+委員使用說明見 **[ADMIN-USERS-GUIDE.md](./ADMIN-USERS-GUIDE.md)**。
+
+## 更換正式網域
+
+SEO 標記中的網址目前設為 `https://keelung-ocean-lions.netlify.app`。
+若日後改用自訂網域，執行以下指令一次換掉全站：
+
+```bash
+OLD="https://keelung-ocean-lions.netlify.app"
+NEW="https://你的新網域"
+sed -i "s|$OLD|$NEW|g" *.html robots.txt sitemap.xml
+```
+
+## 維護注意事項
+
+- `assets/chrome.js` 會在頁面載入後補上缺漏的 meta 標籤，但 **LINE、Facebook 的預覽爬蟲不執行 JavaScript**，
+  因此分享預覽所需的 `og:` 標籤必須寫在 HTML 原始碼裡，不能只靠 chrome.js 補。
+- 新增頁面時，記得同步更新 `sitemap.xml` 與 `assets/chrome.js` 的導覽清單。

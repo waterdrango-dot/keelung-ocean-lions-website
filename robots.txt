@@ -1,0 +1,6 @@
+# 基隆海洋獅子會 robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://keelung-ocean-lions.netlify.app/sitemap.xml
