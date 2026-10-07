@@ -61,9 +61,9 @@ fi
 
 echo ""
 echo "→ 驗證"
-sh "$TARGET/tigeros/hooks/session-start.sh" >/dev/null 2>&1 \
-  && echo "  ✓ session-start.sh 可執行" \
-  || echo "  ✗ session-start.sh 失敗"
+sh "$TARGET/tigeros/hooks/startup-briefing.sh" >/dev/null 2>&1 \
+  && echo "  ✓ startup-briefing.sh 可執行" \
+  || echo "  ✗ startup-briefing.sh 失敗"
 
 # 組出禁令字串再測，避免本腳本自身被守衛誤判
 PROBE_CMD="$(printf 'docker compose down')"
