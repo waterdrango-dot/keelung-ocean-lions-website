@@ -4,7 +4,7 @@
 
 | 檔案 | 類型 | 作用 |
 |---|---|---|
-| `session-start.sh` | SessionStart | 開場注入治理摘要與當前未解風險，解決「每次都要重講規矩」 |
+| `startup-briefing.sh` | SessionStart | 開場注入治理摘要與當前未解風險，解決「每次都要重講規矩」 |
 | `guard-bash.sh` | PreToolUse (Bash) | 攔截違反紅線的指令，exit 2 擋下並把理由回饋給模型 |
 | `skill-router.sh` | UserPromptSubmit | 規則評分後明示提醒該用哪個技能；並偵測雲端 session 警告本機依賴 |
 | `test-guard.sh` | 測試 | guard 的回歸測試，22 項 |

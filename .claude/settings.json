@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/session-start.sh\"",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/tigeros/hooks/startup-briefing.sh\"",
             "timeout": 10
           }
         ]

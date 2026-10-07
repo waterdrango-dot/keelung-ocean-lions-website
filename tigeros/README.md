@@ -27,7 +27,7 @@ tigeros/
 │   ├── system-map.md        三事業體／repo／生產環境／已知風險
 │   └── naming.md            命名規範
 ├── hooks/
-│   ├── session-start.sh     開場注入治理摘要＋執行環境（雲端／本機）
+│   ├── startup-briefing.sh     開場注入治理摘要＋執行環境（雲端／本機）
 │   ├── guard-bash.sh        攔截違反紅線的指令
 │   ├── skill-router.sh      技能路由＋雲端本機依賴警告
 │   ├── test-guard.sh        回歸測試（22 項）
@@ -61,7 +61,7 @@ git commit -m "chore(tigeros): 掛載 TigerOS harness"
 sh tigeros/hooks/test-guard.sh                    # 22 項
 sh tigeros/hooks/test-router.sh                   # 17 項
 sh tigeros/skills/validate-skills.sh ~/.claude/skills
-sh tigeros/hooks/session-start.sh                 # 看開場注入什麼
+sh tigeros/hooks/startup-briefing.sh                 # 看開場注入什麼
 ```
 
 ## 設計取捨
