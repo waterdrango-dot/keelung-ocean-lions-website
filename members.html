@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>會員專區 · 基隆海洋獅子會 Keelung Ocean Lions Club</title>
+<meta name="description" content="基隆海洋獅子會會員專區 — 內部公告、財務報告、活動資料與通訊錄下載。">
+<link rel="canonical" href="https://keelung-ocean-lions.netlify.app/members.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="基隆海洋獅子會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="會員專區 · 基隆海洋獅子會 Keelung Ocean Lions Club">
+<meta property="og:description" content="基隆海洋獅子會會員專區 — 內部公告、財務報告、活動資料與通訊錄下載。">
+<meta property="og:url" content="https://keelung-ocean-lions.netlify.app/members.html">
+<meta property="og:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="會員專區 · 基隆海洋獅子會 Keelung Ocean Lions Club">
+<meta name="twitter:description" content="基隆海洋獅子會會員專區 — 內部公告、財務報告、活動資料與通訊錄下載。">
+<meta name="twitter:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--s-5);
+}
+.member-tile {
+  background: white;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--ocean-deep);
+  padding: var(--s-5);
+  transition: all .25s var(--ease);
+}
+.member-tile:hover {
+  border-left-color: var(--lion-gold);
+  transform: translateX(2px);
+  box-shadow: 0 12px 28px -10px rgba(7,55,99,0.18);
+}
+.member-tile h4 { color: var(--sea-ink); margin: 0 0 8px; font-size: 16px; }
+.member-tile p { color: var(--ink-500); font-size: 13px; margin: 0; }
+.member-tile .icon {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: var(--sand-gold);
+  color: var(--lion-gold);
+  margin-bottom: var(--s-3);
+}
+.notice-feed { display: grid; gap: var(--s-3); }
+.notice {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--s-4);
+  padding: var(--s-4) var(--s-5);
+  background: white;
+  border: 1px solid var(--line);
+  align-items: center;
+}
+.notice__date {
+  font-family: var(--font-en);
+  font-size: 12px;
+  color: var(--lion-gold);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.notice__title { color: var(--sea-ink); font-weight: 500; font-size: 15px; }
+</style>
+</head>
+<body data-page="members">
+
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>MEMBERS</span></div>
+    <span class="eyebrow on-dark">會員專區 · MEMBERS ONLY</span>
+    <h1>獅友園地</h1>
+    <p class="lede">本會內部公告、活動資料、財務報告與通訊錄統一收錄於此。請以您的會員帳號登入瀏覽。</p>
+  </div>
+</section>
+
+<!-- Lock screen -->
+<section class="section" id="lockSection">
+  <div class="container">
+    <div class="lock-shell">
+      <div class="lock-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <h3>會員登入</h3>
+      <p style="color:var(--ink-500); font-size:14px;">請輸入會員證號與通行碼。<br>遺忘登入資訊請洽秘書處。</p>
+      <form onsubmit="event.preventDefault(); document.getElementById('lockSection').style.display='none'; document.getElementById('memArea').style.display='block'; window.scrollTo({top:0, behavior:'smooth'});" style="margin-top:var(--s-5);">
+        <div class="field"><label style="text-align:left;">會員證號</label><input type="text" placeholder="OLC-001" required></div>
+        <div class="field"><label style="text-align:left;">通行碼</label><input type="password" required></div>
+        <button class="btn btn--gold" style="width:100%; justify-content:center;">登入會員專區 →</button>
+      </form>
+      <p style="margin-top:var(--s-5); font-size:12px; color:var(--ink-500);">演示版本 · 任意輸入即可進入</p>
+    </div>
+  </div>
+</section>
+
+<!-- Members area (hidden by default) -->
+<div id="memArea" style="display:none;">
+
+  <section class="section section--tight">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom: var(--s-6); flex-wrap:wrap; gap: var(--s-4);">
+        <div>
+          <span class="eyebrow">最新公告</span>
+          <h2 style="margin-bottom: 0;">獅友通知</h2>
+        </div>
+        <a href="#" class="btn btn--ghost">查看全部 →</a>
+      </div>
+
+      <div class="notice-feed">
+        <div class="notice">
+          <span class="notice__date">2026.07.10</span>
+          <span class="notice__title">第 36 屆會長 江志偉 就職。年度主題「為海洋盡力，服務無界限」，隔週三晚間例會，全年共 26 次</span>
+          <span class="pill pill--gold">重要</span>
+        </div>
+        <div class="notice">
+          <span class="notice__date">2025.05–2025.07</span>
+          <span class="notice__title">姊妹會推薦巡訪展開，預計連續訪問 28 個姊妹會（詳見「姊妹會關係」）</span>
+          <span class="pill">公告</span>
+        </div>
+        <div class="notice">
+          <span class="notice__date">公告中</span>
+          <span class="notice__title">例會公告、年度活動行事曆，請洽秘書處索取最新版本</span>
+          <span class="pill pill--ocean">說明</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">資源中心 · RESOURCES</span>
+        <h2>會員專屬資料</h2>
+      </div>
+
+      <div class="member-grid">
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+          <h4>會員通訊錄 2026</h4>
+          <p>全體會員聯繫方式、職業類別、入會年資</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h4>歷年財務報表</h4>
+          <p>近 5 年度收支決算、稽核紀錄</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg></div>
+          <h4>例會出席紀錄</h4>
+          <p>個人出席統計、滿勤積分查詢</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg></div>
+          <h4>新會員推薦表</h4>
+          <p>邀請新獅友加入本會的標準表單</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h4>會章與議事規範</h4>
+          <p>本會章程、議事規則、各委員會職掌</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <h4>年度活動行事曆</h4>
+          <p>例會、淨灘、義賣、訪問交流總覽</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></div>
+          <h4>視覺識別資源</h4>
+          <p>會徽 PNG / SVG、簡報範本、名片檔</p>
+        </a>
+
+        <a href="javascript:void(0)" class="member-tile" onclick="alert('此檔案僅供本會會員閱覽。請洽秘書處索取：keelung.ocean.lions@gmail.com')">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>姊妹會通訊錄</h4>
+          <p>國內外姊妹會、區會聯絡資料</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">通訊錄速查 · DIRECTORY</span>
+        <h2>第 31 屆理監事暨內閣名錄</h2>
+        <p style="max-width: 580px; margin: var(--s-3) auto 0; color: var(--ink-500); font-size: 14px;">以下為本會最近已說明公布之內閣名錄（110.04.22 修訂）。</p>
+      </div>
+
+      <table class="tbl" style="background:white; border:1px solid var(--line); max-width: 920px; margin: 0 auto;">
+        <thead><tr><th>職務</th><th>姓名</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td><span class="pill pill--gold">理事長 · 會長</span></td><td>簡枝文</td><td>總編輯·授證25週年紀念特刊</td></tr>
+          <tr><td><span class="pill pill--ocean">常務理事 · 第一副會長</span></td><td>陳清源</td><td>—</td></tr>
+          <tr><td><span class="pill pill--ocean">常務理事 · 第二副會長</span></td><td>余廣成</td><td>—</td></tr>
+          <tr><td>年會主席</td><td>陳建宏</td><td>創會長·1屆會長·30週年</td></tr>
+          <tr><td>上任理事</td><td>陳紹群</td><td>第 30 屆會長</td></tr>
+          <tr><td>理事</td><td>劃慶瑋、李鴻欽、江振科、陳坤田、許勝賢、賴聰福、簡國堂、簡宗盛</td><td>—</td></tr>
+          <tr><td>候補理事</td><td>劃國煌、陳漢周、張鈺民</td><td>—</td></tr>
+          <tr><td><span class="pill">常務監事</span></td><td>賴冠互</td><td>—</td></tr>
+          <tr><td>監事</td><td>邱瑞義、趙友欽</td><td>—</td></tr>
+          <tr><td>候補監事</td><td>陳璟至</td><td>—</td></tr>
+          <tr><td>秘書</td><td>簡宗盛</td><td>· 副秘書：張鈺民</td></tr>
+          <tr><td>財務</td><td>陳坤田</td><td>· 副財務：陳漢周</td></tr>
+          <tr><td>連絡</td><td>李鴻欽</td><td>· 副連絡：趙友欽</td></tr>
+          <tr><td>總管</td><td>簡國堂</td><td>· 副總管：許勝賢</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container text-center">
+      <p style="margin-bottom: var(--s-4); color: rgba(255,255,255,0.7); font-size: 14px;">登出後返回公開首頁</p>
+      <button class="btn btn--outline-white" onclick="document.getElementById('lockSection').style.display='block'; document.getElementById('memArea').style.display='none'; window.scrollTo({top:0});">登出 Member Sign Out</button>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

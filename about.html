@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於我們 · 基隆海洋獅子會</title>
+<meta name="description" content="關於基隆海洋獅子會 — 會務組織、服務宗旨與國際獅子會精神。了解我們如何以「為海洋盡力，服務無界限」深耕基隆在地公益。">
+<link rel="canonical" href="https://keelung-ocean-lions.netlify.app/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="基隆海洋獅子會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="關於我們 · 基隆海洋獅子會">
+<meta property="og:description" content="關於基隆海洋獅子會 — 會務組織、服務宗旨與國際獅子會精神。了解我們如何以「為海洋盡力，服務無界限」深耕基隆在地公益。">
+<meta property="og:url" content="https://keelung-ocean-lions.netlify.app/about.html">
+<meta property="og:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="關於我們 · 基隆海洋獅子會">
+<meta name="twitter:description" content="關於基隆海洋獅子會 — 會務組織、服務宗旨與國際獅子會精神。了解我們如何以「為海洋盡力，服務無界限」深耕基隆在地公益。">
+<meta name="twitter:image" content="https://keelung-ocean-lions.netlify.app/assets/photos/keelung-ocean.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:wght@500;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .pillars { display:grid; grid-template-columns: repeat(3,1fr); gap: var(--s-6); margin-top: var(--s-7); }
+  .pillar-card {
+    background: white; border:1px solid var(--line); padding: var(--s-7) var(--s-5);
+    text-align: center; position: relative; overflow: hidden;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .pillar-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -30px rgba(11,83,148,0.4); }
+  .pillar-card__icon {
+    width: 80px; height: 80px; margin: 0 auto var(--s-4);
+    color: var(--ocean-deep);
+  }
+  .pillar-card__zh {
+    font-family: var(--font-serif); font-size: 42px; font-weight: 700;
+    color: var(--sea-ink); letter-spacing: 0.16em; line-height: 1; margin-bottom: 8px;
+  }
+  .pillar-card__en {
+    font-family: var(--font-en); font-size: 13px; letter-spacing: 0.32em;
+    color: var(--lion-gold); text-transform: uppercase; margin-bottom: var(--s-4);
+  }
+  .pillar-card__rule { width: 32px; height: 2px; background: var(--lion-gold); margin: 0 auto var(--s-4); }
+  .pillar-card p { color: var(--ink-700); font-size: 15px; line-height: 1.85; text-align: left; }
+  @media(max-width:880px){ .pillars { grid-template-columns: 1fr; } }
+
+  /* Timeline */
+  .tl {
+    position: relative; max-width: 880px; margin: 0 auto; padding: var(--s-6) 0;
+  }
+  .tl::before {
+    content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(180deg, var(--ocean-deep), var(--lion-gold));
+    transform: translateX(-50%);
+  }
+  .tl-item {
+    display: grid; grid-template-columns: 1fr 80px 1fr; gap: var(--s-5);
+    margin-bottom: var(--s-7);
+    align-items: center;
+  }
+  .tl-item__ring {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 2px solid var(--lion-gold);
+    background: white;
+    display: grid; place-items: center;
+    font-family: var(--font-en); font-size: 12px; font-weight: 700;
+    color: var(--lion-gold); justify-self: center;
+    position: relative; z-index: 1;
+  }
+  .tl-item__content {
+    background: white; border: 1px solid var(--line); padding: var(--s-5);
+    border-radius: 4px; transition: all .3s var(--ease);
+  }
+  .tl-item__content:hover {
+    border-color: var(--lion-gold); box-shadow: 0 16px 32px -16px rgba(11,83,148,0.25);
+  }
+  .tl-item:nth-child(odd) .tl-item__content {
+    grid-column: 1; text-align: right;
+  }
+  .tl-item:nth-child(even) .tl-item__content {
+    grid-column: 3;
+  }
+  .tl-item:nth-child(odd) .tl-item__ring { grid-column: 2; }
+  .tl-item:nth-child(even) .tl-item__ring { grid-column: 2; }
+  .tl-yr { font-family: var(--font-en); font-size: 14px; color: var(--lion-gold); letter-spacing: 0.16em; font-weight: 600; margin-bottom: 6px; }
+  .tl-title { font-size: 18px; font-weight: 700; color: var(--sea-ink); margin-bottom: 6px; }
+  .tl-desc { font-size: 14px; color: var(--ink-500); line-height: 1.7; }
+
+  /* Org chart */
+  .org { display:grid; gap: var(--s-5); justify-content:center; }
+  .org-row { display:flex; gap: var(--s-4); justify-content:center; flex-wrap:wrap; position: relative; }
+  .org-row--top { margin-bottom: var(--s-5); }
+  .org-row--top::after {
+    content: ""; position: absolute; bottom: -28px; left: 50%; width: 2px; height: 24px; background: var(--ocean-deep);
+  }
+  .org-node {
+    background: white; border: 1px solid var(--line); padding: var(--s-4) var(--s-5);
+    text-align: center; min-width: 200px;
+    border-radius: 4px;
+  }
+  .org-node--top { background: var(--ocean-deep); color: white; border-color: var(--ocean-deep); min-width: 280px; }
+  .org-node--top h4 { color: white; font-size: 18px; }
+  .org-node--gold { border-color: var(--lion-gold); border-width: 2px; }
+  .org-node h4 { font-size: 16px; color: var(--sea-ink); margin: 0 0 4px; }
+  .org-node small { font-size: 12px; color: var(--ink-500); font-family: var(--font-en); letter-spacing: 0.12em; }
+
+  /* Lions intl alignment */
+  .lcia { display:grid; grid-template-columns: 1fr 1fr; gap: var(--s-7); align-items:center; }
+  .lcia-mark {
+    aspect-ratio: 1; max-width: 360px; margin: 0 auto;
+    background: linear-gradient(135deg, var(--ocean-deep), var(--sea-ink));
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: white; text-align: center;
+    border: 4px solid var(--lion-gold);
+    box-shadow: 0 30px 60px -30px rgba(7,55,99,0.5);
+  }
+  .lcia-mark .top { font-family: var(--font-en); font-size: 22px; letter-spacing: 0.3em; font-weight: 700; }
+  .lcia-mark .mid { font-family: var(--font-serif); font-size: 64px; font-weight: 700; color: var(--lion-gold-soft); margin: 8px 0; line-height: 1; }
+  .lcia-mark .bot { font-family: var(--font-en); font-size: 13px; letter-spacing: 0.24em; opacity: 0.8; }
+  @media(max-width:880px){ .lcia { grid-template-columns: 1fr; } }
+
+  /* Sister clubs */
+  .sisters-intro {
+    max-width: 760px; margin: 0 auto var(--s-7); text-align: center;
+  }
+  .sisters-region {
+    display: inline-flex; align-items: center; gap: var(--s-3);
+    padding: 10px 22px; border: 1px solid var(--lion-gold);
+    background: rgba(11,83,148,0.04);
+    margin-bottom: var(--s-4);
+    font-family: var(--font-en); font-size: 12px; letter-spacing: 0.28em;
+    color: var(--sea-ink); text-transform: uppercase;
+  }
+  .sisters-region b { color: var(--lion-gold); font-weight: 700; }
+  .sisters-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3);
+    max-width: 1000px; margin: 0 auto;
+  }
+  .sister-card {
+    display: flex; align-items: center; gap: var(--s-4);
+    background: white; border: 1px solid var(--line);
+    padding: var(--s-4) var(--s-5);
+    transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    position: relative;
+  }
+  .sister-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--lion-gold);
+    box-shadow: 0 16px 32px -20px rgba(11,83,148,0.3);
+  }
+  .sister-card__no {
+    flex: 0 0 36px;
+    font-family: var(--font-en); font-size: 12px; font-weight: 700;
+    color: var(--lion-gold); letter-spacing: 0.12em;
+    border-right: 1px solid var(--line); padding-right: var(--s-3);
+    text-align: center;
+  }
+  .sister-card__name {
+    font-family: var(--font-serif); font-size: 17px; font-weight: 500;
+    color: var(--sea-ink); letter-spacing: 0.05em; line-height: 1.3;
+  }
+  .sister-card--ours {
+    background: linear-gradient(135deg, var(--ocean-deep), var(--sea-ink));
+    border-color: var(--lion-gold); border-width: 2px;
+    box-shadow: 0 20px 40px -20px rgba(11,83,148,0.45);
+  }
+  .sister-card--ours .sister-card__no {
+    color: var(--lion-gold-soft); border-right-color: rgba(241,196,15,0.3);
+  }
+  .sister-card--ours .sister-card__name { color: white; font-weight: 700; }
+  .sister-card__badge {
+    position: absolute; top: -8px; right: 12px;
+    background: var(--lion-gold); color: var(--sea-ink);
+    font-family: var(--font-en); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.18em; padding: 3px 10px;
+    text-transform: uppercase;
+  }
+  .sisters-source {
+    text-align: center; margin-top: var(--s-7);
+    font-size: 12px; color: var(--ink-500); letter-spacing: 0.04em;
+    font-style: italic;
+  }
+  @media(max-width:880px){
+    .sisters-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Sister Clubs · 第一專區姊妹分會 */
+  .sisters-wrap { max-width: 1040px; margin: 0 auto; }
+  .sisters-intro {
+    text-align: center; max-width: 720px; margin: 0 auto var(--s-7);
+  }
+  .sisters-intro .pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: white; border: 1px solid var(--lion-gold);
+    padding: 8px 20px; border-radius: 100px;
+    font-family: var(--font-en); font-size: 11px; letter-spacing: 0.28em;
+    color: var(--lion-gold); text-transform: uppercase; font-weight: 600;
+    margin-bottom: var(--s-4);
+  }
+  .sisters-intro .pill::before {
+    content: ""; width: 6px; height: 6px; background: var(--lion-gold); border-radius: 50%;
+  }
+  .sisters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .sister-item {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 18px 22px;
+    display: grid; grid-template-columns: 36px 1fr; align-items: center;
+    gap: 14px;
+    transition: all .3s var(--ease);
+    border-radius: 2px;
+    position: relative;
+  }
+  .sister-item:hover {
+    border-color: var(--lion-gold);
+    transform: translateX(4px);
+    box-shadow: 0 12px 28px -16px rgba(11,83,148,0.3);
+  }
+  .sister-item__num {
+    font-family: var(--font-en); font-size: 13px; font-weight: 700;
+    color: var(--lion-gold); letter-spacing: 0.08em;
+    border-right: 1px solid var(--line); padding-right: 12px; text-align: center;
+  }
+  .sister-item__name {
+    font-family: var(--font-serif); font-size: 16px; font-weight: 500;
+    color: var(--sea-ink); letter-spacing: 0.04em;
+  }
+  .sister-item--us {
+    background: linear-gradient(135deg, var(--ocean-deep), var(--sea-ink));
+    border-color: var(--ocean-deep);
+    box-shadow: 0 18px 36px -18px rgba(7,55,99,0.5);
+  }
+  .sister-item--us .sister-item__num {
+    color: var(--lion-gold-soft); border-right-color: rgba(255,255,255,0.18);
+  }
+  .sister-item--us .sister-item__name {
+    color: white;
+  }
+  .sister-item--us::after {
+    content: "本會 · OURS"; position: absolute; top: -10px; right: 14px;
+    background: var(--lion-gold); color: var(--sea-ink);
+    font-family: var(--font-en); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.18em; padding: 4px 10px; border-radius: 100px;
+  }
+  .sisters-source {
+    margin-top: var(--s-7);
+    text-align: center;
+    font-size: 12px; color: var(--ink-500); line-height: 1.7;
+    font-family: var(--font-en); letter-spacing: 0.08em;
+    border-top: 1px solid var(--line);
+    padding-top: var(--s-5);
+  }
+  .sisters-source strong {
+    font-family: var(--font-sans); color: var(--ink-700);
+    letter-spacing: 0.04em;
+  }
+  @media(max-width:880px){
+    .sisters-grid { grid-template-columns: 1fr; }
+  }
+
+  /* LCIF 國際捐獻榜 */
+  .lcif-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    max-width: 1100px; margin: 0 auto var(--s-7);
+  }
+  .lcif-stat {
+    border: 1px solid rgba(241,196,15,0.32);
+    padding: 26px 28px; background: rgba(7,55,99,0.55);
+    position: relative;
+  }
+  .lcif-stat::before {
+    content:""; position:absolute; top:-1px; left:-1px; width:32px; height:2px;
+    background: var(--lion-gold);
+  }
+  .lcif-stat__label {
+    font-family: var(--font-en); font-size: 10px; letter-spacing: 0.28em;
+    color: var(--lion-gold-soft); text-transform: uppercase; font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .lcif-stat__big {
+    display: flex; align-items: baseline; gap: 8px; color: #fff; margin-bottom: 6px;
+  }
+  .lcif-stat__num {
+    font-family: var(--font-en); font-size: 46px; font-weight: 800;
+    color: var(--lion-gold); letter-spacing: 0.01em; line-height: 1;
+  }
+  .lcif-stat__unit {
+    font-family: var(--font-serif); font-size: 16px; color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+  }
+  .lcif-stat__sub {
+    font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+  .lcif-tier-legend {
+    max-width: 1100px; margin: 0 auto var(--s-6);
+    display: flex; flex-wrap: wrap; gap: 18px 28px;
+    padding: 14px 20px; border-top: 1px solid rgba(241,196,15,0.18);
+    border-bottom: 1px solid rgba(241,196,15,0.18);
+    justify-content: center;
+  }
+  .lcif-tier {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: rgba(255,255,255,0.85);
+  }
+  .lcif-tier b {
+    font-family: var(--font-en); letter-spacing: 0.1em; color: #fff;
+    margin-right: 4px;
+  }
+  .lcif-tier__desc { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .lcif-tier__dot {
+    width: 12px; height: 12px; border-radius: 50%; display: inline-block;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+  }
+  .lcif-tier__dot--pmjf { background: radial-gradient(circle at 35% 30%, #ffe680, #d4af37 60%, #8a6b14); }
+  .lcif-tier__dot--mmjf { background: radial-gradient(circle at 35% 30%, #9ad6ff, #2b7fc4 60%, #0b3a66); }
+  .lcif-tier__dot--mjf  { background: radial-gradient(circle at 35% 30%, #d8d8d8, #5e6976 60%, #2b323a); }
+
+  .lcif-table-wrap {
+    max-width: 1100px; margin: 0 auto;
+    border: 1px solid rgba(241,196,15,0.25);
+    background: rgba(6,30,55,0.6);
+  }
+  .lcif-table {
+    width: 100%; border-collapse: collapse; color: #fff;
+  }
+  .lcif-table thead th {
+    font-family: var(--font-en); font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; font-weight: 700;
+    color: var(--lion-gold-soft); text-align: left;
+    padding: 16px 16px; border-bottom: 1px solid rgba(241,196,15,0.32);
+    background: rgba(7,55,99,0.5);
+  }
+  .lcif-th-rank { width: 56px; text-align: center !important; }
+  .lcif-th-amt  { width: 180px; }
+  .lcif-th-bar  { width: 28%; }
+  .lcif-th-tier { width: 180px; text-align: right !important; }
+  .lcif-table tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    vertical-align: middle;
+  }
+  .lcif-table tbody tr:hover { background: rgba(241,196,15,0.04); }
+  .lcif-cell-rank {
+    text-align: center;
+    font-family: var(--font-en); font-size: 13px; font-weight: 700;
+    color: var(--lion-gold); letter-spacing: 0.06em;
+  }
+  .lcif-name-mask {
+    font-family: var(--font-serif); font-size: 15px;
+    color: rgba(255,255,255,0.78); letter-spacing: 0.08em;
+    border-bottom: 1px dashed rgba(241,196,15,0.32); padding-bottom: 2px;
+  }
+  .lcif-amt-k {
+    font-family: var(--font-en); font-weight: 800; font-size: 16px;
+    color: #fff; margin-right: 10px;
+  }
+  .lcif-amt-usd {
+    font-family: var(--font-en); font-size: 11px; letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.45);
+  }
+  .lcif-bar {
+    display: block; height: 8px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 100px; overflow: hidden;
+    position: relative;
+  }
+  .lcif-bar__fill {
+    display: block; height: 100%;
+    transition: width .8s var(--ease);
+  }
+  .lcif-bar__fill--pmjf { background: linear-gradient(90deg, #ffe680, #d4af37); }
+  .lcif-bar__fill--mmjf { background: linear-gradient(90deg, #6db4ee, #2b7fc4); }
+  .lcif-bar__fill--mjf  { background: linear-gradient(90deg, #98a3ad, #5e6976); }
+  .lcif-cell-tier { text-align: right; }
+  .lcif-badge {
+    display: inline-block;
+    font-family: var(--font-en); font-size: 10px; letter-spacing: 0.18em;
+    font-weight: 700; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 2px;
+    border: 1px solid;
+  }
+  .lcif-badge--pmjf { color: #fde58a; border-color: rgba(253,229,138,0.5); background: rgba(212,175,55,0.12); }
+  .lcif-badge--mmjf { color: #b6dcff; border-color: rgba(182,220,255,0.4); background: rgba(43,127,196,0.14); }
+  .lcif-badge--mjf  { color: #c8cfd6; border-color: rgba(200,207,214,0.3); background: rgba(255,255,255,0.04); }
+  .lcif-row--pmjf .lcif-cell-rank { color: #fde58a; }
+  .lcif-source {
+    max-width: 1100px; margin: var(--s-6) auto 0;
+    text-align: center; font-size: 12px; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em; line-height: 1.7;
+    border-top: 1px solid rgba(241,196,15,0.18); padding-top: var(--s-5);
+  }
+  @media(max-width:880px){
+    .lcif-stats { grid-template-columns: 1fr; }
+    .lcif-th-bar, .lcif-cell-bar { display: none; }
+    .lcif-stat__num { font-size: 36px; }
+    .lcif-table thead th, .lcif-table tbody td { padding: 12px 10px; }
+  }
+
+  /* Hall of Honor — 海洋榮耀 */
+  .honor-quote {
+    text-align: center; max-width: 720px; margin: 0 auto var(--s-7);
+    font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+    color: var(--lion-gold); letter-spacing: 0.12em; line-height: 1.6;
+  }
+  .honor-quote::before, .honor-quote::after {
+    content: "—"; opacity: 0.5; margin: 0 var(--s-3); font-weight: 300;
+  }
+  .honor-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-5);
+    max-width: 1100px; margin: 0 auto;
+  }
+  .honor-card {
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--sea-ink) 100%);
+    border: 1px solid var(--lion-gold);
+    padding: var(--s-6);
+    color: rgba(255,255,255,0.92);
+    position: relative;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .honor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -30px rgba(241,196,15,0.35);
+  }
+  .honor-card__corner {
+    position: absolute; top: -1px; right: -1px;
+    background: var(--lion-gold); color: var(--sea-ink);
+    padding: 6px 14px;
+    font-family: var(--font-en); font-size: 10px; letter-spacing: 0.22em; font-weight: 800;
+    text-transform: uppercase;
+  }
+  .honor-card__corner--gov {
+    background: linear-gradient(135deg, #fdd663, #d4af37);
+    box-shadow: 0 0 0 2px rgba(241,196,15,0.25);
+  }
+  .honor-card__head {
+    display: flex; align-items: baseline; gap: var(--s-4);
+    border-bottom: 1px solid rgba(241,196,15,0.25);
+    padding-bottom: var(--s-3); margin-bottom: var(--s-4);
+  }
+  .honor-card__name {
+    font-family: var(--font-serif); font-size: 28px; font-weight: 700;
+    color: white; letter-spacing: 0.06em; line-height: 1;
+  }
+  .honor-card__term {
+    font-family: var(--font-en); font-size: 11px; font-weight: 600;
+    color: var(--lion-gold-soft); letter-spacing: 0.18em;
+    margin-left: auto; white-space: nowrap;
+  }
+  .honor-card__roles {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .honor-card__roles li {
+    display: grid; grid-template-columns: 90px 1fr; gap: var(--s-3);
+    font-size: 14px; line-height: 1.55; align-items: baseline;
+  }
+  .honor-card__yr {
+    font-family: var(--font-en); font-size: 12px; font-weight: 700;
+    color: var(--lion-gold-soft); letter-spacing: 0.06em;
+  }
+  .honor-card__role { color: rgba(255,255,255,0.88); }
+  .honor-card__role--top {
+    color: var(--lion-gold); font-weight: 600; letter-spacing: 0.04em;
+  }
+  .honor-source {
+    text-align: center; margin-top: var(--s-7);
+    font-size: 12px; color: var(--ink-500); letter-spacing: 0.04em;
+    font-style: italic;
+  }
+  @media(max-width:880px){
+    .honor-grid { grid-template-columns: 1fr; }
+    .honor-card__head { flex-wrap: wrap; }
+    .honor-card__term { margin-left: 0; width: 100%; margin-top: 4px; }
+    .honor-card__roles li { grid-template-columns: 70px 1fr; }
+  }
+</style>
+</head>
+<body data-page="about">
+<div id="site-nav"></div>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">HOME</a> / <span>ABOUT US</span></div>
+    <span class="eyebrow on-dark">關於我們 · ABOUT US</span>
+    <h1>海洋之名，承載著三十五年的浪潮</h1>
+    <p class="lede">基隆海洋獅子會自 1991 年成立以來，以「寬廣、深邃、流動」三軌精神為念，匯聚會員之力，持續為臺灣社會貢獻不息。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">海洋精神三軌 · THREE PILLARS</span>
+      <h2>我們所信奉的，<br>三道恆久不息的浪潮</h2>
+    </div>
+    <div class="pillars">
+      <div class="pillar-card">
+        <svg class="pillar-card__icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="8" y1="40" x2="72" y2="40"/>
+          <path d="M8 50 Q24 42 40 50 T72 50" />
+          <path d="M8 58 Q24 50 40 58 T72 58" opacity="0.6"/>
+          <circle cx="60" cy="28" r="6" fill="currentColor" opacity="0.4"/>
+        </svg>
+        <div class="pillar-card__zh">寬 廣</div>
+        <div class="pillar-card__en">VASTNESS</div>
+        <div class="pillar-card__rule"></div>
+        <p>我們以海洋為視野，相信公益不分國界、不限對象。從偏鄉學童到國際救難，每一道地平線都是我們的關照範圍。</p>
+      </div>
+      <div class="pillar-card">
+        <svg class="pillar-card__icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="40" cy="40" r="30"/>
+          <circle cx="40" cy="40" r="20" opacity="0.6"/>
+          <circle cx="40" cy="40" r="10" opacity="0.3"/>
+          <circle cx="40" cy="40" r="2" fill="currentColor"/>
+        </svg>
+        <div class="pillar-card__zh">深 邃</div>
+        <div class="pillar-card__en">DEPTH</div>
+        <div class="pillar-card__rule"></div>
+        <p>三十五年累積的不只是時間，更是公益的厚度。每一屆會長與會員的奉獻，層層疊加成這片海洋的深度與重量。</p>
+      </div>
+      <div class="pillar-card">
+        <svg class="pillar-card__icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M8 40 Q20 24 32 40 T56 40 T80 40"/>
+          <path d="M8 52 Q20 36 32 52 T56 52 T80 52" opacity="0.6"/>
+          <path d="M8 64 Q20 48 32 64 T56 64 T80 64" opacity="0.3"/>
+        </svg>
+        <div class="pillar-card__zh">流 動</div>
+        <div class="pillar-card__en">FLOW</div>
+        <div class="pillar-card__rule"></div>
+        <p>我們不墨守成規。從紙本徵募到數位平台、從區域行動到全球倡議，我們持續以新形式讓公益的浪花更廣地流動。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">三十五年歷程 · OUR HISTORY</span>
+      <h2>從一道浪花，到一片海洋</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-item__content">
+          <div class="tl-yr">1991</div>
+          <div class="tl-title">授證創會</div>
+          <div class="tl-desc">民國 80 年 7 月 14 日授證。首屆會長陳建宏與所有授證會員創始本會，並由創會委員集資購買會館，首開基隆地區獅子會先例。輔導會：中央獅子會。</div>
+        </div>
+        <div class="tl-item__ring">第1屆</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__ring">第3屆</div>
+        <div class="tl-item__content">
+          <div class="tl-yr">1993</div>
+          <div class="tl-title">國際姊姊會結盟</div>
+          <div class="tl-desc">民國 82 年 6 月 27 日與韓國釜山新羅獅子會簽訂姊姊會結盟、開啟國際交流篇章。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__content">
+          <div class="tl-yr">1994</div>
+          <div class="tl-title">輔導姊妹會成立</div>
+          <div class="tl-desc">輔導推薦忠孝獅子會（1994.03.16 · 導獅：李元吉前總監）、港都獅子會（1994.04.08 · 導獅：陳建宏前總監）。</div>
+        </div>
+        <div class="tl-item__ring">第4屆</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__ring">第18屆</div>
+        <div class="tl-item__content">
+          <div class="tl-yr">2008–2009</div>
+          <div class="tl-title">創會長接任 300A5 總監</div>
+          <div class="tl-desc">本會創會長陳建宏接任 300A5 區總監（其前曾任區秘書長、第一專區主席、第一分區主席），是本會走入區部職務與社會服務能量提升的重要里程碑。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__content">
+          <div class="tl-yr">2016</div>
+          <div class="tl-title">二十五週年慶·紀念年會</div>
+          <div class="tl-desc">本會 25 週年慶，由邑瑞義（第14屆會長）擔任年會主席。</div>
+        </div>
+        <div class="tl-item__ring">第25屆</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__ring">第30屆</div>
+        <div class="tl-item__content">
+          <div class="tl-yr">2021</div>
+          <div class="tl-title">授證三十週年·紀念特刊</div>
+          <div class="tl-desc">第 30 屆會長陳紹群擔任召集人、第一副會長簡枝文擔任總編輯，出版《授證 30 週年紀念特刊》、完整記錄本會三十年足跡。年會主席：陳建宏創會長。</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-item__content">
+          <div class="tl-yr">2025</div>
+          <div class="tl-title">三十五週年邀訪姊妹</div>
+          <div class="tl-desc">第 35 屆會長張眾佳職，率全體獅兄獅嫂走訪姊妹會，以「服務先於己」之精神推展本會會務。</div>
+        </div>
+        <div class="tl-item__ring">第35屆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">組織架構 · ORGANIZATION</span>
+      <h2>清晰治理 · 透明問責</h2>
+    </div>
+    <div class="org">
+      <div class="org-row org-row--top">
+        <div class="org-node org-node--top">
+          <h4>會員大會</h4>
+          <small>GENERAL ASSEMBLY</small>
+        </div>
+      </div>
+      <div class="org-row" style="position:relative;">
+        <div class="org-node org-node--gold">
+          <h4>會長</h4>
+          <small>PRESIDENT</small>
+        </div>
+        <div class="org-node">
+          <h4>監事會</h4>
+          <small>AUDIT BOARD</small>
+        </div>
+      </div>
+      <div class="org-row">
+        <div class="org-node">
+          <h4>第一副會長</h4>
+          <small>1ST VICE PRESIDENT</small>
+        </div>
+        <div class="org-node">
+          <h4>第二副會長</h4>
+          <small>2ND VICE PRESIDENT</small>
+        </div>
+        <div class="org-node">
+          <h4>秘書長</h4>
+          <small>SECRETARY</small>
+        </div>
+        <div class="org-node">
+          <h4>財務長</h4>
+          <small>TREASURER</small>
+        </div>
+      </div>
+      <div class="org-row">
+        <div class="org-node">
+          <h4>公益服務委員會</h4>
+          <small>SERVICE</small>
+        </div>
+        <div class="org-node">
+          <h4>會員發展委員會</h4>
+          <small>MEMBERSHIP</small>
+        </div>
+        <div class="org-node">
+          <h4>公關媒體委員會</h4>
+          <small>COMMUNICATIONS</small>
+        </div>
+        <div class="org-node">
+          <h4>財務募款委員會</h4>
+          <small>FUNDRAISING</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow on-dark">海洋榮耀 · LION HONORS</span>
+      <h2 style="color:#fff;">本會前輩於 300A5 區及國際獅子會的服務足蹟</h2>
+      <p class="section-title__sub" style="color:rgba(255,255,255,0.7);">十位獅兄歷任區總監、區年會主席、專區主席與分區主席，於 300A5 區為基隆海洋之光。</p>
+    </div>
+    <div class="honor-quote">本會在 300A5 區服務肩上</div>
+    <div class="honor-grid">
+
+      <article class="honor-card">
+        <div class="honor-card__corner honor-card__corner--gov">District Governor</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">陳建宏</div>
+          <div class="honor-card__term">創會長 · 第 1 屆</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">1991–92</span><span class="honor-card__role">本會創會會長（首屆）</span></li>
+          <li><span class="honor-card__yr">1995–96</span><span class="honor-card__role">第一分區主席</span></li>
+          <li><span class="honor-card__yr">1998–99</span><span class="honor-card__role">第一專區主席</span></li>
+          <li><span class="honor-card__yr">1999–00</span><span class="honor-card__role">300A5 區秘書長</span></li>
+          <li><span class="honor-card__yr">2008–09</span><span class="honor-card__role honor-card__role--top">300A5 區總監</span></li>
+          <li><span class="honor-card__yr">2020–21</span><span class="honor-card__role">本會 30 週年年會主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Region Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">李鴻欽</div>
+          <div class="honor-card__term">第 11 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">2001–02</span><span class="honor-card__role">本會第 11 屆會長</span></li>
+          <li><span class="honor-card__yr">2008–09</span><span class="honor-card__role">F 區事務長</span></li>
+          <li><span class="honor-card__yr">2012–13</span><span class="honor-card__role">第一分區主席</span></li>
+          <li><span class="honor-card__yr">2013–14</span><span class="honor-card__role honor-card__role--top">第一專區主席</span></li>
+          <li><span class="honor-card__yr">2014–15</span><span class="honor-card__role honor-card__role--top">300A5 區年會主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Region Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">陳文宗</div>
+          <div class="honor-card__term">第 2 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">1992–93</span><span class="honor-card__role">本會第 2 屆會長</span></li>
+          <li><span class="honor-card__yr">1999–00</span><span class="honor-card__role">第一分區主席</span></li>
+          <li><span class="honor-card__yr">2004–05</span><span class="honor-card__role honor-card__role--top">第一專區主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Convention Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">劉慶璋</div>
+          <div class="honor-card__term">第 5 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">1995–96</span><span class="honor-card__role">本會第 5 屆會長</span></li>
+          <li><span class="honor-card__yr">2008–09</span><span class="honor-card__role honor-card__role--top">300A5 區年會主席</span></li>
+          <li><span class="honor-card__yr">2010–11</span><span class="honor-card__role">本會 20 週年年會主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Zone Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">楊阿金</div>
+          <div class="honor-card__term">第 4 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">1994–95</span><span class="honor-card__role">本會第 4 屆會長</span></li>
+          <li><span class="honor-card__yr">2002–03</span><span class="honor-card__role">第一分區主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Zone Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">呂伯祈</div>
+          <div class="honor-card__term">第 7 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">1997–98</span><span class="honor-card__role">本會第 7 屆會長</span></li>
+          <li><span class="honor-card__yr">2005–06</span><span class="honor-card__role">第一分區主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Zone Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">邱瑞義</div>
+          <div class="honor-card__term">第 14 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">2004–05</span><span class="honor-card__role">本會第 14 屆會長</span></li>
+          <li><span class="honor-card__yr">2015–16</span><span class="honor-card__role">第一分區主席</span></li>
+          <li><span class="honor-card__yr">2015–16</span><span class="honor-card__role">本會 25 週年年會主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Zone Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">陳坤田</div>
+          <div class="honor-card__term">第 21 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">2011–12</span><span class="honor-card__role">本會第 21 屆會長</span></li>
+          <li><span class="honor-card__yr">2018–19</span><span class="honor-card__role">第一分區主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Zone Chair</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">簡國堂</div>
+          <div class="honor-card__term">第 26 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">2016–17</span><span class="honor-card__role">本會第 26 屆會長</span></li>
+          <li><span class="honor-card__yr">2021–22</span><span class="honor-card__role">第一分區主席</span></li>
+        </ul>
+      </article>
+
+      <article class="honor-card">
+        <div class="honor-card__corner">Editor-in-Chief</div>
+        <div class="honor-card__head">
+          <div class="honor-card__name">簡枝文</div>
+          <div class="honor-card__term">第 31 屆會長</div>
+        </div>
+        <ul class="honor-card__roles">
+          <li><span class="honor-card__yr">2014–15</span><span class="honor-card__role">300A5 區東海岸獅訊總編輯</span></li>
+          <li><span class="honor-card__yr">2014–15</span><span class="honor-card__role">台灣總會中文版獅子會刊編輯</span></li>
+          <li><span class="honor-card__yr">2021–22</span><span class="honor-card__role">本會第 31 屆會長</span></li>
+          <li><span class="honor-card__yr">2021–22</span><span class="honor-card__role">本會 30 週年紀念特刊總編輯</span></li>
+        </ul>
+      </article>
+
+    </div>
+    <p class="honor-source" style="color:rgba(255,255,255,0.55);">資料來源：本會〈海洋榮耀〉名錄（30 週年紀念特刊 P24 章節）與歷屆幹部官方委任狀</p>
+  </div>
+</section>
+
+<!-- LCIF 國際捐獻榜 -->
+<section class="section section--dark" style="background:linear-gradient(180deg, #062542 0%, #08355e 60%, #062542 100%); border-top:1px solid rgba(241,196,15,0.18); border-bottom:1px solid rgba(241,196,15,0.18);">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow on-dark" style="color:var(--lion-gold-soft);">LCIF 國際捐獻榜 · LCIF DONORS</span>
+      <h2 style="color:#fff;">本會第 1–30 屆予 LCIF 累計捐輸 USD 205,000</h2>
+      <p class="section-title__sub" style="color:rgba(255,255,255,0.72);">三十屆獅友以「鴻石級 PMJF · Multiple MJF · MJF」三級榮譽，響應 Lions Clubs International Foundation 全球人道服務行動。</p>
+    </div>
+
+    <div class="lcif-stats">
+      <div class="lcif-stat">
+        <div class="lcif-stat__label">累計捐輸</div>
+        <div class="lcif-stat__big"><span class="lcif-stat__unit">USD</span><span class="lcif-stat__num">205,000</span></div>
+        <div class="lcif-stat__sub">折合美金仟元榜 · 共 205 仟元</div>
+      </div>
+      <div class="lcif-stat">
+        <div class="lcif-stat__label">國際捐獻者</div>
+        <div class="lcif-stat__big"><span class="lcif-stat__num">36</span><span class="lcif-stat__unit">位獅友</span></div>
+        <div class="lcif-stat__sub">第 1–30 屆累計榮譽榜</div>
+      </div>
+      <div class="lcif-stat">
+        <div class="lcif-stat__label">跨越任期</div>
+        <div class="lcif-stat__big"><span class="lcif-stat__num">30</span><span class="lcif-stat__unit">屆</span></div>
+        <div class="lcif-stat__sub">本會 1991–2021 三十年國際公益足蹟</div>
+      </div>
+    </div>
+
+    <div class="lcif-tier-legend">
+      <div class="lcif-tier"><span class="lcif-tier__dot lcif-tier__dot--pmjf"></span><b>PMJF</b><span class="lcif-tier__desc">鴻石級 · Progressive Melvin Jones Fellow ｜ 累計 ≥ USD 5,000</span></div>
+      <div class="lcif-tier"><span class="lcif-tier__dot lcif-tier__dot--mmjf"></span><b>Multiple MJF</b><span class="lcif-tier__desc">複數梅爾文‧瓊斯榮譽 ｜ USD 2,000–4,000</span></div>
+      <div class="lcif-tier"><span class="lcif-tier__dot lcif-tier__dot--mjf"></span><b>MJF</b><span class="lcif-tier__desc">梅爾文‧瓊斯榮譽會員 ｜ USD 1,000</span></div>
+    </div>
+
+    <div class="lcif-table-wrap">
+      <table class="lcif-table">
+        <thead>
+          <tr>
+            <th class="lcif-th-rank">序</th>
+            <th class="lcif-th-name">獅友姓名</th>
+            <th class="lcif-th-amt">累計捐輸</th>
+            <th class="lcif-th-bar">捐獻等量</th>
+            <th class="lcif-th-tier">榮譽等級</th>
+          </tr>
+        </thead>
+        <tbody id="lcif-tbody"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2" style="text-align:right; padding:18px 16px; font-family:var(--font-serif); font-weight:600; color:var(--lion-gold); letter-spacing:0.08em;">合計 · TOTAL</td>
+            <td style="padding:18px 16px; font-family:var(--font-en); font-size:18px; font-weight:800; color:var(--lion-gold);">USD 205,000</td>
+            <td></td>
+            <td style="padding:18px 16px; text-align:right; font-family:var(--font-en); font-size:11px; letter-spacing:0.2em; color:rgba(255,255,255,0.55);">36 / 36</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <p class="lcif-source">資料來源：本會 30 週年紀念特刊 P41 ──〈1–30 屆捐獻 LCIF 美金仟元榜〉。獅友姓名詳見紙本特刊。</p>
+  </div>
+</section>
+<script>
+(function(){
+  // 第1屆–第30屆累計捐輸：以「美金仟元」為單位，照特刊原始排序（金額由大至小）
+  var rows = [
+    [1,37],[2,29],[3,27],[4,22],[5,11],[6,9],[7,9],[8,8],[9,6],[10,5],
+    [11,4],[12,3],[13,3],[14,3],[15,3],
+    [16,2],[17,2],[18,2],[19,2],[20,2],
+    [21,1],[22,1],[23,1],[24,1],[25,1],[26,1],[27,1],[28,1],[29,1],[30,1],
+    [31,1],[32,1],[33,1],[34,1],[35,1],[36,1]
+  ];
+  var max = 37;
+  function tier(amt){
+    if (amt >= 5) return {key:'pmjf', label:'PMJF', sub:'鴻石級'};
+    if (amt >= 2) return {key:'mmjf', label:'Multiple MJF', sub:'複數榮譽'};
+    return {key:'mjf', label:'MJF', sub:'梅爾文榮譽'};
+  }
+  var html = rows.map(function(r){
+    var rank = r[0], amt = r[1];
+    var t = tier(amt);
+    var pct = Math.max(6, Math.round(amt/max*100));
+    return '<tr class="lcif-row lcif-row--'+t.key+'">'
+      + '<td class="lcif-cell-rank">'+ String(rank).padStart(2,'0') +'</td>'
+      + '<td class="lcif-cell-name"><span class="lcif-name-mask">姓名留存紙本特刊</span></td>'
+      + '<td class="lcif-cell-amt"><span class="lcif-amt-k">'+ amt +' 仟元</span><span class="lcif-amt-usd">USD '+ (amt*1000).toLocaleString() +'</span></td>'
+      + '<td class="lcif-cell-bar"><span class="lcif-bar"><span class="lcif-bar__fill lcif-bar__fill--'+t.key+'" style="width:'+pct+'%;"></span></span></td>'
+      + '<td class="lcif-cell-tier"><span class="lcif-badge lcif-badge--'+t.key+'">'+ t.label +'</span></td>'
+      + '</tr>';
+  }).join('');
+  var tb = document.getElementById('lcif-tbody');
+  if (tb) tb.innerHTML = html;
+})();
+</script>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="lcia">
+      <div class="lcia-mark">
+        <div>
+          <div class="top">LIONS</div>
+          <div class="mid">L</div>
+          <div class="bot">INTERNATIONAL · 300A5</div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow on-dark">國際接軌 · GLOBAL ALIGNMENT</span>
+        <h2>世界最大公益服務組織之一員</h2>
+        <p class="lede">基隆海洋獅子會隸屬國際獅子會 (Lions Clubs International)，全球擁有逾 140 萬會員、46,000 個分會，於 200 個國家及地區共同推動公益。</p>
+        <p class="lede" style="font-size:16px;">本會為 300A5 區所屬之分會，依循國際獅子會「服務先於己 (We Serve)」之核心理念，與全球獅友共同響應 LCIF 五大全球行動目標：糖尿病、視力健康、飢餓救援、環境保育、兒童癌症。</p>
+        <a href="service.html" class="btn btn--gold mt-5">查看公益實踐 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">姊妹分會 · SISTER CLUBS</span>
+      <h2>第一專區 · 十五個分會，並肩服務基隆</h2>
+      <p class="section-title__sub">本會與第一專區十四個姊妹分會、一個校園分會，於國際獅子會 300A5 區共同推動公益。</p>
+    </div>
+    <div class="sisters-intro">
+      <div class="sisters-region">
+        <span>LIONS CLUBS INTERNATIONAL</span>
+        <span style="opacity:0.4;">·</span>
+        <b>DISTRICT 300A5</b>
+        <span style="opacity:0.4;">·</span>
+        <span>REGION I</span>
+      </div>
+    </div>
+    <div class="sisters-grid">
+      <article class="sister-card"><div class="sister-card__no">01</div><div class="sister-card__name">基隆第一獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">02</div><div class="sister-card__name">基隆木蘭獅子會</div></article>
+      <article class="sister-card sister-card--ours">
+        <div class="sister-card__badge">OUR CLUB</div>
+        <div class="sister-card__no">03</div>
+        <div class="sister-card__name">基隆海洋獅子會</div>
+      </article>
+      <article class="sister-card"><div class="sister-card__no">04</div><div class="sister-card__name">基隆心和獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">05</div><div class="sister-card__name">基隆一品獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">06</div><div class="sister-card__name">基隆中央獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">07</div><div class="sister-card__name">基隆東方獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">08</div><div class="sister-card__name">基隆和樂獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">09</div><div class="sister-card__name">基隆愛心獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">10</div><div class="sister-card__name">基隆振興校園獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">11</div><div class="sister-card__name">基隆中正獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">12</div><div class="sister-card__name">基隆和平獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">13</div><div class="sister-card__name">基隆港都獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">14</div><div class="sister-card__name">基隆理想獅子會</div></article>
+      <article class="sister-card"><div class="sister-card__no">15</div><div class="sister-card__name">基隆海洋大學校園獅子會</div></article>
+    </div>
+    <p class="sisters-source">資料來源：國際獅子會 300A5 區 25–26 年度官方分會連結（依官方公告順序排列）</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="assets/chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+# =================================================================
+# 基隆海洋獅子會 · Decap CMS 設定檔
+# Netlify Identity + Git Gateway · Email 邀請制
+# 介面：繁體中文
+# =================================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+locale: 'zh_Hant'
+
+media_folder: 'assets/uploads'
+public_folder: '/assets/uploads'
+
+publish_mode: editorial_workflow
+
+site_url: https://keelung-ocean-lions.netlify.app
+display_url: https://keelung-ocean-lions.netlify.app
+logo_url: /assets/lions/lions-logo.png
+
+collections:
+
+  # ---------- 首頁主視覺 ----------
+  - name: 'home'
+    label: '首頁設定'
+    files:
+      - file: 'data/home.json'
+        name: 'home'
+        label: '首頁主視覺'
+        fields:
+          - { label: '主標題', name: 'hero_title', widget: 'string' }
+          - { label: '副標', name: 'hero_subtitle', widget: 'text' }
+          - { label: '主題語', name: 'theme', widget: 'string' }
+
+  # ---------- 最新消息 ----------
+  - name: 'news'
+    label: '最新消息'
+    folder: 'content/news'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: '標題', name: 'title', widget: 'string' }
+      - { label: '日期', name: 'date', widget: 'datetime' }
+      - { label: '內文', name: 'body', widget: 'markdown' }
+
+  # ---------- 活動行事曆 ----------
+  - name: 'events'
+    label: '活動行事曆'
+    folder: 'content/events'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: '活動名稱', name: 'title', widget: 'string' }
+      - { label: '日期', name: 'date', widget: 'datetime' }
+      - { label: '地點', name: 'place', widget: 'string', required: false }
+      - { label: '說明', name: 'body', widget: 'markdown' }
