@@ -1,0 +1,104 @@
+{
+  "_comment": "TigerOS 技能路由規則。由 tigeros/hooks/skill-router.sh 在 UserPromptSubmit 時評分，把命中的技能提示注入 context，讓觸發變成確定性的，不再只靠模型讀 description 猜。",
+  "version": "1.0",
+  "config": {
+    "minScore": 3,
+    "maxShow": 3
+  },
+  "scoring": {
+    "keyword": 2,
+    "intent": 4
+  },
+  "_runtime_說明": {
+    "local": "需要本機 Chrome／桌面版 LINE／地端 Codex／NAS，雲端 session 跑不動",
+    "cloud": "資料來源在雲端或公開網路，雲端 session 可執行",
+    "any": "純文書處理，兩邊都可以"
+  },
+  "skills": {
+    "chengbao-monthly-pnl": {
+      "runtime": "local",
+      "keywords": ["損益", "月結", "精算", "稅前淨利", "恆等式", "未解釋差額"],
+      "intents": ["(做|跑|算|結).{0,6}(這個月|本月|當月|月度).{0,6}(損益|帳|淨利)"]
+    },
+    "chengbao-finance": {
+      "runtime": "local",
+      "keywords": ["損益表", "資產負債表", "現金流量表", "應收", "實收", "核銷金額", "帳務整理", "費用分攤"],
+      "intents": ["(整理|盤點).{0,6}(帳|帳務|財務)"]
+    },
+    "cb-payment-reconciliation": {
+      "runtime": "local",
+      "keywords": ["對帳", "比對", "匯款核對", "後五碼", "匯款確認", "仁寶金額", "三方比對"],
+      "intents": ["(把|將).{0,10}(LINE|銀行|仁寶).{0,10}(對|比對|核)"]
+    },
+    "cb-salary-transfer": {
+      "runtime": "local",
+      "keywords": ["薪轉", "撥薪", "薪資撥轉", "薪轉檔", "建檔失敗", "補撥", "筆數對不上"],
+      "intents": ["(撥|發|匯).{0,4}薪"]
+    },
+    "chengbao-homecare-contract": {
+      "runtime": "local",
+      "keywords": ["合約", "居家服務契約", "簽約", "附件四", "部分負擔", "給付額度", "身分別"],
+      "intents": ["(做|產生|生成).{0,6}(合約|契約)", "(這個個案|新個案).{0,6}簽約"]
+    },
+    "chengbao-mgmt-analysis": {
+      "runtime": "local",
+      "keywords": ["經營分析", "經營管理報表", "YoY", "同期比較", "居服居喘", "ARPU", "淨利率", "FA200"],
+      "intents": ["(做|跑).{0,8}(經營分析|年度報表)", "跟去年同期比"]
+    },
+    "cb-schedule-reminder-today": {
+      "runtime": "local",
+      "keywords": ["今日班表", "今天誰上班", "今日排班", "今天排班"],
+      "intents": ["今(天|日).{0,6}(班表|排班|誰上班)"]
+    },
+    "cb-schedule-reminder-tomorrow": {
+      "runtime": "local",
+      "keywords": ["明日班表", "明天排班", "明日預告", "明天班表"],
+      "intents": ["明(天|日).{0,6}(班表|排班|預告)"]
+    },
+    "cb-schedule-reminder-weekly": {
+      "runtime": "local",
+      "keywords": ["週班表", "本週排班", "週班表彙整", "這週班表"],
+      "intents": ["(本|這|下)週.{0,6}(班表|排班)"]
+    },
+    "cb-lineoa-daily-report": {
+      "runtime": "local",
+      "keywords": ["LINE OA 日報", "每日整理", "居服報表", "LINE回報", "轉帳辨識"],
+      "intents": ["(做|跑|產).{0,6}(日報|每日整理)"]
+    },
+    "chengbao-daily-bank-reconcile": {
+      "runtime": "local",
+      "keywords": ["三AI對帳", "寶博士", "已收訖", "銀行對帳"],
+      "intents": ["(每日|今天).{0,6}對帳"]
+    },
+    "cb-lineoa-cai-style": {
+      "runtime": "any",
+      "keywords": ["蔡康永", "客服文案", "回覆家屬", "讓人感到被理解"],
+      "intents": ["(回|寫).{0,8}(家屬|客戶).{0,6}訊息"]
+    },
+    "line-chat-digest": {
+      "runtime": "local",
+      "keywords": ["讀LINE", "LINE群組", "聊天室", "群組狀況"],
+      "intents": ["(去)?讀.{0,8}LINE", "(看|追).{0,6}(一下)?.{0,4}LINE"]
+    },
+    "bonjump-meeting-builder": {
+      "runtime": "local",
+      "keywords": ["邦躍", "處內主管會議", "12位主管", "整組業績", "真同期", "主管行動手冊"],
+      "intents": ["(準備|整理).{0,8}(這個月|明天)?.{0,4}主管會議", "盤點主管"]
+    },
+    "bonjump-morning-briefing": {
+      "runtime": "local",
+      "keywords": ["獨立早會", "早會報告", "邦躍早會", "受理業績", "競賽追獎", "七工", "八工"],
+      "intents": ["(準備|做).{0,8}(明天)?.{0,4}早會"]
+    },
+    "survey-builder": {
+      "runtime": "any",
+      "keywords": ["問卷", "量表", "李克特", "反向題", "前測", "Cronbach"],
+      "intents": ["(做|設計|產生).{0,6}(一份)?.{0,4}問卷"]
+    },
+    "chengbao-erp-hub": {
+      "runtime": "any",
+      "keywords": ["ERP", "NAS", "家庭系統", "自動化流程"],
+      "intents": ["(規劃|設計).{0,8}自動化"]
+    }
+  }
+}

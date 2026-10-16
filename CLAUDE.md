@@ -1,8 +1,30 @@
 # 基隆海洋獅子會官網 · 工作規則
 
+@tigeros/core/CLAUDE.core.md
+
 ## 這個 repo 是什麼
 純靜態多頁網站（13 個 HTML），無建置流程，直接部署到 Netlify。
 內容由委員透過 Decap CMS 後台（`/admin/`）維護，CMS 寫回 `data/` 與各 HTML。
+
+同時是 **TigerOS 目前的落腳處**——`tigeros/` 是三個事業體共用的 harness 核心，
+設計成可攜，之後會掛載到 `chengbao-erp` 等 repo。改 `tigeros/` 時請記得它不只服務這個站，
+改完務必跑 `sh tigeros/hooks/test-guard.sh`。
+
+網站原始碼原本只以 zip 存放，已於 2026-09-20 經江董同意解開納入版控（PR #3）。
+
+## 網站結構
+```
+index.html about.html agm.html contact.html donate.html gallery.html
+history.html join.html media.html members.html presidents.html
+register.html service.html
+admin/          Decap CMS 後台（config.yml）
+data/home.json  首頁內容
+assets/         styles.css chrome.js lions/ photos/
+netlify.toml    部署設定
+robots.txt sitemap.xml
+tigeros/        TigerOS harness 核心
+```
+文件：`README.md`、`DEPLOY-SOP.md`、`ADMIN-USERS-GUIDE.md`、`MEMORY.md`
 
 ## 語言與產出
 - 全部以繁體中文溝通與產出，語氣專業簡潔。
@@ -37,6 +59,7 @@
 - **創會年數一律寫「三十五年 / 35 年」**（會方 2026-09-20 拍板）。
   唯獨敘述歷史事件時照史實寫，例如《授證 30 週年紀念特刊》、
   「1991–2021 三十年國際公益足蹟」，不可改成三十五年。
+- 獅子會會員姓名、電話、職務屬個資，依核心憲法第 5 條不得寫進 commit 或公開檔案。
 
 ## 分支與提交
 - 從 `main` 開分支，分支名 `claude/<主題>`。
@@ -44,6 +67,7 @@
 - 每條任務開一個 draft PR。
 
 ## 必須先問過才能做
+- 這是**對外正式站**：內容改動先確認，不要直接動線上版。
 - 刪除既有頁面或照片。
 - 更動 `admin/config.yml`（會影響委員後台操作）。
 - 更動 Netlify Identity / Git Gateway 相關設定。
